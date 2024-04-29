@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1019.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_menuHamburguesa">
+   <children>
+      <Pane prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Group layoutX="262.0" layoutY="15.5625" />
+            <Text layoutX="23.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="second" wrappingWidth="181.2954559326172">
+               <font>
+                  <Font name="Inter Regular" size="50.0" />
+               </font>
+            </Text>
+            <Text layoutX="192.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hand" translateY="-1.0">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="1019.0" prefHeight="248.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="455.0" layoutY="-57.0" prefHeight="91.0" prefWidth="393.0" />
+         </children></Pane>
+      <Pane layoutY="96.0" prefHeight="935.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="24.0" layoutY="25.0" prefHeight="402.0" prefWidth="243.0">
+               <children>
+                  <Button fx:id="btnRopaMenu" onMouseClicked="#mostrarFiltroRopa" mnemonicParsing="false" style="-fx-background-color: white;" text="Ropa">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <VBox>
+                     <children>
+                        <Button fx:id="btnChaquetasMenu" onMouseClicked="#mostrarFiltroChaquetas" mnemonicParsing="false" style="-fx-background-color: white;" text="Chaquetas">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnPantalonesMenu" onMouseClicked="#mostrarFiltroPantalones" mnemonicParsing="false" style="-fx-background-color: white;" text="Pantalones">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnCamisasMenu" onMouseClicked="#mostrarFiltroCamisas" mnemonicParsing="false" style="-fx-background-color: white;" text="Camisas">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnAccesoriosMenu" onMouseClicked="#mostrarFiltroAccesorios" mnemonicParsing="false" style="-fx-background-color: white;" text="Accesorios">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <VBox>
+                     <children>
+                        <Button fx:id="btnZapatosMenu" onMouseClicked="#mostrarFiltroZapatos" mnemonicParsing="false" style="-fx-background-color: white;" text="Zapatos">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnBolsosMenu" onMouseClicked="#mostrarFiltroBolsos" mnemonicParsing="false" style="-fx-background-color: white;" text="Bolsos">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>
