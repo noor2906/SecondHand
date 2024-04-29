@@ -1,0 +1,54 @@
+package com.example.tiendaropa;
+
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
+import javafx.scene.layout.Pane;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+// PANTALLA 2
+
+public class Controlador_home {
+
+    @FXML
+    private Button btnMenu;
+
+ /*   @FXML
+    private Pane pantallaMenu;*/
+
+    //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    public void mostrarMenu(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_menuHamburguesa_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    /*// Esconde la pantalla del menú al inicio
+
+    @FXML
+    private void initialize() {
+        pantallaMenu.setTranslateX(+200);
+    }
+
+    // Mueve la pantalla del menú hacia la derecha
+    @FXML
+    private void mostrarMenu() {
+        TranslateTransition slideIn = new TranslateTransition(Duration.millis(500), pantallaMenu);
+        slideIn.setByX(200);
+        slideIn.play();
+    }*/
+}
+
+
