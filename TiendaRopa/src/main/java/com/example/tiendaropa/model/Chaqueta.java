@@ -3,24 +3,8 @@ import java.util.List;
 
 public class Chaqueta extends Ropa {
 
-    //ATRIBUTOS
-    private boolean impermeable;
-
     //CONSTRUCTOR
-    public Chaqueta(int codigo, String nombre, int precio, String marca, String descripcion, List<Material> materiales, String talla, String color, String tipoCierre, boolean impermeable) {
-        super(codigo, nombre, precio, marca, descripcion, materiales, talla, color, tipoCierre);
-        this.impermeable = impermeable;
+    public Chaqueta(int codArt, String nombre, int precio, String marca, String descripcion, boolean activo, String imagen, int material, String talla, String color, String tipoCierre, boolean impermeable, String tipoManga, boolean estampada, String tipoPantalon, boolean tieneBolsillos, String tipoRopa) {
+        super(codArt, nombre, precio, marca, descripcion, activo, imagen, material, talla, color, tipoCierre, impermeable, tipoManga, estampada, tipoPantalon, tieneBolsillos, tipoRopa);
     }
-
-    //GET Y SET
-    public boolean isImpermeable() {
-        return impermeable;
-    }
-
-    public void setImpermeable(boolean impermeable) {
-        this.impermeable = impermeable;
-    }
-
-//METODOS
-
 }

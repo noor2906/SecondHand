@@ -8,19 +8,24 @@ public class Pedido {
     private String fecha;
     private String direccionEnvio;
     private String estado;
-    private static List<Articulo> listaArticulos;
+    private LineaPedido lineaPedido;
     private int cantidadArticulo;
 
 
     //Constructor
-    public Pedido(int numero, String fecha, String direccionEnvio, String estado) {
+
+    public Pedido(int numero, String fecha, String direccionEnvio, String estado, LineaPedido lineaPedido, int cantidadArticulo) {
         this.numero = numero;
         this.fecha = fecha;
         this.direccionEnvio = direccionEnvio;
         this.estado = estado;
+        this.lineaPedido = lineaPedido;
+        this.cantidadArticulo = cantidadArticulo;
     }
 
+
     //Getters y setters
+
     public int getNumero() {
         return numero;
     }
@@ -37,12 +42,12 @@ public class Pedido {
         this.fecha = fecha;
     }
 
-    public String getDir_envio() {
+    public String getDireccionEnvio() {
         return direccionEnvio;
     }
 
-    public void setDir_envio(String dir_envio) {
-        this.direccionEnvio = dir_envio;
+    public void setDireccionEnvio(String direccionEnvio) {
+        this.direccionEnvio = direccionEnvio;
     }
 
     public String getEstado() {
@@ -53,12 +58,12 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public List<Articulo> getListaArticulos() {
-        return listaArticulos;
+    public LineaPedido getLineaPedido() {
+        return lineaPedido;
     }
 
-    public void setListaArticulos(List<Articulo> listaArticulos) {
-        this.listaArticulos = listaArticulos;
+    public void setLineaPedido(LineaPedido lineaPedido) {
+        this.lineaPedido = lineaPedido;
     }
 
     public int getCantidadArticulo() {
@@ -67,13 +72,5 @@ public class Pedido {
 
     public void setCantidadArticulo(int cantidadArticulo) {
         this.cantidadArticulo = cantidadArticulo;
-    }
-
-    public static void anyadirArticulo(Articulo articulo){
-        listaArticulos.add(articulo);
-    }
-
-    public static int contarCantidad(){
-        return listaArticulos.size();
     }
 }
