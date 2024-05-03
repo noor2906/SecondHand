@@ -117,7 +117,7 @@
                               <Font name="Inter Bold" size="24.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnRegistro" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Regístrate" textFill="WHITE">
+                        <Button fx:id="btnRegistro" onMouseClicked="#mostrarRegistro" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Regístrate" textFill="WHITE">
                            <font>
                               <Font name="Inter Bold" size="18.0" />
                            </font>

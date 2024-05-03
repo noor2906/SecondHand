@@ -22,16 +22,29 @@ public class Controlador_login {
         ok=conn.login(user,pass);
         conn.desconectar();
         if (ok){
-            a.setAlertType(Alert.AlertType.INFORMATION);
-            a.setHeaderText(null);
-            a.setContentText("Ha iniciado sesión!");
-            a.show();
+            mostrarHome(actionEvent);
         }else {
             a.setAlertType(Alert.AlertType.INFORMATION);
             a.setHeaderText(null);
             a.setContentText("El usuario no existe :(");
             a.show();
         }
+    }
+      public void mostrarHome(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXML_home_Noor.fxml")));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    public void mostrarRegistro(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXML_registroUsuario_Carol.fxml")));
+
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     public void limpiarUser(ActionEvent actionEvent) {
