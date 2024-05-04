@@ -212,11 +212,7 @@
                                     <Insets left="-12.0" right="-12.0" />
                                  </padding>
                                  <graphic>
-                                    <ImageView fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@imagenes%20pantalla5/img12.jpg" />
-                                       </image>
-                                    </ImageView>
+                                    <ImageView fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true" />
                                  </graphic>
                               </Button>
                               <VBox prefHeight="191.0" prefWidth="401.0" spacing="10.0">
@@ -285,11 +281,7 @@
                                     <Insets left="-12.0" right="-12.0" />
                                  </padding>
                                  <graphic>
-                                    <ImageView fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@images/imagen1.jpg" />
-                                       </image>
-                                    </ImageView>
+                                    <ImageView fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true" />
                                  </graphic>
                               </Button>
                               <VBox prefHeight="191.0" prefWidth="401.0" spacing="10.0">
@@ -476,11 +468,7 @@
                                     <Insets left="-12.0" right="-12.0" />
                                  </padding>
                                  <graphic>
-                                    <ImageView fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@images/imagen4.jpg" />
-                                       </image>
-                                    </ImageView>
+                                    <ImageView fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true" />
                                  </graphic>
                               </Button>
                               <VBox prefHeight="191.0" prefWidth="401.0" spacing="10.0">
