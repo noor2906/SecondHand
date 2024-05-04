@@ -45,7 +45,7 @@
                                                 <Font name="Inter Regular" size="18.0" />
                                              </font>
                                           </TextField>
-                                          <Button fx:id="btnClear1" onAction="#limpiarUser" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                          <Button fx:id="btnClear1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onAction="#limpiarUser" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
                                              <graphic>
                                                 <SVGPath fx:id="btnClear" content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
                                              </graphic>
@@ -74,7 +74,7 @@
                                                 <Font name="Inter Regular" size="18.0" />
                                              </font>
                                           </TextField>
-                                          <Button fx:id="btnClear11" onAction="#limpiarContra" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                          <Button fx:id="btnClear11" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onAction="#limpiarContra" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
                                              <graphic>
                                                 <SVGPath fx:id="btnClear2" content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
                                              </graphic>
@@ -90,7 +90,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="67.0" prefWidth="571.0" spacing="15.0">
                            <children>
-                              <Button fx:id="btnLogin" onAction="#login" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Iniciar sesión" textFill="WHITE">
+                              <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Iniciar sesión" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
@@ -117,7 +117,7 @@
                               <Font name="Inter Bold" size="24.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnRegistro" onMouseClicked="#mostrarRegistro" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Regístrate" textFill="WHITE">
+                        <Button fx:id="btnRegistro" mnemonicParsing="false" onMouseClicked="#mostrarRegistro" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Regístrate" textFill="WHITE">
                            <font>
                               <Font name="Inter Bold" size="18.0" />
                            </font>
@@ -212,17 +212,17 @@
                      <children>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../MasterCard.png" />
+                              <Image url="@images/MasterCard.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../PayPal.png" />
+                              <Image url="@images/PayPal.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Visa.png" />
+                              <Image url="@images/Visa.png" />
                            </image>
                         </ImageView>
                      </children>

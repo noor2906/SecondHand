@@ -44,7 +44,7 @@
                   </HBox>
                </children>
             </Pane>
-            <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
+            <Pane prefHeight="96.0" prefWidth="1440.0">
                <children>
                   <Button fx:id="btnTituloHeader" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" prefHeight="60.8" prefWidth="296.0" style="-fx-background-color: none;">
                      <graphic>
@@ -126,7 +126,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutY="1019.0" prefHeight="248.0" prefWidth="1440.0" style="-fx-background-color: white;">
+            <Pane layoutY="1019.0" prefHeight="248.0" prefWidth="1440.0">
                <children>
                   <HBox layoutX="626.0" layoutY="54.5625">
                      <children>
