@@ -2,8 +2,17 @@ package com.example.tiendaropa;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class Controlador_login {
   private ConexionBBDD conn = new ConexionBBDD();
@@ -12,7 +21,7 @@ public class Controlador_login {
     @FXML
     private TextField txtDatoLogin;
 
-    public void login(ActionEvent actionEvent) {
+    public void login(ActionEvent actionEvent) throws IOException {
         Alert a = new Alert(Alert.AlertType.NONE);
         boolean ok;
         String user = txtDatoLogin.getText();
