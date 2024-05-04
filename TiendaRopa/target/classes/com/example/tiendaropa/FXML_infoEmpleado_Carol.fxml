@@ -1,78 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.SVGPath?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_infoEmpleado">
    <children>
-      <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
-         <children>
-            <Group layoutX="262.0" layoutY="15.5625" />
-            <Text layoutX="514.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="second" wrappingWidth="181.2954559326172">
-               <font>
-                  <Font name="Inter Regular" size="50.0" />
-               </font>
-            </Text>
-            <Text layoutX="673.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hand" translateY="-1.0">
-               <font>
-                  <Font name="System Bold" size="50.0" />
-               </font>
-            </Text>
-            <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
-               <graphic>
-                  <Group>
-                     <children>
-                        <SVGPath content="M20 20C23.6834 20 26.6667 17.0167 26.6667 13.3333C26.6667 9.64999 23.6834 6.66666 20 6.66666C16.3167 6.66666 13.3334 9.64999 13.3334 13.3333C13.3334 17.0167 16.3167 20 20 20ZM20 23.3333C15.55 23.3333 6.66669 25.5667 6.66669 30V31.6667C6.66669 32.5833 7.41669 33.3333 8.33335 33.3333H31.6667C32.5834 33.3333 33.3334 32.5833 33.3334 31.6667V30C33.3334 25.5667 24.45 23.3333 20 23.3333Z" layoutX="10.0" layoutY="10.0" />
-                     </children>
-                  </Group>
-               </graphic>
-            </Button>
-            <Button layoutX="1369.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-10.0">
-               <graphic>
-                  <Group>
-                     <children>
-                        <SVGPath content="M11.6667 30C9.83335 30 8.35002 31.5 8.35002 33.3333C8.35002 35.1667 9.83335 36.6667 11.6667 36.6667C13.5 36.6667 15 35.1667 15 33.3333C15 31.5 13.5 30 11.6667 30ZM1.66669 5.00001C1.66669 5.91668 2.41669 6.66668 3.33335 6.66668H5.00002L11 19.3167L8.75002 23.3833C7.53335 25.6167 9.13335 28.3333 11.6667 28.3333H30C30.9167 28.3333 31.6667 27.5833 31.6667 26.6667C31.6667 25.75 30.9167 25 30 25H11.6667L13.5 21.6667H25.9167C27.1667 21.6667 28.2667 20.9833 28.8334 19.95L34.8 9.13334C35.4167 8.03334 34.6167 6.66668 33.35 6.66668H8.68335L7.56669 4.28334C7.30002 3.70001 6.70002 3.33334 6.06669 3.33334H3.33335C2.41669 3.33334 1.66669 4.08334 1.66669 5.00001V5.00001ZM28.3334 30C26.5 30 25.0167 31.5 25.0167 33.3333C25.0167 35.1667 26.5 36.6667 28.3334 36.6667C30.1667 36.6667 31.6667 35.1667 31.6667 33.3333C31.6667 31.5 30.1667 30 28.3334 30Z" layoutX="10.0" layoutY="10.0" />
-                     </children>
-                  </Group>
-               </graphic>
-            </Button>
-            <Button cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
-               <graphic>
-                  <Group>
-                     <children>
-                        <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
-                           <graphic>
-                              <SVGPath content="M6.66667 30H33.3333C34.25 30 35 29.25 35 28.3333C35 27.4167 34.25 26.6667 33.3333 26.6667H6.66667C5.75 26.6667 5 27.4167 5 28.3333C5 29.25 5.75 30 6.66667 30ZM6.66667 21.6667H33.3333C34.25 21.6667 35 20.9167 35 20C35 19.0833 34.25 18.3333 33.3333 18.3333H6.66667C5.75 18.3333 5 19.0833 5 20C5 20.9167 5.75 21.6667 6.66667 21.6667ZM5 11.6667C5 12.5833 5.75 13.3333 6.66667 13.3333H33.3333C34.25 13.3333 35 12.5833 35 11.6667C35 10.75 34.25 10 33.3333 10H6.66667C5.75 10 5 10.75 5 11.6667Z" />
-                           </graphic>
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </Group>
-               </graphic>
-            </Button>
-            <TextField layoutX="1087.0" layoutY="33.0" prefHeight="33.0" prefWidth="168.0" promptText="      Buscar" style="-fx-border-color: grey; -fx-border-width: 1px; -fx-border-radius: 2px;">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </TextField>
-            <FontAwesomeIconView fill="#bcbcbc" glyphName="SEARCH" layoutX="1091.0" layoutY="55.0" size="14" wrappingWidth="17.549951553344727" />
-            <Line endX="1314.0" layoutX="126.0" layoutY="96.0" startX="-126.0" />
-         </children>
-      </Pane>
       <Pane layoutX="-6.0" layoutY="1019.0" prefHeight="248.0" prefWidth="1446.0" style="-fx-background-color: white;">
          <children>
             <Text layoutX="626.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MÉTODOS DE PAGO">
@@ -121,17 +58,17 @@
                      <children>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@noor/MasterCard.png" />
+                              <Image url="@images/PayPal.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@noor/PayPal.png" />
+                              <Image url="@images/MasterCard.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@noor/Visa.png" />
+                              <Image url="@images/Visa.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -154,7 +91,7 @@
             </HBox>
          </children></Pane>
       <Button fx:id="btnLogin1" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="57.0" layoutY="132.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;" />
-      <Text layoutX="90.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de usuario">
+      <Text layoutX="101.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de usuario">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -242,5 +179,87 @@
             <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
          </children>
       </Group>
+      <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btnTituloHeader" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" prefHeight="60.8" prefWidth="296.0" style="-fx-background-color: none;">
+               <graphic>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="second" wrappingWidth="181.2954559326172">
+                           <font>
+                              <Font name="Inter Regular" size="50.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="-9.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="hand" translateY="-1.0">
+                           <font>
+                              <Font name="Inter Regular" size="50.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Button layoutX="1369.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-10.0">
+               <graphic>
+                  <Group />
+               </graphic>
+            </Button>
+            <Button cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
+               <graphic>
+                  <Group />
+               </graphic>
+            </Button>
+            <Group layoutX="1085.0" layoutY="33.0">
+               <children>
+                  <TextField fx:id="txtfBusqueda" layoutX="2.0" prefHeight="33.0" prefWidth="168.0" promptText="Buscar" style="-fx-border-radius: 7px; -fx-border-width: 0 0 0 0;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Inter Regular" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </TextField>
+                  <Button layoutY="4.0" mnemonicParsing="false" style="-fx-background-color: none; -fx-background-radius: none;" textFill="#767676">
+                     <graphic>
+                        <SVGPath content="M15.5 14H14.71L14.43 13.73C15.63 12.33 16.25 10.42 15.91 8.39002C15.44 5.61002 13.12 3.39002 10.32 3.05002C6.09001 2.53002 2.53002 6.09001 3.05002 10.32C3.39002 13.12 5.61002 15.44 8.39002 15.91C10.42 16.25 12.33 15.63 13.73 14.43L14 14.71V15.5L18.25 19.75C18.66 20.16 19.33 20.16 19.74 19.75C20.15 19.34 20.15 18.67 19.74 18.26L15.5 14ZM9.50002 14C7.01002 14 5.00002 11.99 5.00002 9.50002C5.00002 7.01002 7.01002 5.00002 9.50002 5.00002C11.99 5.00002 14 7.01002 14 9.50002C14 11.99 11.99 14 9.50002 14Z" fill="#999999" />
+                     </graphic>
+                     <font>
+                        <Font name="Inter Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Group>
+            <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+               <graphic>
+                  <SVGPath content="M6.66667 30H33.3333C34.25 30 35 29.25 35 28.3333C35 27.4167 34.25 26.6667 33.3333 26.6667H6.66667C5.75 26.6667 5 27.4167 5 28.3333C5 29.25 5.75 30 6.66667 30ZM6.66667 21.6667H33.3333C34.25 21.6667 35 20.9167 35 20C35 19.0833 34.25 18.3333 33.3333 18.3333H6.66667C5.75 18.3333 5 19.0833 5 20C5 20.9167 5.75 21.6667 6.66667 21.6667ZM5 11.6667C5 12.5833 5.75 13.3333 6.66667 13.3333H33.3333C34.25 13.3333 35 12.5833 35 11.6667C35 10.75 34.25 10 33.3333 10H6.66667C5.75 10 5 10.75 5 11.6667Z" />
+               </graphic>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnLogin" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1290.0" layoutY="24.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+               <graphic>
+                  <SVGPath content="M20 20C23.6834 20 26.6667 17.0167 26.6667 13.3333C26.6667 9.64999 23.6834 6.66666 20 6.66666C16.3167 6.66666 13.3334 9.64999 13.3334 13.3333C13.3334 17.0167 16.3167 20 20 20ZM20 23.3333C15.55 23.3333 6.66669 25.5667 6.66669 30V31.6667C6.66669 32.5833 7.41669 33.3333 8.33335 33.3333H31.6667C32.5834 33.3333 33.3334 32.5833 33.3334 31.6667V30C33.3334 25.5667 24.45 23.3333 20 23.3333Z" />
+               </graphic>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCarrito" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1340.0" layoutY="24.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+               <graphic>
+                  <SVGPath content="M11.6667 30C9.83335 30 8.35002 31.5 8.35002 33.3333C8.35002 35.1667 9.83335 36.6667 11.6667 36.6667C13.5 36.6667 15 35.1667 15 33.3333C15 31.5 13.5 30 11.6667 30ZM1.66669 5.00001C1.66669 5.91668 2.41669 6.66668 3.33335 6.66668H5.00002L11 19.3167L8.75002 23.3833C7.53335 25.6167 9.13335 28.3333 11.6667 28.3333H30C30.9167 28.3333 31.6667 27.5833 31.6667 26.6667C31.6667 25.75 30.9167 25 30 25H11.6667L13.5 21.6667H25.9167C27.1667 21.6667 28.2667 20.9833 28.8334 19.95L34.8 9.13334C35.4167 8.03334 34.6167 6.66668 33.35 6.66668H8.68335L7.56669 4.28334C7.30002 3.70001 6.70002 3.33334 6.06669 3.33334H3.33335C2.41669 3.33334 1.66669 4.08334 1.66669 5.00001V5.00001ZM28.3334 30C26.5 30 25.0167 31.5 25.0167 33.3333C25.0167 35.1667 26.5 36.6667 28.3334 36.6667C30.1667 36.6667 31.6667 35.1667 31.6667 33.3333C31.6667 31.5 30.1667 30 28.3334 30Z" />
+               </graphic>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </Pane>

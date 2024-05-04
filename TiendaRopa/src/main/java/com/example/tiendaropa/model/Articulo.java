@@ -1,34 +1,40 @@
 package com.example.tiendaropa.model;
-import java.util.List;
 
 public abstract class Articulo {
 
     //ATRIBUTOS
-    private int codigo;
+    private int codArt;
     private String nombre;
     private int precio;
     private String marca;
     private String descripcion;
-    private List<Material> materiales;
+    private boolean activo;
+    private String imagen;
+    private int material;
 
 
     //CONSTRUCTOR
-    public Articulo(int codigo, String nombre, int precio, String marca, String descripcion, List<Material> materiales) {
-        this.codigo = codigo;
+
+    public Articulo(int codArt, String nombre, int precio, String marca, String descripcion, boolean activo, String imagen, int material) {
+        this.codArt = codArt;
         this.nombre = nombre;
         this.precio = precio;
         this.marca = marca;
         this.descripcion = descripcion;
-        this.materiales = materiales;
+        this.activo = activo;
+        this.imagen = imagen;
+        this.material = material;
     }
+
 
     //GET Y SET
-    public int getCodigo() {
-        return codigo;
+
+    public int getCodArt() {
+        return codArt;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCodArt(int codArt) {
+        this.codArt = codArt;
     }
 
     public String getNombre() {
@@ -63,26 +69,30 @@ public abstract class Articulo {
         this.descripcion = descripcion;
     }
 
-    public List<Material> getMateriales() {
-        return materiales;
+    public boolean isActivo() {
+        return activo;
     }
 
-    public void setMateriales(List<Material> materiales) {
-        this.materiales = materiales;
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
 
-    //toString
-
-    @Override
-    public String toString() {
-        return "Articulo: " + "\n" +
-                "- Código: [" + codigo + "] \n" +
-                "- Nombre: '" + nombre + "' \n" +
-                "- Precio: " + precio + " €" + "\n"+
-                "- Marca: '" + marca + "' \n" +
-                "- Descripcion: [" + descripcion +"] \n" +
-                "- Materiales: " + materiales + "";
+    public String getImagen() {
+        return imagen;
     }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public int getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(int material) {
+        this.material = material;
+    }
+
 
     //METODOS
 

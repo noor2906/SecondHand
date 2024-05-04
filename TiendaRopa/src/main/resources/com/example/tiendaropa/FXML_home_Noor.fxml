@@ -20,7 +20,7 @@
                            <graphic>
                               <ImageView fitHeight="928.0" fitWidth="742.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@imagenes%20pantalla2/ropa.jpg" />
+                                    <Image url="@images/ropa.jpg" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -32,7 +32,7 @@
                            <graphic>
                               <ImageView fitHeight="928.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@imagenes%20pantalla2/accesorios.jpg" />
+                                    <Image url="@images/accesorios.jpg" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -44,7 +44,7 @@
                   </HBox>
                </children>
             </Pane>
-            <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
+            <Pane prefHeight="96.0" prefWidth="1440.0">
                <children>
                   <Button fx:id="btnTituloHeader" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" prefHeight="60.8" prefWidth="296.0" style="-fx-background-color: none;">
                      <graphic>
@@ -126,7 +126,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutY="1019.0" prefHeight="248.0" prefWidth="1440.0" style="-fx-background-color: white;">
+            <Pane layoutY="1019.0" prefHeight="248.0" prefWidth="1440.0">
                <children>
                   <HBox layoutX="626.0" layoutY="54.5625">
                      <children>
