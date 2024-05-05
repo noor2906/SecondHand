@@ -1,12 +1,9 @@
 package com.example.tiendaropa.model;
 
-import java.util.List;
-
 public class Ropa extends Articulo {
 
     //ATRIBUTOS
     protected String talla;
-
     protected String color;
     protected String tipoCierre;
     protected boolean impermeable;
@@ -16,10 +13,13 @@ public class Ropa extends Articulo {
     protected boolean tieneBolsillos;
     protected String tipoRopa; //se puede hacer un instanceOf en vez de este atributo
 
+
     //CONSTRUCTOR
 
-    public Ropa(int codArt, String nombre, int precio, String marca, String descripcion, boolean activo, String imagen, int material, String talla, String color, String tipoCierre, boolean impermeable, String tipoManga, boolean estampada, String tipoPantalon, boolean tieneBolsillos, String tipoRopa) {
-        super(codArt, nombre, precio, marca, descripcion, activo, imagen, material);
+    public Ropa(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen,
+                String material, String talla, String color, String tipoCierre, boolean impermeable, String tipoManga,
+                boolean estampada, String tipoPantalon, boolean tieneBolsillos, String tipoRopa) {
+        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material);
         this.talla = talla;
         this.color = color;
         this.tipoCierre = tipoCierre;
@@ -106,7 +106,6 @@ public class Ropa extends Articulo {
         this.tipoRopa = tipoRopa;
     }
 
-
-    //METODOS
+//METODOS
 
 }

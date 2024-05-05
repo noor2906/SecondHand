@@ -1,40 +1,39 @@
 package com.example.tiendaropa.model;
 
-public abstract class Articulo {
+public class Articulo {
 
     //ATRIBUTOS
-    private int codArt;
+    private int codigo;
     private String nombre;
-    private int precio;
+    private float precio;
     private String marca;
     private String descripcion;
     private boolean activo;
     private String imagen;
-    private int material;
+    private String material;
+
 
 
     //CONSTRUCTOR
+    public Articulo(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo,
+                    String imagen, String material) {
 
-    public Articulo(int codArt, String nombre, int precio, String marca, String descripcion, boolean activo, String imagen, int material) {
-        this.codArt = codArt;
+        this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
         this.marca = marca;
         this.descripcion = descripcion;
         this.activo = activo;
         this.imagen = imagen;
-        this.material = material;
+        this.material = Material.obtenerDenominacionMaterial(codigo);
     }
 
-
-    //GET Y SET
-
-    public int getCodArt() {
-        return codArt;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setCodArt(int codArt) {
-        this.codArt = codArt;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {
@@ -45,11 +44,11 @@ public abstract class Articulo {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
@@ -85,15 +84,12 @@ public abstract class Articulo {
         this.imagen = imagen;
     }
 
-    public int getMaterial() {
+    public String getMaterial() {
         return material;
     }
 
-    public void setMaterial(int material) {
+    public void setMaterial(String material) {
         this.material = material;
     }
-
-
-    //METODOS
 
 }
