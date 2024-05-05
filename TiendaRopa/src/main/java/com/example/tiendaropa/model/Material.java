@@ -1,35 +1,50 @@
 package com.example.tiendaropa.model;
 
+import com.example.tiendaropa.ConexionBBDD;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 public class Material {
+    // METODO QUE RECIBE EL CODIGO DEL ARTICULO Y DEVUELVE UN STRING CON EL MATERIAL DEL ARTICULO
 
-    //ATRIBUTOS
-    private int cod_material;
-    private String denominacion;
+    //consulta a la BBDD donde sacamos el código del material
 
+    public static String obtenerDenominacionMaterial(int codigoArticulo){
 
-    //CONSTRUCTOR
-    public Material(int cod_material, String denominacion) {
-        this.cod_material = cod_material;
-        this.denominacion = denominacion;
+        ConexionBBDD conexion = new ConexionBBDD();
+        conexion.conectar();
+        conexion.crearSentencia();
+
+        ResultSet rs = conexion.ejecutarSentencia("select material.codigo from articulo, material " +
+                "where material.codigo = articulo.material and articulo.cod_art =" + codigoArticulo);
+        String denominacionMaterial = "";
+        int codigoMaterial = 0;
+
+        try{
+            while (rs.next()){
+                codigoMaterial = rs.getInt("codigo");
+
+                //switch donde asociamos cada codigo a un 'material' de tipo String
+
+                switch (codigoMaterial){
+                    case 1 -> denominacionMaterial = "Algodón";
+                    case 2 -> denominacionMaterial = "Poliéster";
+                    case 3 -> denominacionMaterial = "Seda";
+                    case 4 -> denominacionMaterial = "Cuero";
+                    case 5 -> denominacionMaterial = "Lana";
+                    case 6 -> denominacionMaterial = "Pana";
+                    case 7 -> denominacionMaterial = "Franela";
+                    case 8 -> denominacionMaterial = "Lino";
+                    case 9 -> denominacionMaterial = "Cachemira";
+                    case 10 -> denominacionMaterial = "Terciopelo";
+                }
+            }
+            conexion.cerrarConexion();
+        } catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+        return denominacionMaterial;
     }
-
-
-    //GET Y SET
-    public int getCod_material() {
-        return cod_material;
-    }
-
-    public void setCod_material(int cod_material) {
-        this.cod_material = cod_material;
-    }
-
-    public String getDenominacion() {
-        return denominacion;
-    }
-
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
-    //METODOS
 }

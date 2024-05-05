@@ -5,9 +5,8 @@ public class Bolso extends Accesorios {
 
     //CONSTRUCTOR
 
-
-    public Bolso(int codArt, String nombre, int precio, String marca, String descripcion, boolean activo, String imagen, int material, String estilo, boolean personalizado, int capacidad, String tipo_cierre, int talla, String tipo_suela) {
-        super(codArt, nombre, precio, marca, descripcion, activo, imagen, material, estilo, personalizado, capacidad, tipo_cierre, talla, tipo_suela);
+    public Bolso(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen, String material, String estilo, boolean personalizado, String tipo_cierre, int capacidad, int talla, String tipo_suela, String tipoAccesorio) {
+        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material, estilo, personalizado, tipo_cierre, capacidad, talla, tipo_suela, tipoAccesorio);
     }
 }
 
