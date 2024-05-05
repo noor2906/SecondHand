@@ -53,4 +53,47 @@ private Connection conexion = null;
         }
         return ok;
     }
+
+
+    // Mis métodos de Conexion a BBDD ----------------------------------------------------------------------------------
+
+    public void conectarBBDD() {
+        try{
+            conexion = DriverManager.getConnection("jdbc:mysql://127.0.0.1:4000/tienda_ropa", "root", "");
+            System.out.println("Conectado");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void cerrarConexion(){
+        try{
+            if(rs != null){ //si el resultado de la sentencia no es nulo, cerramos
+                rs.close();
+            }
+
+            if(sentenciaSQL != null) { //si la sentencia no es nula, cerramos
+                sentenciaSQL.close();
+            }
+
+            System.out.println("Cerrando correctamente...");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //crearSentencia() igual
+
+
+    public ResultSet ejecutarSentencia(String sentencia){
+        try{
+            // almacenamos en el resultset la sentencia que hemos creado
+            rs = sentenciaSQL.executeQuery(sentencia);
+            System.out.println("Ejecutando sentencia");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
+    }
+
 }
