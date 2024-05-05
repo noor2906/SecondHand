@@ -90,7 +90,7 @@
                </children>
             </HBox>
          </children></Pane>
-      <Button fx:id="btnLogin1" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="57.0" layoutY="132.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;" />
+      <Button fx:id="btnLogin1" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="57.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#mostrarLogin" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;" />
       <HBox layoutY="203.0" prefHeight="839.0" prefWidth="1440.0" spacing="100.0">
          <children>
             <ImageView fitHeight="840.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" />
@@ -221,7 +221,7 @@
       </Group>
       <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="btnTituloHeader" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" prefHeight="60.8" prefWidth="296.0" style="-fx-background-color: none;">
+            <Button fx:id="btnTituloHeader" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#mostrarHome" prefHeight="60.8" prefWidth="296.0" style="-fx-background-color: none;">
                <graphic>
                   <HBox>
                      <children>
@@ -283,7 +283,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="btnLogin" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1290.0" layoutY="24.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+            <Button fx:id="btnLogin" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1290.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#mostrarLogin" prefHeight="40.0" prefWidth="40.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
                <graphic>
                   <SVGPath content="M20 20C23.6834 20 26.6667 17.0167 26.6667 13.3333C26.6667 9.64999 23.6834 6.66666 20 6.66666C16.3167 6.66666 13.3334 9.64999 13.3334 13.3333C13.3334 17.0167 16.3167 20 20 20ZM20 23.3333C15.55 23.3333 6.66669 25.5667 6.66669 30V31.6667C6.66669 32.5833 7.41669 33.3333 8.33335 33.3333H31.6667C32.5834 33.3333 33.3334 32.5833 33.3334 31.6667V30C33.3334 25.5667 24.45 23.3333 20 23.3333Z" />
                </graphic>

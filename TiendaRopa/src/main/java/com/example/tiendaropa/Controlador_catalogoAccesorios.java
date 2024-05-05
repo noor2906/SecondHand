@@ -20,4 +20,40 @@ public class Controlador_catalogoAccesorios {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void mostrarHome(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_home_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarLogin(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_login_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarCarrito(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_carrito_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

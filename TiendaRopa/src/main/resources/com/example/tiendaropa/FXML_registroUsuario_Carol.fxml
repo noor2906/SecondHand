@@ -24,7 +24,7 @@
                         <Font name="Inter Bold" size="50.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
+                  <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#mostrarLogin" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
                      <graphic>
                         <Group>
                            <children>
