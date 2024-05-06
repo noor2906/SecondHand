@@ -1,6 +1,7 @@
 package com.example.tiendaropa;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.util.Duration;
 import javafx.scene.layout.Pane;
 
@@ -71,19 +72,19 @@ public class Controlador_home {
         stage.show();
     }
 
-    public void mostrarCatalogoRopa(MouseEvent event) throws IOException {
+    public void mostrarCatalogoRopa(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoRopa_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
     }
 
-    public void mostrarCatalogoAccesorios(MouseEvent event) throws IOException {
+    public void mostrarCatalogoAccesorios(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAcesorios_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAccesorios_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();

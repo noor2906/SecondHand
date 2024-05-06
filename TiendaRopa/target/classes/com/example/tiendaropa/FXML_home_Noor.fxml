@@ -16,7 +16,7 @@
                <children>
                   <HBox fillHeight="false" layoutX="15.0" prefHeight="928.0" prefWidth="1440.0">
                      <children>
-                        <ToggleButton fx:id="TbtnCatalogoRopa" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#mostrarCatalogoRopa" style="-fx-background-color: none;">
+                        <ToggleButton fx:id="tBtnCatalogoRopa" graphicTextGap="0.0" mnemonicParsing="false" onAction="#mostrarCatalogoRopa" style="-fx-background-color: none;">
                            <graphic>
                               <ImageView fitHeight="928.0" fitWidth="742.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -28,7 +28,7 @@
                               <Insets right="-1.0" />
                            </padding>
                         </ToggleButton>
-                        <ToggleButton fx:id="TbtnCatalogoAccesorios" mnemonicParsing="false" onMouseClicked="#mostrarCatalogoAccesorios" style="-fx-background-color: none;">
+                        <ToggleButton fx:id="tBtnCatalogoAccesorios" mnemonicParsing="false" onAction="#mostrarCatalogoAccesorios" style="-fx-background-color: none;">
                            <graphic>
                               <ImageView fitHeight="928.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
