@@ -202,11 +202,6 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
     //Cargamos la ropa en la pantalla
     public void cargarRopa(Ropa ropa) throws FileNotFoundException {
 
-        // Variable para checkear que esté bien
-        boolean check = true;
-
-
-
         //Propiedades de un artículo cualquiera ------------------------------------------------------------------------
 
         txtNombreProducto.setText(ropa.getNombre());
@@ -335,8 +330,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
             }
 
         } catch (Exception e) {
-            check = false;
-            System.out.println("Error en los propiedades");
+            System.out.println("Error en los propiedades ropa");
             throw new RuntimeException(e);
         }
     }
@@ -396,9 +390,6 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
 
     //Cargamos el accesorio en la pantalla
     public void cargarAccesorio(Accesorios accesorio) throws FileNotFoundException {
-
-        TextField tfParticulares = null;
-
 
         //Propiedades de un artículo cualquiera ------------------------------------------------------------------------
         txtNombreProducto.setText(accesorio.getNombre());
@@ -496,7 +487,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
             }
 
         } catch (Exception e) {
-            System.out.println("Error en los propiedades");
+            System.out.println("Error en los propiedades accesorios");
             throw new RuntimeException(e);
         }
 
