@@ -73,7 +73,7 @@
             </Text>
             <VBox alignment="BOTTOM_LEFT" layoutX="90.0" layoutY="32.0" prefHeight="151.0" prefWidth="175.0" spacing="6.0">
                <children>
-                  <Button fx:id="btnFAyuda" mnemonicParsing="false" style="-fx-background-color: white;">
+                  <Button fx:id="btnFAyuda" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: white;">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AYUDA">
                            <font>
@@ -82,7 +82,7 @@
                         </Text>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" style="-fx-background-color: white;">
+                  <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: white;">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="163.87107849121094">
                            <font>
@@ -91,7 +91,7 @@
                         </Text>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" style="-fx-background-color: white;">
+                  <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: white;">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
                            <font>
@@ -100,7 +100,7 @@
                         </Text>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnFDevoluciones" mnemonicParsing="false" style="-fx-background-color: white;">
+                  <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: white;">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
                            <font>
@@ -109,7 +109,7 @@
                         </Text>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnFEnvio" mnemonicParsing="false" style="-fx-background-color: white;">
+                  <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: white;">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
                            <font>
