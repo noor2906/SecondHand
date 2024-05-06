@@ -16,7 +16,7 @@
                <children>
                   <HBox fillHeight="false" layoutX="15.0" prefHeight="928.0" prefWidth="1440.0">
                      <children>
-                        <ToggleButton graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-color: none;">
+                        <ToggleButton fx:id="TbtnCatalogoRopa" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#mostrarCatalogoRopa" style="-fx-background-color: none;">
                            <graphic>
                               <ImageView fitHeight="928.0" fitWidth="742.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -28,7 +28,7 @@
                               <Insets right="-1.0" />
                            </padding>
                         </ToggleButton>
-                        <ToggleButton mnemonicParsing="false" style="-fx-background-color: none;">
+                        <ToggleButton fx:id="TbtnCatalogoAccesorios" mnemonicParsing="false" onMouseClicked="#mostrarCatalogoAccesorios" style="-fx-background-color: none;">
                            <graphic>
                               <ImageView fitHeight="928.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -159,7 +159,7 @@
                         </Button>
                         <VBox spacing="2.0">
                            <children>
-                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="170.27113342285156">
                                        <font>
@@ -168,7 +168,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
                                        <font>
@@ -177,7 +177,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
                                        <font>
@@ -186,7 +186,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                              <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
                                        <font>
@@ -228,7 +228,7 @@
                   </HBox>
                   <HBox layoutX="378.0" layoutY="214.5" prefHeight="20.0" prefWidth="717.0" spacing="8.0">
                      <children>
-                        <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Política de privacidad">
+                        <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de privacidad">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -244,7 +244,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Condiciones de compra">
+                        <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Condiciones de compra">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -257,7 +257,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Política de cookies">
+                        <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>

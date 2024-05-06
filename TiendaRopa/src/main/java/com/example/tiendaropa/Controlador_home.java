@@ -71,6 +71,24 @@ public class Controlador_home {
         stage.show();
     }
 
+    public void mostrarCatalogoRopa(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoRopa_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarCatalogoAccesorios(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAcesorios_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     /*// Esconde la pantalla del menú al inicio
 
     @FXML

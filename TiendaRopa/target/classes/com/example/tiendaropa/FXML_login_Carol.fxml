@@ -11,7 +11,7 @@
    <content>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1273.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
-            <ImageView fitHeight="1024.0" fitWidth="1440.0" layoutX="-9.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnVolverHome" fitHeight="1024.0" fitWidth="1440.0" layoutX="1.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/login.jpg" />
                </image></ImageView>
@@ -166,7 +166,7 @@
                         </Button>
                         <VBox spacing="2.0">
                            <children>
-                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="170.27113342285156">
                                        <font>
@@ -175,7 +175,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
                                        <font>
@@ -184,7 +184,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
                                        <font>
@@ -193,7 +193,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEnvio" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
                                        <font>
@@ -235,7 +235,7 @@
                   </HBox>
                   <HBox layoutX="378.0" layoutY="214.5" prefHeight="20.0" prefWidth="717.0" spacing="8.0">
                      <children>
-                        <Button fx:id="btnFPP" mnemonicParsing="false" style="-fx-background-color: none;" text="Política de privacidad">
+                        <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Política de privacidad">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -251,7 +251,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFCC" mnemonicParsing="false" style="-fx-background-color: none;" text="Condiciones de compra">
+                        <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Condiciones de compra">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -264,7 +264,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPC" mnemonicParsing="false" style="-fx-background-color: none;" text="Política de cookies">
+                        <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Política de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -277,7 +277,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPrefC" mnemonicParsing="false" style="-fx-background-color: none;" text="Preferencia de cookies">
+                        <Button fx:id="btnFPrefC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Preferencia de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -289,6 +289,11 @@
                   </HBox>
                </children>
             </Pane>
+            <Button fx:id="btnLogin_VolverHome" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1052.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#mostrarHome" scaleShape="false" style="-fx-background-color: none;" textFill="WHITE">
+               <graphic>
+                  <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" fill="WHITE" scaleX="1.5" scaleY="1.5" scaleZ="1.5" />
+               </graphic>
+            </Button>
          </children>
       </Pane>
    </content>
