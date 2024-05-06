@@ -47,4 +47,13 @@ public class Controlador_infoEmpleadoEditable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

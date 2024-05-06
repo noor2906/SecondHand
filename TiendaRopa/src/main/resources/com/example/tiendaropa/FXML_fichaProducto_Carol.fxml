@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.SVGPath?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<ScrollPane vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_fichaProducto">
+<ScrollPane vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_fichaProducto">
    <content>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -306,31 +298,51 @@
                   </Text>
                   <VBox alignment="BOTTOM_LEFT" layoutX="90.0" layoutY="32.0" prefHeight="151.0" prefWidth="175.0" spacing="6.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AYUDA">
-                           <font>
-                              <Font name="Inter Bold" size="18.0" />
-                           </font>
-                        </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="163.87107849121094">
-                           <font>
-                              <Font name="Inter Regular" size="16.0" />
-                           </font>
-                        </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
-                           <font>
-                              <Font name="Inter Regular" size="16.0" />
-                           </font>
-                        </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
-                           <font>
-                              <Font name="Inter Regular" size="16.0" />
-                           </font>
-                        </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
-                           <font>
-                              <Font name="Inter Regular" size="16.0" />
-                           </font>
-                        </Text>
+                        <Button fx:id="btnFAyuda" mnemonicParsing="false" style="-fx-background-color: white;">
+                           <graphic>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AYUDA">
+                                 <font>
+                                    <Font name="Inter Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" style="-fx-background-color: white;">
+                           <graphic>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="181.87107849121094">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" style="-fx-background-color: white;">
+                           <graphic>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnFDevoluciones" mnemonicParsing="false" style="-fx-background-color: white;">
+                           <graphic>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnFEnvio" mnemonicParsing="false" style="-fx-background-color: white;">
+                           <graphic>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
                      </children>
                   </VBox>
                   <HBox layoutX="531.0" layoutY="98.0" prefHeight="66.0" prefWidth="306.0" spacing="35.0">
@@ -357,11 +369,6 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <Text layoutX="378.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Política de privacidad  |  Condiciones de compra  |  Política de cookies  |  Preferencia de cookies" y="-5.0">
-                     <font>
-                        <Font name="Inter Regular" size="16.0" />
-                     </font>
-                  </Text>
                   <HBox alignment="CENTER" layoutX="1140.0" layoutY="90.0" prefHeight="46.0" prefWidth="232.0" spacing="15.0">
                      <children>
                         <SVGPath content="M24 0C10.7453 0 0 10.7453 0 24C0 35.255 7.74912 44.6995 18.2026 47.2934V31.3344H13.2538V24H18.2026V20.8397C18.2026 12.671 21.8995 8.8848 29.9194 8.8848C31.44 8.8848 34.0637 9.18336 35.137 9.48096V16.129C34.5706 16.0694 33.5866 16.0397 32.3645 16.0397C28.4294 16.0397 26.9088 17.5306 26.9088 21.4061V24H34.7482L33.4013 31.3344H26.9088V47.8243C38.7926 46.3891 48.001 36.2707 48.001 24C48 10.7453 37.2547 0 24 0Z" />
@@ -370,6 +377,15 @@
                         <SVGPath content="M24 0C10.7438 0 0 10.7438 0 24C0 34.1719 6.32812 42.8531 15.2531 46.35C15.0469 44.4469 14.85 41.5406 15.3375 39.4688C15.7781 37.5938 18.15 27.5437 18.15 27.5437C18.15 27.5437 17.4281 26.1094 17.4281 23.9813C17.4281 20.6438 19.3594 18.15 21.7687 18.15C23.8125 18.15 24.8063 19.6875 24.8063 21.5344C24.8063 23.5969 23.4937 26.6719 22.8187 29.5219C22.2562 31.9125 24.0187 33.8625 26.3719 33.8625C30.6375 33.8625 33.9187 29.3625 33.9187 22.875C33.9187 17.1281 29.7937 13.1063 23.8969 13.1063C17.0719 13.1063 13.0594 18.225 13.0594 23.5219C13.0594 25.5844 13.8562 27.7969 14.85 28.9969C15.0469 29.2312 15.075 29.4469 15.0187 29.6813C14.8406 30.4406 14.4281 32.0719 14.3531 32.4C14.25 32.8406 14.0063 32.9344 13.5469 32.7188C10.5469 31.3219 8.67188 26.9438 8.67188 23.4188C8.67188 15.8438 14.175 8.89688 24.525 8.89688C32.85 8.89688 39.3187 14.8313 39.3187 22.7625C39.3187 31.0312 34.1063 37.6875 26.8688 37.6875C24.4406 37.6875 22.1531 36.4219 21.3656 34.9313C21.3656 34.9313 20.1656 39.5156 19.875 40.6406C19.3312 42.7219 17.8687 45.3375 16.8937 46.9313C19.1437 47.625 21.525 48 24 48C37.2562 48 48 37.2562 48 24C48 10.7438 37.2562 0 24 0Z" />
                      </children>
                   </HBox>
+                  <Button fx:id="btnFPieFooter" layoutX="337.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: white;">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Política de privacidad  |  Condiciones de compra  |  Política de cookies  |  Preferencia de cookies">
+                           <font>
+                              <Font name="Inter Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
                </children>
             </Pane>
          </children>
