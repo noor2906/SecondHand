@@ -14,7 +14,7 @@ public class Material {
     public static String obtenerDenominacionMaterial(int codigoArticulo){
 
         ConexionBBDD conexion = new ConexionBBDD();
-        conexion.conectar();
+        conexion.conectarBBDD();
         conexion.crearSentencia();
 
         ResultSet rs = conexion.ejecutarSentencia("select material.codigo from articulo, material " +
@@ -41,7 +41,7 @@ public class Material {
                     case 10 -> denominacionMaterial = "Terciopelo";
                 }
             }
-            conexion.cerrarConexion();
+            conexion.desconectarBBDD();
         } catch (SQLException e){
             throw new RuntimeException(e);
         }

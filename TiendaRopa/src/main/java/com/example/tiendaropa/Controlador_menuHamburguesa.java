@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class Controlador_menuHamburguesa {
 
+    //BOTONES ----------------------------------------------------------------------------------------------------------
+
     // HEADER ----------------------------------------------------------------------------------------------------------
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -26,10 +26,10 @@ public class Controlador_login {
         boolean ok;
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
-        conn.conectar();
+        conn.conectarBBDD();
         conn.crearSentencia();
         ok=conn.login(user,pass);
-        conn.desconectar();
+        conn.desconectarBBDD();
         if (ok){
             mostrarHome(actionEvent);
         }else {
@@ -39,6 +39,8 @@ public class Controlador_login {
             a.show();
         }
     }
+
+
       public void mostrarHome(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -64,6 +66,9 @@ public class Controlador_login {
     public void limpiarContra(ActionEvent actionEvent) {
         txtContraLogin.clear();
     }
+
+
+    //BOTONES ----------------------------------------------------------------------------------------------------------
 
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

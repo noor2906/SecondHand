@@ -139,7 +139,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
             System.out.println("Inicio correcto");
 
 
-            conexion.cerrarConexion();
+            conexion.desconectarBBDD();
 
         } catch (Exception e) {
             throw new RuntimeException(e);

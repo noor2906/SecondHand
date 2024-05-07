@@ -20,11 +20,7 @@ import java.io.IOException;
 
 public class Controlador_home {
 
-    @FXML
-    private Button btnMenu;
-
- /*   @FXML
-    private Pane pantallaMenu;*/
+    //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
     public void mostrarMenu(MouseEvent event) throws IOException {
@@ -90,7 +86,7 @@ public class Controlador_home {
         stage.show();
     }
 
-    /*// Esconde la pantalla del menú al inicio
+    /*// Esconde la pantalla del menú al inicio - Intento de transición menu hamburguesa
 
     @FXML
     private void initialize() {

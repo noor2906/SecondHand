@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class Controlador_catalogoRopa {
 
+    //BOTONES ----------------------------------------------------------------------------------------------------------
+
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
