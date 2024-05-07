@@ -13,6 +13,18 @@ import java.io.IOException;
 
 public class Controlador_menuHamburguesa {
 
+    //BOTONES ----------------------------------------------------------------------------------------------------------
+
+    // HEADER ----------------------------------------------------------------------------------------------------------
+    public void mostrarHome(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_home_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     // ROPA ------------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón 'Ropa' del menú hamburguesa a la página de productos filtrados

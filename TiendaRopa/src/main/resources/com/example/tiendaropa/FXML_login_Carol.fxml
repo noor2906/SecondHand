@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.SVGPath?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_login">
+<ScrollPane hbarPolicy="NEVER" prefWidth="1430.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_login">
    <content>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: h;">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1273.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
-            <VBox alignment="TOP_CENTER" layoutX="343.0" layoutY="182.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="790.0" spacing="70.0" style="-fx-background-color: white;">
+            <ImageView fitHeight="1024.0" fitWidth="1440.0" layoutX="1.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/login.jpg" />
+               </image></ImageView>
+            <VBox alignment="TOP_CENTER" layoutX="456.0" layoutY="135.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="515.0" spacing="70.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="¡bienvenidx!">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="¡bienvenidx!">
                      <font>
-                        <Font name="System Bold" size="53.0" />
+                        <Font name="Inter Black" size="64.0" />
                      </font>
                   </Text>
-                  <VBox alignment="CENTER" prefHeight="352.0" prefWidth="421.0" spacing="35.0" style="-fx-background-color: white;">
+                  <VBox alignment="CENTER" prefHeight="352.0" prefWidth="421.0" spacing="35.0" style="-fx-background-color: none;">
                      <children>
                         <VBox alignment="CENTER" prefHeight="248.0" prefWidth="471.0" spacing="34.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="108.0" prefWidth="543.0" spacing="25.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="108.0" prefWidth="543.0" spacing="25.0">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DNI/ Correo electrónico:">
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI/ Correo electrónico:">
                                        <font>
                                           <Font name="Inter Light" size="28.0" />
                                        </font>
                                     </Text>
                                     <HBox alignment="CENTER" prefHeight="28.0">
                                        <children>
-                                          <TextField fx:id="txtDatoLogin" prefHeight="28.0" prefWidth="398.0" promptText="Escribe tus datos" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                          <TextField fx:id="txtDatoLogin" prefHeight="28.0" prefWidth="398.0" promptText="Escribe tus datos" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: white;">
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>
@@ -45,9 +43,9 @@
                                                 <Font name="Inter Regular" size="18.0" />
                                              </font>
                                           </TextField>
-                                          <Button fx:id="btnClear1" onAction="#limpiarUser" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                          <Button fx:id="btnClear1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onAction="#limpiarUser" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: none;" textFill="WHITE">
                                              <graphic>
-                                                <SVGPath fx:id="btnClear" content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                <SVGPath fx:id="btnClear" content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" fill="WHITE" />
                                              </graphic>
                                              <font>
                                                 <Font size="24.0" />
@@ -57,16 +55,16 @@
                                     </HBox>
                                  </children>
                               </VBox>
-                              <VBox alignment="CENTER" prefHeight="107.0" prefWidth="271.0" spacing="25.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="107.0" prefWidth="271.0" spacing="25.0">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:">
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:">
                                        <font>
                                           <Font name="Inter Light" size="28.0" />
                                        </font>
                                     </Text>
                                     <HBox alignment="CENTER" prefHeight="28.0">
                                        <children>
-                                          <TextField fx:id="txtContraLogin" prefHeight="28.0" prefWidth="398.0" promptText="Escribe tu contraseña" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                          <TextField fx:id="txtContraLogin" prefHeight="28.0" prefWidth="398.0" promptText="Escribe tu contraseña" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: white;">
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>
@@ -74,9 +72,9 @@
                                                 <Font name="Inter Regular" size="18.0" />
                                              </font>
                                           </TextField>
-                                          <Button fx:id="btnClear11" onAction="#limpiarContra" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                          <Button fx:id="btnClear11" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onAction="#limpiarContra" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: none;" textFill="WHITE">
                                              <graphic>
-                                                <SVGPath fx:id="btnClear2" content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                <SVGPath fx:id="btnClear2" content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" fill="WHITE" />
                                              </graphic>
                                              <font>
                                                 <Font size="24.0" />
@@ -90,12 +88,12 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="67.0" prefWidth="571.0" spacing="15.0">
                            <children>
-                              <Button fx:id="btnLogin" onAction="#login" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Iniciar sesión" textFill="WHITE">
+                              <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Iniciar sesión" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnContraOlvidada" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: white; -fx-background-radius: none;" text="¿Has olvidado la contraseña?">
+                              <Button fx:id="btnContraOlvidada" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: none;" text="¿Has olvidado la contraseña?">
                                  <font>
                                     <Font name="Inter Regular" size="15.0" />
                                  </font>
@@ -110,14 +108,14 @@
                         <Insets left="50.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="110.0" prefWidth="405.0" spacing="35.0" style="-fx-background-color: white;">
+                  <VBox alignment="CENTER" prefHeight="110.0" prefWidth="405.0" spacing="35.0" style="-fx-background-color: none;">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="¿Necesitas una cuenta?">
                            <font>
                               <Font name="Inter Bold" size="24.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnRegistro" onMouseClicked="#mostrarRegistro" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Regístrate" textFill="WHITE">
+                        <Button fx:id="btnRegistro" mnemonicParsing="false" onMouseClicked="#mostrarRegistro" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: black; -fx-background-radius: none;" text="Regístrate" textFill="WHITE">
                            <font>
                               <Font name="Inter Bold" size="18.0" />
                            </font>
@@ -157,7 +155,7 @@
                   </HBox>
                   <VBox alignment="BOTTOM_LEFT" layoutX="84.0" layoutY="34.0" prefHeight="151.0" prefWidth="175.0" spacing="5.0">
                      <children>
-                        <Button fx:id="btnFAyuda" mnemonicParsing="false" style="-fx-background-color: none;">
+                        <Button fx:id="btnFAyuda" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                            <graphic>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AYUDA">
                                  <font>
@@ -168,7 +166,7 @@
                         </Button>
                         <VBox spacing="2.0">
                            <children>
-                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="170.27113342285156">
                                        <font>
@@ -177,7 +175,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
                                        <font>
@@ -186,7 +184,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
                                        <font>
@@ -195,7 +193,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEnvio" mnemonicParsing="false" style="-fx-background-color: none;">
+                              <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
                                        <font>
@@ -212,17 +210,17 @@
                      <children>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../MasterCard.png" />
+                              <Image url="@images/MasterCard.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../PayPal.png" />
+                              <Image url="@images/PayPal.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="66.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Visa.png" />
+                              <Image url="@images/Visa.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -237,7 +235,7 @@
                   </HBox>
                   <HBox layoutX="378.0" layoutY="214.5" prefHeight="20.0" prefWidth="717.0" spacing="8.0">
                      <children>
-                        <Button fx:id="btnFPP" mnemonicParsing="false" style="-fx-background-color: none;" text="Política de privacidad">
+                        <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de privacidad">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -253,7 +251,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFCC" mnemonicParsing="false" style="-fx-background-color: none;" text="Condiciones de compra">
+                        <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Condiciones de compra">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -266,7 +264,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPC" mnemonicParsing="false" style="-fx-background-color: none;" text="Política de cookies">
+                        <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -279,7 +277,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPrefC" mnemonicParsing="false" style="-fx-background-color: none;" text="Preferencia de cookies">
+                        <Button fx:id="btnFPrefC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Preferencia de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -291,6 +289,11 @@
                   </HBox>
                </children>
             </Pane>
+            <Button fx:id="btnVolverHome" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1052.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#mostrarVolverHome" scaleShape="false" style="-fx-background-color: none;" textFill="WHITE">
+               <graphic>
+                  <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" fill="WHITE" scaleX="1.5" scaleY="1.5" scaleZ="1.5" />
+               </graphic>
+            </Button>
          </children>
       </Pane>
    </content>

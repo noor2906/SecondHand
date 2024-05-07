@@ -22,7 +22,7 @@
                   <Font name="System Bold" size="50.0" />
                </font>
             </Text>
-            <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
+            <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#mostrarLogin" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
                <graphic>
                   <Group>
                      <children>
@@ -40,7 +40,7 @@
                   </Group>
                </graphic>
             </Button>
-            <Button fx:id="btnMenu" onMouseClicked="#mostrarMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
+            <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
                <graphic>
                   <Group>
                      <children>
@@ -518,15 +518,5 @@
             </VBox>
          </children>
       </VBox>
-      <Button fx:id="btnLogin11" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1016.0" layoutY="124.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" scaleShape="false" style="-fx-background-color: grey; -fx-effect: null;" text="Guardar Cambios" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnLogin111" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="798.0" layoutY="124.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" scaleShape="false" style="-fx-background-color: grey; -fx-effect: null;" text="Editar usuario" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
    </children>
 </Pane>

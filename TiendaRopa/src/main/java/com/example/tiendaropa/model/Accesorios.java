@@ -1,5 +1,4 @@
 package com.example.tiendaropa.model;
-import java.util.List;
 
 public class Accesorios extends Articulo {
 
@@ -7,30 +6,34 @@ public class Accesorios extends Articulo {
     protected String estilo;
     protected boolean personalizado;
 
+    protected String tipoAccesorio;
+
     //Atributos bolso
     private int capacidad;
-    private String tipo_cierre;
+    private String tipoCierre;
 
     //Atributo zapatos
     private int talla;
-    private String tipo_suela;
+    private String tipoSuela;
 
 
     //CONSTRUCTOR
 
-    public Accesorios(int codArt, String nombre, int precio, String marca, String descripcion, boolean activo, String imagen, int material, String estilo, boolean personalizado, int capacidad, String tipo_cierre, int talla, String tipo_suela) {
-        super(codArt, nombre, precio, marca, descripcion, activo, imagen, material);
+    public Accesorios(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo,
+                      String imagen, String material, String estilo, boolean personalizado, String tipo_cierre,
+                      int capacidad, int talla, String tipo_suela, String tipoAccesorio) {
+        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material);
         this.estilo = estilo;
         this.personalizado = personalizado;
+        this.tipoCierre = tipo_cierre;
         this.capacidad = capacidad;
-        this.tipo_cierre = tipo_cierre;
+        this.tipoSuela = tipo_suela;
         this.talla = talla;
-        this.tipo_suela = tipo_suela;
+        this.tipoAccesorio = tipoAccesorio;
     }
 
 
     //GET Y SET
-
     public String getEstilo() {
         return estilo;
     }
@@ -47,6 +50,14 @@ public class Accesorios extends Articulo {
         this.personalizado = personalizado;
     }
 
+    public String getTipoAccesorio() {
+        return tipoAccesorio;
+    }
+
+    public void setTipoAccesorio(String tipoAccesorio) {
+        this.tipoAccesorio = tipoAccesorio;
+    }
+
     public int getCapacidad() {
         return capacidad;
     }
@@ -55,12 +66,12 @@ public class Accesorios extends Articulo {
         this.capacidad = capacidad;
     }
 
-    public String getTipo_cierre() {
-        return tipo_cierre;
+    public String getTipoCierre() {
+        return tipoCierre;
     }
 
-    public void setTipo_cierre(String tipo_cierre) {
-        this.tipo_cierre = tipo_cierre;
+    public void setTipoCierre(String tipoCierre) {
+        this.tipoCierre = tipoCierre;
     }
 
     public int getTalla() {
@@ -71,12 +82,12 @@ public class Accesorios extends Articulo {
         this.talla = talla;
     }
 
-    public String getTipo_suela() {
-        return tipo_suela;
+    public String getTipoSuela() {
+        return tipoSuela;
     }
 
-    public void setTipo_suela(String tipo_suela) {
-        this.tipo_suela = tipo_suela;
+    public void setTipoSuela(String tipoSuela) {
+        this.tipoSuela = tipoSuela;
     }
 
 

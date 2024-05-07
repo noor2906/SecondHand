@@ -1,6 +1,7 @@
 package com.example.tiendaropa;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.util.Duration;
 import javafx.scene.layout.Pane;
 
@@ -19,11 +20,7 @@ import java.io.IOException;
 
 public class Controlador_home {
 
-    @FXML
-    private Button btnMenu;
-
- /*   @FXML
-    private Pane pantallaMenu;*/
+    //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
     public void mostrarMenu(MouseEvent event) throws IOException {
@@ -35,7 +32,61 @@ public class Controlador_home {
         stage.show();
     }
 
-    /*// Esconde la pantalla del menú al inicio
+    public void mostrarHome(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_home_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarLogin(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_login_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarCarrito(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_carrito_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarCatalogoRopa(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarCatalogoAccesorios(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAccesorios_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    /*// Esconde la pantalla del menú al inicio - Intento de transición menu hamburguesa
 
     @FXML
     private void initialize() {
