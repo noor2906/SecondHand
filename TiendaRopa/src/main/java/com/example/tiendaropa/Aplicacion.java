@@ -17,11 +17,7 @@ public class Aplicacion extends Application {
         stage.setTitle("Second Hand - Noor | Carolina | Verónica");
         stage.setScene(scene);
         stage.show();
-        try {
-            Departamento.rellenarMapaDpto();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        try {Departamento.rellenarMapaDpto();} catch (SQLException e) {throw new RuntimeException(e);}
     }
 
 

@@ -153,9 +153,8 @@ public class ConexionBBDD {
         crearSentencia();
         rs=ejecutarSQL("select * from departamento");
         while (rs.next()) {
-            int dpto = rs.getInt("codigo");
             departamento = new Departamento(rs.getInt("codigo"), rs.getString("nombre"));
-            mapaDepartamentos.put(dpto,departamento);
+            mapaDepartamentos.put(rs.getInt("codigo"),departamento);
         }
         desconectarBBDD();
         return mapaDepartamentos;
