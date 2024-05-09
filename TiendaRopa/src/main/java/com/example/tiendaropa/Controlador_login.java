@@ -1,5 +1,6 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Controlador_login {
-  private ConexionBBDD conn = new ConexionBBDD();
+    private ConexionBBDD conn = new ConexionBBDD();
     @FXML
     private TextField txtContraLogin;
     @FXML
@@ -23,15 +24,16 @@ public class Controlador_login {
 
     public void login(ActionEvent actionEvent) throws IOException {
         Alert a = new Alert(Alert.AlertType.NONE);
-        boolean ok;
+        Usuario usuario;
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
         conn.conectarBBDD();
         conn.crearSentencia();
-        ok=conn.login(user,pass);
+        usuario=conn.login(user,pass);
         conn.desconectarBBDD();
-        if (ok){
+        if (usuario!=null){
             mostrarHome(actionEvent);
+            System.out.println(usuario.toString()); //! Borrar más adelante --> Ver si el usuario se ha creado correctamente
         }else {
             a.setAlertType(Alert.AlertType.INFORMATION);
             a.setHeaderText(null);

@@ -1,5 +1,11 @@
 package com.example.tiendaropa;
+import com.example.tiendaropa.model.Cliente;
+import com.example.tiendaropa.model.Departamento;
+import com.example.tiendaropa.model.Empleado;
+import com.example.tiendaropa.model.Usuario;
+
 import java.sql.*;
+import java.util.HashMap;
 
 public class ConexionBBDD {
 
@@ -46,11 +52,11 @@ public class ConexionBBDD {
 
     //Método para ejecutar la sentencia creada de la BBDD - Noor
 
-    public ResultSet ejecutarSentencia(String sentencia) {
+    public ResultSet ejecutarSQL(String sql) {
         try {
             // almacenamos en el resultset la sentencia que hemos creado
-            rs = sentenciaSQL.executeQuery(sentencia);
-            System.out.println("Ejecutando sentencia");
+            rs = sentenciaSQL.executeQuery(sql);
+            System.out.println("Sentencia ejecutada");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -73,7 +79,7 @@ public class ConexionBBDD {
     //Método para desconectar de la BBDD - Noor
 
 
-    public void desconectarBBDD(){
+/*    public void desconectar(){
         try{
             if(rs != null){ //si el resultado de la sentencia no es nulo, cerramos
                 rs.close();
@@ -87,24 +93,72 @@ public class ConexionBBDD {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }*/
+
+    public void desconectarBBDD(){
+        try { rs.close(); } catch (Exception e) {System.out.println("rs no se ha cerrado");}
+        try { sentenciaSQL.close(); } catch (Exception e) { System.out.println("Sentencia no se ha cerrado");}
+        try { conexion.close();System.out.println("Conexión cerrada!"); } catch (Exception e) { System.out.println("Conexión no se ha cerrado"); }
     }
 
-
     //LOGIN ------------------------------------------------------------------------------------------------------------
-    public boolean login(String user, String pass){
-        boolean ok = false;
+    public Usuario login(String user, String pass){
+        Usuario usuario = null;
+        /*        boolean ok = false;*/
         try {
             if (user != null && pass != null) {
-                String sql = "select * from cliente where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'";
-                rs = sentenciaSQL.executeQuery(sql);
+                rs = ejecutarSQL("select * from cliente where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'");
                 if (rs.next()) {
-                    ok=true;
+                    usuario = new Cliente(rs.getString("dni"),
+                            rs.getString("nombre"),
+                            rs.getString("apellidos"),
+                            rs.getString("telefono"),
+                            rs.getString("f_nacimiento"),
+                            rs.getString("email"),
+                            rs.getString("pass"),
+                            rs.getBoolean("activo"),
+                            rs.getString("direccion"),
+                            rs.getBoolean("tarjeta_fidelizacion"),
+                            rs.getFloat("saldo_cuenta"),
+                            rs.getString("dir_envio"),
+                            rs.getInt("num_pedidos")
+                    );
+                }else {
+                    rs = ejecutarSQL("select * from empleado where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'");
+                    if (rs.next()) {
+
+                        usuario = new Empleado(rs.getString("dni"),
+                                rs.getString("nombre"),
+                                rs.getString("apellidos"),
+                                rs.getString("telefono"),
+                                rs.getString("f_nacimiento"),
+                                rs.getString("email"),
+                                rs.getString("pass"),
+                                rs.getBoolean("activo"),
+                                rs.getString("direccion"),
+                                rs.getBoolean("tiene_privilegios"),
+                                Departamento.seleccionarDpto(rs.getInt("dpto"))
+                        );
+                    }
                 }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return ok;
+        return usuario;
+    }
+    public HashMap<Integer,Departamento> crearDepartamentos(HashMap<Integer,Departamento> mapaDepartamentos) throws SQLException {
+        Departamento departamento = null;
+        conectarBBDD();
+        crearSentencia();
+        rs=ejecutarSQL("select * from departamento");
+        while (rs.next()) {
+            int dpto = rs.getInt("codigo");
+            departamento = new Departamento(rs.getInt("codigo"), rs.getString("nombre"));
+            mapaDepartamentos.put(dpto,departamento);
+        }
+        desconectarBBDD();
+        return mapaDepartamentos;
     }
 
 

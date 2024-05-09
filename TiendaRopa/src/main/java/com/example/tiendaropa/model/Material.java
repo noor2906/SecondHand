@@ -17,7 +17,7 @@ public class Material {
         conexion.conectarBBDD();
         conexion.crearSentencia();
 
-        ResultSet rs = conexion.ejecutarSentencia("select material.codigo from articulo, material " +
+        ResultSet rs = conexion.ejecutarSQL("select material.codigo from articulo, material " +
                 "where material.codigo = articulo.material and articulo.cod_art =" + codigoArticulo);
         String denominacionMaterial = "";
         int codigoMaterial = 0;

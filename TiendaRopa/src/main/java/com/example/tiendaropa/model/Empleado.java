@@ -29,4 +29,22 @@ public class Empleado extends Usuario{
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
+
+    //! BORRAR más adelante
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "tienePrivilegios=" + tienePrivilegios +
+                ", departamento=" + departamento +
+                ", dni='" + dni + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", fNacimiento='" + fNacimiento + '\'' +
+                ", e_mail='" + e_mail + '\'' +
+                ", pass='" + pass + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", activo=" + activo +
+                '}';
+    }
 }

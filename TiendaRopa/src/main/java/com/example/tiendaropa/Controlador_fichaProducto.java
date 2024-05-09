@@ -131,7 +131,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
 
             //Consulta a la BBDD ARTÍCULO  -----------------------------------------------------------------------------
 
-            ResultSet rs = conexion.ejecutarSentencia("select articulo.*, accesorio.* from accesorio join articulo " +
+            ResultSet rs = conexion.ejecutarSQL("select articulo.*, accesorio.* from accesorio join articulo " +
                     "on accesorio.cod_art = articulo.cod_art where articulo.cod_art = 20");
             recogerAccesorio(rs);
 
