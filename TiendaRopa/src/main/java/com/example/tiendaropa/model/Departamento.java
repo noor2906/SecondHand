@@ -1,6 +1,7 @@
 package com.example.tiendaropa.model;
 
 import com.example.tiendaropa.ConexionBBDD;
+import com.example.tiendaropa.ConsultasBBDD;
 
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -36,8 +37,8 @@ public class Departamento {
         this.nombre = nombre;
     }
     public static void rellenarMapaDpto() throws SQLException {
-        ConexionBBDD conn = new ConexionBBDD();
-        mapaDepartamentos =conn.crearDepartamentos(mapaDepartamentos);
+       ConsultasBBDD consulta = new ConsultasBBDD();
+        mapaDepartamentos =consulta.crearDepartamentos(mapaDepartamentos);
     }
     public static Departamento seleccionarDpto(int id){
         return mapaDepartamentos.get(id);

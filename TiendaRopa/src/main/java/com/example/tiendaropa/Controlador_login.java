@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Controlador_login {
-    private ConexionBBDD conn = new ConexionBBDD();
+    private ConsultasBBDD consulta = new ConsultasBBDD();
     @FXML
     private TextField txtContraLogin;
     @FXML
@@ -27,10 +27,7 @@ public class Controlador_login {
         Usuario usuario;
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
-        conn.conectarBBDD();
-        conn.crearSentencia();
-        usuario=conn.login(user,pass);
-        conn.desconectarBBDD();
+        usuario=consulta.login(user,pass);
         if (usuario!=null){
             mostrarHome(actionEvent);
             System.out.println(usuario.toString()); //! Borrar más adelante --> Ver si el usuario se ha creado correctamente

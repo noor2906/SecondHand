@@ -62,7 +62,11 @@ public class ConexionBBDD {
         }
         return rs;
     }
-
+    public void desconectarBBDD(){
+        try { rs.close(); } catch (Exception e) {System.out.println("rs no se ha cerrado");}
+        try { sentenciaSQL.close(); } catch (Exception e) { System.out.println("Sentencia no se ha cerrado");}
+        try { conexion.close();System.out.println("Conexión cerrada!"); } catch (Exception e) { System.out.println("Conexión no se ha cerrado"); }
+    }
 
 
    /* //Método especifico para crear para conectar a la BBDD - Verónica (no se estaba usando)
@@ -94,75 +98,6 @@ public class ConexionBBDD {
             throw new RuntimeException(e);
         }
     }*/
-
-    public void desconectarBBDD(){
-        try { rs.close(); } catch (Exception e) {System.out.println("rs no se ha cerrado");}
-        try { sentenciaSQL.close(); } catch (Exception e) { System.out.println("Sentencia no se ha cerrado");}
-        try { conexion.close();System.out.println("Conexión cerrada!"); } catch (Exception e) { System.out.println("Conexión no se ha cerrado"); }
-    }
-
-    //LOGIN ------------------------------------------------------------------------------------------------------------
-    public Usuario login(String user, String pass){
-        Usuario usuario = null;
-        /*        boolean ok = false;*/
-        try {
-            if (user != null && pass != null) {
-                rs = ejecutarSQL("select * from cliente where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'");
-                if (rs.next()) {
-                    usuario = new Cliente(rs.getString("dni"),
-                            rs.getString("nombre"),
-                            rs.getString("apellidos"),
-                            rs.getString("telefono"),
-                            rs.getString("f_nacimiento"),
-                            rs.getString("email"),
-                            rs.getString("pass"),
-                            rs.getBoolean("activo"),
-                            rs.getString("direccion"),
-                            rs.getBoolean("tarjeta_fidelizacion"),
-                            rs.getFloat("saldo_cuenta"),
-                            rs.getString("dir_envio"),
-                            rs.getInt("num_pedidos")
-                    );
-                }else {
-                    rs = ejecutarSQL("select * from empleado where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'");
-                    if (rs.next()) {
-
-                        usuario = new Empleado(rs.getString("dni"),
-                                rs.getString("nombre"),
-                                rs.getString("apellidos"),
-                                rs.getString("telefono"),
-                                rs.getString("f_nacimiento"),
-                                rs.getString("email"),
-                                rs.getString("pass"),
-                                rs.getBoolean("activo"),
-                                rs.getString("direccion"),
-                                rs.getBoolean("tiene_privilegios"),
-                                Departamento.seleccionarDpto(rs.getInt("dpto"))
-                        );
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return usuario;
-    }
-    public HashMap<Integer,Departamento> crearDepartamentos(HashMap<Integer,Departamento> mapaDepartamentos) throws SQLException {
-        Departamento departamento = null;
-        conectarBBDD();
-        crearSentencia();
-        rs=ejecutarSQL("select * from departamento");
-        while (rs.next()) {
-            departamento = new Departamento(rs.getInt("codigo"), rs.getString("nombre"));
-            mapaDepartamentos.put(rs.getInt("codigo"),departamento);
-        }
-        desconectarBBDD();
-        return mapaDepartamentos;
-    }
-
-
-
-
 
 
 /*
