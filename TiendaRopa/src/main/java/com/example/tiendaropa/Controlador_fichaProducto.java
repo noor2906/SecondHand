@@ -1,5 +1,6 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.Conexiones.ConexionBBDD;
 import com.example.tiendaropa.model.Accesorios;
 import com.example.tiendaropa.model.Ropa;
 import javafx.fxml.FXML;

@@ -1,4 +1,4 @@
-package com.example.tiendaropa;
+package com.example.tiendaropa.Conexiones;
 
 import com.example.tiendaropa.model.*;
 
