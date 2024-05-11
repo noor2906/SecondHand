@@ -1,6 +1,7 @@
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.model.Departamento;
+import com.example.tiendaropa.model.Material;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,7 +18,10 @@ public class Aplicacion extends Application {
         stage.setTitle("Second Hand - Noor | Carolina | Verónica");
         stage.setScene(scene);
         stage.show();
+
+        //Cargamos los departamentos, materiales (falta método de pago)
         try {Departamento.rellenarMapaDpto();} catch (SQLException e) {throw new RuntimeException(e);}
+        try {Material.rellenarMapaMateriales();} catch (SQLException e) {throw new RuntimeException(e);}
     }
 
 

@@ -1,9 +1,6 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.model.Cliente;
-import com.example.tiendaropa.model.Departamento;
-import com.example.tiendaropa.model.Empleado;
-import com.example.tiendaropa.model.Usuario;
+import com.example.tiendaropa.model.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -74,6 +71,23 @@ public class ConsultasBBDD {
         }
         conn.desconectarBBDD();
         return mapaDepartamentos;
+    }
+
+    public HashMap<Integer,Material> crearMateriales(HashMap<Integer, Material> mapaMateriales) throws SQLException {
+        ConexionBBDD con = new ConexionBBDD();
+        ResultSet rs;
+        Material material = null;
+
+        con.conectarBBDD();
+        con.crearSentencia();
+        rs=con.ejecutarSQL("select * from material");
+        while (rs.next()) {
+            material = new Material(rs.getInt("codigo"), rs.getString("denominacion"));
+
+            mapaMateriales.put(rs.getInt("codigo"),material);
+        }
+        con.desconectarBBDD();
+        return mapaMateriales;
     }
 
 }

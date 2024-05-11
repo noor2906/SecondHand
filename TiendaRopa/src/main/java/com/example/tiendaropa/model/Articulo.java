@@ -25,7 +25,7 @@ public class Articulo {
         this.descripcion = descripcion;
         this.activo = activo;
         this.imagen = imagen;
-        this.material = Material.obtenerDenominacionMaterial(codigo);
+        this.material = material;
     }
 
     public int getCodigo() {
