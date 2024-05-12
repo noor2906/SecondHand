@@ -2,9 +2,12 @@ package com.example.tiendaropa.Conexiones;
 
 import com.example.tiendaropa.model.*;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class ConsultasBBDD {
     //LOGIN ------------------------------------------------------------------------------------------------------------
@@ -88,6 +91,32 @@ public class ConsultasBBDD {
         }
         con.desconectarBBDD();
         return mapaMateriales;
+    }
+
+    public List<Articulo> consultaArticulos(List<Articulo> arrayArticulos) throws SQLException {
+        ConexionBBDD con = new ConexionBBDD();
+        ResultSet rs;
+
+        con.conectarBBDD();
+        con.crearSentencia();
+        rs = con.ejecutarSQL("SELECT * FROM articulo");
+
+        while (rs.next()) {
+            Articulo articulo = new Articulo(
+                    rs.getInt("cod_art"),
+                    rs.getString("nombre"),
+                    rs.getFloat("precio"),
+                    rs.getString("marca"),
+                    rs.getString("descripcion"),
+                    rs.getBoolean("activo"),
+                    rs.getString("imagen"),
+                    Material.seleccionarMaterial(rs.getInt("material"))
+            );
+            arrayArticulos.add(articulo);
+        }
+
+        con.desconectarBBDD();
+        return arrayArticulos;
     }
 
 }

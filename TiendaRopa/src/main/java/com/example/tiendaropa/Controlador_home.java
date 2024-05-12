@@ -71,7 +71,7 @@ public class Controlador_home {
     public void mostrarCatalogoRopa(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -80,7 +80,7 @@ public class Controlador_home {
     public void mostrarCatalogoAccesorios(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAccesorios_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
