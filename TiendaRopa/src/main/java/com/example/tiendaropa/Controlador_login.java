@@ -1,5 +1,6 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

@@ -5,4 +5,6 @@ module com.example.tiendaropa {
 
     opens com.example.tiendaropa to javafx.fxml;
     exports com.example.tiendaropa;
+    exports com.example.tiendaropa.Conexiones;
+    opens com.example.tiendaropa.Conexiones to javafx.fxml;
 }

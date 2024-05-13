@@ -17,7 +17,7 @@ public class Ropa extends Articulo {
     //CONSTRUCTOR
 
     public Ropa(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen,
-                String material, String talla, String color, String tipoCierre, boolean impermeable, String tipoManga,
+                Material material, String talla, String color, String tipoCierre, boolean impermeable, String tipoManga,
                 boolean estampada, String tipoPantalon, boolean tieneBolsillos, String tipoRopa) {
         super(codigo, nombre, precio, marca, descripcion, activo, imagen, material);
         this.talla = talla;

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="651.0" maxWidth="401.0" minHeight="651.0" minWidth="401.0" prefHeight="651.0" prefWidth="401.0" spacing="20.0" style="-fx-background-color: #F6F6F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_itemCatalogo">
+   <children>
+      <Button fx:id="btnImagen1" ellipsisString="" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="530.0" prefWidth="822.0" style="-fx-background-color: NONE;" textAlignment="CENTER">
+         <padding>
+            <Insets left="-12.0" right="-12.0" />
+         </padding>
+         <graphic>
+            <ImageView fx:id="imgItemCatalogo" fitHeight="522.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Button>
+      <VBox prefHeight="191.0" prefWidth="401.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="22.0" prefWidth="401.0">
+               <children>
+                  <TextField fx:id="txtfNombreItemCatalogo" editable="false" prefHeight="36.0" prefWidth="366.0" style="-fx-background-color: none;" text="Nombre del producto">
+                     <font>
+                        <Font name="Inter Regular" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="362.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER" spacing="2.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="€">
+                           <font>
+                              <Font name="Inter Regular" size="36.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtfPrecioItemCatalogo" editable="false" prefHeight="68.0" prefWidth="170.0" style="-fx-background-color: none;" text="0">
+                           <font>
+                              <Font name="Inter Black" size="36.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnCarritoImg1" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: none; -fx-background-radius: none;">
+                     <graphic>
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="98.0" spacing="15.0" style="-fx-background-color: black;">
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <SVGPath content="M22.5 16.25H16.25V22.5C16.25 23.1875 15.6875 23.75 15 23.75C14.3125 23.75 13.75 23.1875 13.75 22.5V16.25H7.5C6.8125 16.25 6.25 15.6875 6.25 15C6.25 14.3125 6.8125 13.75 7.5 13.75H13.75V7.5C13.75 6.8125 14.3125 6.25 15 6.25C15.6875 6.25 16.25 6.8125 16.25 7.5V13.75H22.5C23.1875 13.75 23.75 14.3125 23.75 15C23.75 15.6875 23.1875 16.25 22.5 16.25Z" fill="WHITE" />
+                              <SVGPath content="M8.75 22.5C7.375 22.5 6.2625 23.625 6.2625 25C6.2625 26.375 7.375 27.5 8.75 27.5C10.125 27.5 11.25 26.375 11.25 25C11.25 23.625 10.125 22.5 8.75 22.5ZM1.25 3.75C1.25 4.4375 1.8125 5 2.5 5H3.75L8.25 14.4875L6.5625 17.5375C5.65 19.2125 6.85 21.25 8.75 21.25H22.5C23.1875 21.25 23.75 20.6875 23.75 20C23.75 19.3125 23.1875 18.75 22.5 18.75H8.75L10.125 16.25H19.4375C20.375 16.25 21.2 15.7375 21.625 14.9625L26.1 6.85C26.5625 6.025 25.9625 5 25.0125 5H6.5125L5.675 3.2125C5.475 2.775 5.025 2.5 4.55 2.5H2.5C1.8125 2.5 1.25 3.0625 1.25 3.75V3.75ZM21.25 22.5C19.875 22.5 18.7625 23.625 18.7625 25C18.7625 26.375 19.875 27.5 21.25 27.5C22.625 27.5 23.75 26.375 23.75 25C23.75 23.625 22.625 22.5 21.25 22.5Z" fill="WHITE" />
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</VBox>

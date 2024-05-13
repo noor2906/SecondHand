@@ -1,6 +1,8 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.Conexiones.ConexionBBDD;
 import com.example.tiendaropa.model.Accesorios;
+import com.example.tiendaropa.model.Material;
 import com.example.tiendaropa.model.Ropa;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -168,7 +170,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
                 int codArt = rs.getInt("cod_art");
                 String imagen  = rs.getString("imagen");
                 boolean activo  = rs.getBoolean("activo");
-                String material  = rs.getString("material");
+                Material material = Material.seleccionarMaterial(rs.getInt("material"));
 
 
                 //Propiedades ropa
@@ -231,7 +233,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
 
         //Propiedades de la ropa ---------------------------------------------------------------------------------------
 
-        String [] propiedadesRopa = {ropa.getMaterial(), ropa.getTalla(), ropa.getColor(), ropa.getTipoCierre()};
+        String [] propiedadesRopa = {String.valueOf(ropa.getMaterial()), ropa.getTalla(), ropa.getColor(), ropa.getTipoCierre()};
 
         hBoxPropiedadesArticulo.setSpacing(10);
 
@@ -356,7 +358,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
                 String marca = rs.getString("marca");
                 String imagen  = rs.getString("imagen");
                 boolean activo  = rs.getBoolean("activo");
-                String material  = rs.getString("material");
+                Material material = Material.seleccionarMaterial(rs.getInt("material"));
 
 
                 //Propiedades accesorio
@@ -426,7 +428,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
         }
 
 
-        String [] propiedadesAccesorio = {accesorio.getMaterial(), accesorio.getEstilo(), personalizado};
+        String [] propiedadesAccesorio = {String.valueOf(accesorio.getMaterial()), accesorio.getEstilo(), personalizado};
 
         hBoxPropiedadesArticulo.setSpacing(10);
 

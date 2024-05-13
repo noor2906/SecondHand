@@ -10,13 +10,17 @@ public class Articulo {
     private String descripcion;
     private boolean activo;
     private String imagen;
-    private String material;
+    private Material material;
 
 
 
-    //CONSTRUCTOR
+    //CONSTRUCTORES ----------------------------------------------------------------------------------------------------
+
+    public Articulo(){};
+
+
     public Articulo(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo,
-                    String imagen, String material) {
+                    String imagen, Material material) {
 
         this.codigo = codigo;
         this.nombre = nombre;
@@ -25,8 +29,12 @@ public class Articulo {
         this.descripcion = descripcion;
         this.activo = activo;
         this.imagen = imagen;
-        this.material = Material.obtenerDenominacionMaterial(codigo);
+        this.material = material;
     }
+
+
+
+    //GETTERS Y SETTERS ------------------------------------------------------------------------------------------------
 
     public int getCodigo() {
         return codigo;
@@ -84,12 +92,13 @@ public class Articulo {
         this.imagen = imagen;
     }
 
-    public String getMaterial() {
+    public Material getMaterial() {
         return material;
     }
 
-    public void setMaterial(String material) {
+    public void setMaterial(Material material) {
         this.material = material;
     }
+
 
 }

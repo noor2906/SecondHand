@@ -1,7 +1,6 @@
 package com.example.tiendaropa.model;
 
-import com.example.tiendaropa.ConexionBBDD;
-import com.example.tiendaropa.ConsultasBBDD;
+import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 
 import java.sql.SQLException;
 import java.util.HashMap;
