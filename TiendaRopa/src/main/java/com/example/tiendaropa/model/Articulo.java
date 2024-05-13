@@ -1,6 +1,6 @@
 package com.example.tiendaropa.model;
 
-public abstract  class Articulo {
+public abstract class Articulo {
 
     //ATRIBUTOS
     private int codigo;
