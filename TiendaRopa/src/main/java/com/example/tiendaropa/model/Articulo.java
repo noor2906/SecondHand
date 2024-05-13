@@ -1,6 +1,6 @@
 package com.example.tiendaropa.model;
 
-public class Articulo {
+public abstract  class Articulo {
 
     //ATRIBUTOS
     private int codigo;
@@ -101,4 +101,19 @@ public class Articulo {
     }
 
 
+    //Metodos
+
+    @Override
+    public String toString() {
+        return "Articulo{" +
+                "codigo=" + codigo +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                ", marca='" + marca + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", activo=" + activo +
+                ", imagen='" + imagen + '\'' +
+                ", material=" + material +
+                '}';
+    }
 }

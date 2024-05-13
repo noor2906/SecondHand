@@ -1,3 +1,4 @@
+/*
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConexionBBDD;
@@ -37,7 +38,9 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
     //ArrayList<Articulo> art;  // Lo puse aquí pq tuve una idea
 
 
-    /* IDEA - NOOR  */
+    */
+/* IDEA - NOOR  *//*
+
 
     //Instanciamos un artículo. Obtenemos ese artículo con algún método al hacer click en la pantalla de
     // catalogos y éste controlador se edita para que dependiendo del objeto que obtengamos (se haría con un instanceOf
@@ -108,7 +111,9 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
     // INITIALIZE  -----------------------------------------------------------------------------------------------------
 
 
-    /* NOTAS */
+    */
+/* NOTAS *//*
+
 
     //URL -> ventana en la que estamos
     //ResourceBundle -> es para cuando pasas datos entre escenas
@@ -545,3 +550,4 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
     }
 
 }
+*/

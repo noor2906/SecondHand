@@ -1,7 +1,7 @@
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
-import com.example.tiendaropa.model.Articulo;
+import com.example.tiendaropa.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,11 +26,10 @@ public class Controlador_catalogo implements Initializable {
 
     @FXML
     private VBox vBoxArticulos;
-
-
     private List<Articulo> articulos = new ArrayList<>();
 
 
+    //Obtenemos artículos
     private List<Articulo> getArticulos() throws SQLException {
         List<Articulo> articulos = new ArrayList<>();
         Articulo articulo = null;
@@ -50,7 +49,6 @@ public class Controlador_catalogo implements Initializable {
 
         return articulos;
     }
-
 
     //Tercer intento
     @Override

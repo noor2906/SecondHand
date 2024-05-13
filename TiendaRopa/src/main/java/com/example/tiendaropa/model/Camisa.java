@@ -10,31 +10,27 @@ public class Camisa extends Ropa{
 
     //CONSTRUCTOR
 
-    public Camisa(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen, Material material, String talla, String color, String tipoCierre, boolean impermeable, String tipoManga, boolean estampada, String tipoPantalon, boolean tieneBolsillos, String tipoRopa, String tipoManga1, boolean estampada1) {
-        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material, talla, color, tipoCierre, impermeable, tipoManga, estampada, tipoPantalon, tieneBolsillos, tipoRopa);
-        this.tipoManga = tipoManga1;
-        this.estampada = estampada1;
+    public Camisa(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen, Material material, String talla, String color, String tipoCierre, String tipoRopa, String tipoManga, boolean estampada) {
+        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material, talla, color, tipoCierre, tipoRopa);
+        this.tipoManga = tipoManga;
+        this.estampada = estampada;
     }
 
 
     //GETTER Y SETTER
 
-    @Override
     public String getTipoManga() {
         return tipoManga;
     }
 
-    @Override
     public void setTipoManga(String tipoManga) {
         this.tipoManga = tipoManga;
     }
 
-    @Override
     public boolean isEstampada() {
         return estampada;
     }
 
-    @Override
     public void setEstampada(boolean estampada) {
         this.estampada = estampada;
     }
