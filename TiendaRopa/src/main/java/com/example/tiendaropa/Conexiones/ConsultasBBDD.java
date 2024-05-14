@@ -61,6 +61,8 @@ public class ConsultasBBDD {
         return usuario;
 
     }
+
+    //DEPARTAMENTOS ----------------------------------------------------------------------------------------------------
     public HashMap<Integer,Departamento> crearDepartamentos(HashMap<Integer,Departamento> mapaDepartamentos) throws SQLException {
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs;
@@ -76,6 +78,7 @@ public class ConsultasBBDD {
         return mapaDepartamentos;
     }
 
+    //MATERIALES -------------------------------------------------------------------------------------------------------
     public HashMap<Integer,Material> crearMateriales(HashMap<Integer, Material> mapaMateriales) throws SQLException {
         ConexionBBDD con = new ConexionBBDD();
         ResultSet rs;
@@ -93,15 +96,7 @@ public class ConsultasBBDD {
         return mapaMateriales;
     }
 
-
-    //Atributos para poder realizar los filtros
-    public List<Camisa> camisas = new ArrayList<>();
-    public List<Pantalon> pantalones = new ArrayList<>();
-    public List<Chaqueta> chaquetas = new ArrayList<>();
-    public List<Bolso> bolsos = new ArrayList<>();
-    public List<Zapatos> zapatos = new ArrayList<>();
-
-
+    //ARTICULOS --------------------------------------------------------------------------------------------------------
     public List<Articulo> consultaArticulos(List<Articulo> arrayArticulos) throws SQLException {
         ConexionBBDD con = new ConexionBBDD();
         ResultSet rs;
@@ -157,18 +152,13 @@ public class ConsultasBBDD {
                         articulo = new Camisa(codigoArt, nombre, precio, marca, descripcion, activo, imagen, material,
                                 tallaRopa, color, tipoCierreRopa, tipoRopa, tipoManga, estampada);
 
-                        camisas.add((Camisa) articulo);
-
                     } else if (Objects.equals(tipoRopa, "Pantalón")) {
                         articulo = new Pantalon(codigoArt, nombre, precio, marca, descripcion, activo, imagen, material,
                                 tallaRopa, color, tipoCierreRopa, tipoRopa, tipoPantalon, tieneBolsillos);
 
-                        pantalones.add((Pantalon) articulo);
                     } else if (Objects.equals(tipoRopa, "Chaqueta")) {
                         articulo = new Chaqueta(codigoArt, nombre, precio, marca, descripcion, activo, imagen, material,
                                 tallaRopa, color, tipoCierreRopa, tipoRopa, impermeable);
-
-                        chaquetas.add((Chaqueta) articulo);
                     }
 
                 }
@@ -178,61 +168,28 @@ public class ConsultasBBDD {
                         articulo = new Bolso(codigoArt, nombre, precio, marca, descripcion, activo, imagen, material,
                                 estilo, personalizado, tipoAccesorio, capacidad, tipoCierreAccesorio);
 
-                        bolsos.add((Bolso) articulo);
                     } else if (tipoAccesorio.equals("Zapatos")){
                         articulo = new Zapatos(codigoArt, nombre, precio, marca, descripcion, activo, imagen, material,
                                 estilo, personalizado, tipoAccesorio, tallaAccesorio, tipoSuela);
 
-                        zapatos.add((Zapatos) articulo);
                     }
                 }
 
                 arrayArticulos.add(articulo);
-
 
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+        //Para ver los artículos
+       /* System.out.println("ARTICULOS");
         for (int i = 0; i < arrayArticulos.size(); i++) {
             System.out.println(arrayArticulos.get(i));
-        }
-
-        for (int i = 0; i < bolsos.size(); i++) {
-            System.out.println(bolsos.get(i));
-        }
+        }*/
 
         con.desconectarBBDD();
         return arrayArticulos;
     }
-
-    //Primer intento
-    /*//Todos los artículos
-    public List<Articulo> consultaArticulos(List<Articulo> arrayArticulos) throws SQLException {
-        ConexionBBDD con = new ConexionBBDD();
-        ResultSet rs;
-
-        con.conectarBBDD();
-        con.crearSentencia();
-        rs = con.ejecutarSQL("SELECT * FROM articulo");
-
-        while (rs.next()) {
-            Articulo articulo = new Articulo(
-                    rs.getInt("cod_art"),
-                    rs.getString("nombre"),
-                    rs.getFloat("precio"),
-                    rs.getString("marca"),
-                    rs.getString("descripcion"),
-                    rs.getBoolean("activo"),
-                    rs.getString("imagen"),
-                    Material.seleccionarMaterial(rs.getInt("material"))
-            );
-            arrayArticulos.add(articulo);
-        }
-
-        con.desconectarBBDD();
-        return arrayArticulos;
-    }*/
 
 }

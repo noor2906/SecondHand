@@ -31,7 +31,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroRopa(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -41,7 +41,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroCamisas(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -51,7 +51,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroChaquetas(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -61,7 +61,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroPantalones(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologoRopa_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -73,7 +73,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroAccesorios(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAccesorios_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -83,7 +83,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroBolsos(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAccesorios_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -93,7 +93,7 @@ public class Controlador_menuHamburguesa {
     public void mostrarFiltroZapatos(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_catalogoAccesorios_Noor.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
