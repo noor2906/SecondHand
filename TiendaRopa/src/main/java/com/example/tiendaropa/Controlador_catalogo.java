@@ -1,7 +1,8 @@
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
-import com.example.tiendaropa.model.Articulo;
+import com.example.tiendaropa.model.*;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,11 +27,12 @@ public class Controlador_catalogo implements Initializable {
 
     @FXML
     private VBox vBoxArticulos;
-
-
     private List<Articulo> articulos = new ArrayList<>();
 
+    private Articulo articulo;
 
+
+    //Obtenemos artículos
     private List<Articulo> getArticulos() throws SQLException {
         List<Articulo> articulos = new ArrayList<>();
         Articulo articulo = null;
@@ -50,7 +52,6 @@ public class Controlador_catalogo implements Initializable {
 
         return articulos;
     }
-
 
     //Tercer intento
     @Override
@@ -117,8 +118,19 @@ public class Controlador_catalogo implements Initializable {
     }
 
 
+       /* //Método para obtener el código artículo
+        public int obtenercodigoArticulo(ArrayList<Articulo> articulos){
 
-//BOTONES ----------------------------------------------------------------------------------------------------------
+            int codArt = 0;
+
+            for (Articulo articulo : articulos){
+                codArt = articulo.getCodigo();
+            }
+
+            return codArt;
+        }*/
+
+    //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
     public void mostrarMenu(MouseEvent event) throws IOException {
