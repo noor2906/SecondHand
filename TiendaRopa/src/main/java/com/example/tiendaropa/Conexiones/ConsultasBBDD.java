@@ -38,7 +38,8 @@ public class ConsultasBBDD {
                 }else {
                     rs = conn.ejecutarSQL("select * from empleado where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'");
                     if (rs.next()) {
-
+                    /*(Comentario de: Carol) IMPORTANTE! - La conexion a la BBDD solo está en el if de arriba, en el else no,
+                     asi que si por algun motivo entra al else..va a petar, habria que conectar antes del if o añadirlo en los dos sitios */
                         usuario = new Empleado(rs.getString("dni"),
                                 rs.getString("nombre"),
                                 rs.getString("apellidos"),
@@ -56,7 +57,9 @@ public class ConsultasBBDD {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        } /* (Comentario de: CAROL) finally {
+            conn.desconectarBBDD(); //Esto deberia ir aqui dentro para que siempre se cierre la conexion, aun que haya errores. Prevenir mas q nah.
+        }*/
         conn.desconectarBBDD();
         return usuario;
 
@@ -190,6 +193,43 @@ public class ConsultasBBDD {
 
         con.desconectarBBDD();
         return arrayArticulos;
+    }
+
+    //EMPLEADOS --------------------------------------------------------------------------------------------------------
+
+    public List<Empleado> listaEmpleados(){
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs;
+        List<Empleado> empleados = new ArrayList<>();
+        try {
+            conn.conectarBBDD();
+            conn.crearSentencia();
+            rs = conn.ejecutarSQL("select * from empleado");
+            while (rs.next()) {
+
+                Empleado empleado = new Empleado(
+                        rs.getString("dni"),
+                        rs.getString("nombre"),
+                        rs.getString("apellidos"),
+                        rs.getString("telefono"),
+                        rs.getString("f_nacimiento"),
+                        rs.getString("email"),
+                        rs.getString("pass"),
+                        rs.getBoolean("activo"),
+                        rs.getString("direccion"),
+                        rs.getBoolean("tiene_privilegios"),
+                        Departamento.seleccionarDpto(rs.getInt("dpto"))
+                );
+
+                empleados.add(empleado);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            conn.desconectarBBDD();
+        }
+        return empleados;
+
     }
 
 }
