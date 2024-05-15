@@ -1,15 +1,30 @@
 package com.example.tiendaropa;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Controlador_registroUsuario {
+    @FXML
+    private TextField txtUsuario;
+    @FXML
+    private TextField txtNombre;
+    @FXML
+    private TextField txtContra;
+    @FXML
+    private TextField txtApellidos;
+    @FXML
+    private TextField txtTelefono;
+    public void registrar(){
+
+    }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
