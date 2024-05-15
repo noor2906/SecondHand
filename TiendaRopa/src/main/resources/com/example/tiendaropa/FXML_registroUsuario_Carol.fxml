@@ -260,7 +260,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu email" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtEmail" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu email" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -282,7 +282,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dni" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtDni" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dni" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -304,7 +304,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dirección" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtDireccion" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dirección" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>

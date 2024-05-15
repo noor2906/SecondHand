@@ -68,6 +68,19 @@ public class ConexionBBDD {
         try { conexion.close();System.out.println("Conexión cerrada!"); } catch (Exception e) { System.out.println("Conexión no se ha cerrado"); }
     }
 
+    public int updateSQL(String sql) {// Para insertar cosas en la bbdd
+        int ok = 0;
+        // actualiza la BBDD
+        try {
+            sentenciaSQL.executeUpdate(sql);
+            ok=1;
+        } catch (SQLException e) {
+            System.out.println(e);
+            ok=-1;
+        }
+        return ok;
+    }
+
 
    /* //Método especifico para crear para conectar a la BBDD - Verónica (no se estaba usando)
 
