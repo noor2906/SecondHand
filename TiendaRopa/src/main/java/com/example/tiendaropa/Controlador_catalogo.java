@@ -2,7 +2,6 @@ package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.model.*;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -41,14 +40,6 @@ public class Controlador_catalogo implements Initializable {
         ConsultasBBDD consulta = new ConsultasBBDD();
 
         articulos = consulta.consultaArticulos(articulos);
-
-        /*for (int i = 0; i < articulos.size(); i++) {
-            articulo = new Articulo();
-            articulo.setNombre("Camiseta de Noor");
-            articulo.setPrecio(5);
-            articulo.setImagen("imagen1.jpg");
-            articulos.add(articulo);
-        }*/
 
         return articulos;
     }
@@ -109,26 +100,12 @@ public class Controlador_catalogo implements Initializable {
             // Si hay artículos restantes que no llenan una fila completa
             if (column > 0) {
                 vBoxArticulos.getChildren().add(hbox);
-                //hbox.setAlignment(Pos.CENTER_LEFT);
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
-       /* //Método para obtener el código artículo
-        public int obtenercodigoArticulo(ArrayList<Articulo> articulos){
-
-            int codArt = 0;
-
-            for (Articulo articulo : articulos){
-                codArt = articulo.getCodigo();
-            }
-
-            return codArt;
-        }*/
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
@@ -179,65 +156,3 @@ public class Controlador_catalogo implements Initializable {
     }
 
 }
-
-//Primer intento
-   /* @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        articulos.addAll(getArticulos());
-        int column = 0;
-        int row = 0;
-
-            try {
-                for (int i = 0; i < articulos.size(); i++) {
-                    FXMLLoader fxmlLoader = new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("FXML_itemArticuloCatalogo.fxml"));
-
-                    Controlador_itemCatalogo controladorItemCatalogo = fxmlLoader.getController();
-                    controladorItemCatalogo.setData(articulos.get(i));
-
-                    paneCatalogo.add(scrollCatalogos, column++, row);
-
-                }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-    }*/
-
-
-//Segundo intento
-    /*@Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        articulos.addAll(getArticulos());
-        int column = 0;
-        int row = 0;
-
-        try {
-            for (int i = 0; i < articulos.size(); i++) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("FXML_itemArticuloCatalogo.fxml"));
-
-                // Carga el elemento individual del artículo desde el archivo FXML
-                Pane itemArticulo = fxmlLoader.load();
-
-                // Obtén el controlador del elemento individual del artículo
-                Controlador_itemCatalogo controladorItemCatalogo = fxmlLoader.getController();
-                controladorItemCatalogo.setData(articulos.get(i));
-
-                // Agrega el elemento individual del artículo al Pane (paneCatalogo)
-                paneCatalogo.getChildren().add(itemArticulo);
-
-                // Incrementa las coordenadas de columna y fila para el siguiente elemento
-
-                if (column == 3) {
-                    column = 0;
-                    row++;
-                }
-
-                column++;
-
-                paneCatalogo.getChildren().add();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/

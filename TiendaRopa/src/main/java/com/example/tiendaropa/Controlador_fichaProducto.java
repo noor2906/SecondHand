@@ -1,7 +1,7 @@
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConexionBBDD;
-import com.example.tiendaropa.model.Articulo;
+import com.example.tiendaropa.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
@@ -28,9 +28,6 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
 
 
     //Atributos migas de pan -------------------------------------------------------------------------------------------
-
-
-    //Migas de pan  ----------------------------------------------------------------------------------------------------
 
     @FXML
     private Button btnMigasPanTipoArticulo;
@@ -65,6 +62,9 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
     @FXML
     private ImageView imagenProducto;
 
+    @FXML
+    private Button btnRetrocesoFichaProducto;
+
 
     //Atributos '¿cómo soy?'  ------------------------------------------------------------------------------------------
 
@@ -73,6 +73,9 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
 
     @FXML
     private HBox hBoxPropiedadesSubtipo;
+
+
+    Articulo articulo;
 
 
     // INITIALIZE  -----------------------------------------------------------------------------------------------------
@@ -104,7 +107,6 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
         Image imgArticulo = new Image(rutaImagen);
         imagenProducto.setImage(imgArticulo);
     }
-
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
@@ -145,10 +147,20 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
         stage.show();
     }
 
+
     public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void retroceder(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
