@@ -42,7 +42,7 @@
                         </Group>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnMenu" onMouseClicked="#mostrarMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
+                  <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
                      <graphic>
                         <Group>
                            <children>
@@ -100,7 +100,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu nombre de usuario" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtUsuario" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu nombre de usuario" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -122,7 +122,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu nombre" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtNombre" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu nombre" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -162,7 +162,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu contraseña" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtContra" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu contraseña" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -184,7 +184,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tus apellidos" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtApellidos" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tus apellidos" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -206,7 +206,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu número de teléfono" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtTelefono" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu número de teléfono" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -260,7 +260,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu email" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtEmail" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu email" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -282,7 +282,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dni" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtDni" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dni" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -304,7 +304,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <TextField opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dirección" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
+                                    <TextField fx:id="txtDireccion" opacity="0.5" prefHeight="26.0" prefWidth="398.0" promptText="Escribe tu dirección" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: black;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -347,7 +347,7 @@
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                </padding>
             </HBox>
-            <Button layoutX="1089.0" layoutY="947.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: black;" text="Registrarse" textFill="WHITE">
+            <Button fx:id="btnRegistro" onMouseClicked="#registrar" layoutX="1089.0" layoutY="947.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: black;" text="Registrarse" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

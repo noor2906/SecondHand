@@ -31,6 +31,7 @@ public class Controlador_login {
         usuario=consulta.login(user,pass);
         if (usuario!=null){
             mostrarHome(actionEvent);
+            // distinguir entre empleado --> panel admin y cliente --> home
             System.out.println(usuario.toString()); //! Borrar más adelante --> Ver si el usuario se ha creado correctamente
         }else {
             a.setAlertType(Alert.AlertType.INFORMATION);
