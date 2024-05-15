@@ -30,6 +30,10 @@ public class Empleado extends Usuario{
         this.departamento = departamento;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     //! BORRAR más adelante
     @Override
     public String toString() {

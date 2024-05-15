@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_infoEmpleado">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_infoEmpleado">
    <children>
       <Pane layoutX="-6.0" layoutY="1019.0" prefHeight="248.0" prefWidth="1446.0" style="-fx-background-color: white;">
          <children>
@@ -96,7 +96,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <HBox layoutY="203.0" prefHeight="839.0" prefWidth="1440.0" spacing="100.0">
+      <HBox fx:id="hBoxListaEmpleado" layoutY="203.0" prefHeight="839.0" prefWidth="1440.0" spacing="100.0">
          <children>
             <VBox>
                <children>
@@ -212,7 +212,7 @@
                   </Button>
                   <VBox spacing="2.0">
                      <children>
-                        <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false"  onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                        <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                            <graphic>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="170.27113342285156">
                                  <font>
@@ -221,7 +221,7 @@
                               </Text>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                        <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                            <graphic>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
                                  <font>
@@ -230,7 +230,7 @@
                               </Text>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                        <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                            <graphic>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
                                  <font>
@@ -239,7 +239,7 @@
                               </Text>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;">
+                        <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
                            <graphic>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
                                  <font>
@@ -281,7 +281,7 @@
             </HBox>
             <HBox layoutX="378.0" layoutY="214.5" prefHeight="20.0" prefWidth="717.0" spacing="8.0">
                <children>
-                  <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Política de privacidad">
+                  <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de privacidad">
                      <font>
                         <Font name="Inter Light" size="16.0" />
                      </font>
@@ -297,7 +297,7 @@
                         <Font name="Inter Light" size="16.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Condiciones de compra">
+                  <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Condiciones de compra">
                      <font>
                         <Font name="Inter Light" size="16.0" />
                      </font>
@@ -310,7 +310,7 @@
                         <Font name="Inter Light" size="16.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Política de cookies">
+                  <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de cookies">
                      <font>
                         <Font name="Inter Light" size="16.0" />
                      </font>
@@ -323,7 +323,7 @@
                         <Font name="Inter Light" size="16.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnFPrefC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba"  style="-fx-background-color: none;" text="Preferencia de cookies">
+                  <Button fx:id="btnFPrefC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Preferencia de cookies">
                      <font>
                         <Font name="Inter Light" size="16.0" />
                      </font>
