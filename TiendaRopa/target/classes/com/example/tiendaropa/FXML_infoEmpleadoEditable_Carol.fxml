@@ -172,7 +172,7 @@
          <children>
             <VBox>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre y Apellidos">
+                  <Text fx:id="textNombreApellidos" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre y Apellidos">
                      <font>
                         <Font name="System Bold" size="27.0" />
                      </font>
@@ -189,7 +189,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField prefHeight="25.0" prefWidth="260.0">
+                              <TextField fx:id="txtDNI" prefHeight="25.0" prefWidth="260.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -203,7 +203,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField prefHeight="25.0" prefWidth="223.0">
+                              <TextField fx:id="txtTelefono" prefHeight="25.0" prefWidth="223.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -217,7 +217,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField prefHeight="25.0" prefWidth="244.0">
+                              <TextField fx:id="txtEmail" prefHeight="25.0" prefWidth="244.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -231,7 +231,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField prefHeight="25.0" prefWidth="87.0">
+                              <TextField fx:id="txtNumApellidos" prefHeight="25.0" prefWidth="87.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -240,7 +240,7 @@
                         </HBox>
                      </children>
                      <VBox.margin>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                        <Insets bottom="50.0" left="200.0" right="50.0" top="50.0" />
                      </VBox.margin>
                   </VBox>
                </children>
@@ -257,7 +257,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Text>
-                        <DatePicker>
+                        <DatePicker fx:id="dpFechaNacimiento">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -271,7 +271,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Text>
-                        <TextField>
+                        <TextField fx:id="txtDireccion">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -285,7 +285,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Text>
-                        <CheckBox mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" textAlignment="CENTER">
+                        <CheckBox fx:id="cbTarjetaFidl" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" textAlignment="CENTER">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -293,20 +293,6 @@
                               <Insets left="30.0" />
                            </HBox.margin>
                         </CheckBox>
-                     </children>
-                  </HBox>
-                  <HBox>
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección de envío:">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Text>
-                        <TextField prefHeight="25.0" prefWidth="162.0">
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
-                        </TextField>
                      </children>
                   </HBox>
                </children>

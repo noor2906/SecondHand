@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class Aplicacion extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Aplicacion.class.getResource("FXML_infoEmpleadoEditable_Carol.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Aplicacion.class.getResource("FXML_listaEmpleados_Carol.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1440, 1000);
         stage.setTitle("Second Hand - Noor | Carolina | Verónica");
         stage.setScene(scene);
