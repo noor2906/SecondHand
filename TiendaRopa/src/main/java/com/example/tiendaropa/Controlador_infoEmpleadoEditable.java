@@ -33,9 +33,12 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import com.example.tiendaropa.Conexiones.ModificacionesBBDD;
 
 
 public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
+
+    private ModificacionesBBDD modificacionesBBDD = new ModificacionesBBDD();
 
     @FXML
     private Button btnVolverListaEmpleado;
@@ -87,8 +90,9 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         }
     }
 
-    public void actualizarEdicionHabilitada(){
 
+    @FXML
+    public void actualizarEdicionHabilitada() {
         edicionHabilitada = !edicionHabilitada;
         txtDNI.setDisable(edicionHabilitada);
         txtTelefono.setDisable(edicionHabilitada);
@@ -97,6 +101,38 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         txtDireccion.setDisable(edicionHabilitada);
         cbTarjetaFidl.setDisable(edicionHabilitada);
         dpFechaNacimiento.setDisable(edicionHabilitada);
+
+        if (!edicionHabilitada) {
+            // Si la edición está habilitada, significa que estamos guardando los cambios
+            guardarCambios();
+        }
+    }
+
+    private void guardarCambios() {
+
+        // Obtener los datos del formulario
+        String dni = txtDNI.getText();
+        String nombre = textNombreApellidos.getText().split(" ")[0]; // Obtener el primer nombre
+        String apellidos = textNombreApellidos.getText().substring(nombre.length()).trim(); // Obtener los apellidos restantes
+        String telefono = txtTelefono.getText();
+        String email = txtEmail.getText();
+        String direccion = txtDireccion.getText();
+        LocalDate fechaNacimiento = dpFechaNacimiento.getValue();
+        boolean tienePrivilegios = cbTarjetaFidl.isSelected();
+
+        // Formatear la fecha de LocalDate a String (si es necesario)
+        String fNacimiento = (fechaNacimiento != null) ? fechaNacimiento.toString() : "";
+
+        modificacionesBBDD.conectarBBDD();
+
+        try {
+            modificacionesBBDD.actualizarEmpleado(dni, nombre, apellidos, telefono, fNacimiento, email, direccion, tienePrivilegios);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            modificacionesBBDD.cerrarConexion();
+        }
+
 
     }
 

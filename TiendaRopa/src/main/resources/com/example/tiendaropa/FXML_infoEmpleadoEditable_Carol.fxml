@@ -303,7 +303,7 @@
          </children>
       </HBox>
       <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" layoutX="41.0" layoutY="129.0" />
-      <Button fx:id="btnLogin11" onMouseClicked="#actualizarEdicionHabilitada" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1198.0" layoutY="122.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" scaleShape="false" style="-fx-background-color: grey; -fx-effect: null;" text="Guardar Cambios" textFill="WHITE">
+      <Button fx:id="btnLogin11" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1198.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#actualizarEdicionHabilitada" prefHeight="33.0" prefWidth="201.0" scaleShape="false" style="-fx-background-color: grey; -fx-effect: null;" text="Modificar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
