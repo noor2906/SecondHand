@@ -1,6 +1,8 @@
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
+import com.example.tiendaropa.model.Cliente;
+import com.example.tiendaropa.model.Empleado;
 import com.example.tiendaropa.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,11 +31,13 @@ public class Controlador_login {
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
         usuario=consulta.login(user,pass);
-        if (usuario!=null){
+        if (usuario instanceof Cliente){
             mostrarHome(actionEvent);
             // distinguir entre empleado --> panel admin y cliente --> home
             System.out.println(usuario.toString()); //! Borrar más adelante --> Ver si el usuario se ha creado correctamente
-        }else {
+        } else if (usuario instanceof Empleado) {
+            mostrarPanelAdmin(actionEvent);
+        } else {
             a.setAlertType(Alert.AlertType.INFORMATION);
             a.setHeaderText(null);
             a.setContentText("El usuario no existe :(");
@@ -46,6 +50,14 @@ public class Controlador_login {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXML_home_Noor.fxml")));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    public void mostrarPanelAdmin(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXML_panelAdmin_Noor.fxml")));
 
         stage.setScene(new Scene(root));
         stage.show();
