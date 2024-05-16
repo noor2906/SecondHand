@@ -49,4 +49,13 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void mostrarListaUsuarios(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_listaUsuarios_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

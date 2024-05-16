@@ -167,7 +167,7 @@
                               </Text>
                               <HBox prefHeight="26.0" prefWidth="271.0">
                                  <children>
-                                    <DatePicker prefHeight="72.0" prefWidth="271.0" />
+                                    <DatePicker fx:id="dpFecha" prefHeight="72.0" prefWidth="271.0" />
                                  </children>
                               </HBox>
                            </children>
@@ -344,7 +344,7 @@
                               </Text>
                               <HBox alignment="CENTER" prefHeight="26.0" prefWidth="271.0" spacing="30.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Sí, quiero tarjeta de fidelización">
+                                    <CheckBox fx:id="chbxFidelizacion" mnemonicParsing="false" text="Sí, quiero tarjeta de fidelización">
                                        <font>
                                           <Font size="16.0" />
                                        </font>

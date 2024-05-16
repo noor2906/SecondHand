@@ -8,16 +8,17 @@ public class Cliente extends Usuario{
     private float saldoCuenta;
     private int numPedidos;
 
-    //private MetodoPago metodoPago; (por ahora no hay)
+    private MetodoPago metodoPago;
 
     // Constructor
 
-    public Cliente(String dni, String nombre, String apellidos, String telefono, String f_nacimiento, String e_mail, String pass, boolean activo, String direccion, boolean tarjetaFidelizacion, float saldoCuenta, String dirEnvio, int numPedidos) {
+    public Cliente(String dni, String nombre, String apellidos, String telefono, String f_nacimiento, String e_mail, String pass, boolean activo, String direccion, boolean tarjetaFidelizacion, float saldoCuenta, String dirEnvio, int numPedidos, MetodoPago metodoPago) {
         super(dni, nombre, apellidos, telefono, f_nacimiento, e_mail, pass, activo, direccion);
         this.tarjetaFidelizacion = tarjetaFidelizacion;
         this.saldoCuenta = saldoCuenta;
         this.dirEnvio = dirEnvio;
         this.numPedidos = numPedidos;
+        this.metodoPago=metodoPago;
     }
 
     //Getters y setters
@@ -52,12 +53,26 @@ public class Cliente extends Usuario{
     public void setNumPedidos(int numPedidos) {
         this.numPedidos = numPedidos;
     }
+    public String getNombre(){
+        return nombre;
+    }
 
- /*   public MetodoPago getMetodoPago() {
+    public MetodoPago getMetodoPago() {
         return metodoPago;
     }
 
     public void setMetodoPago(MetodoPago metodoPago) {
         this.metodoPago = metodoPago;
-    }*/
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "tarjetaFidelizacion=" + tarjetaFidelizacion +
+                ", dirEnvio='" + dirEnvio + '\'' +
+                ", saldoCuenta=" + saldoCuenta +
+                ", numPedidos=" + numPedidos +
+                ", metodoPago=" + metodoPago +
+                '}';
+    }
 }

@@ -33,7 +33,8 @@ public class ConsultasBBDD {
                             rs.getBoolean("tarjeta_fidelizacion"),
                             rs.getFloat("saldo_cuenta"),
                             rs.getString("dir_envio"),
-                            rs.getInt("num_pedidos")
+                            rs.getInt("num_pedidos"),
+                            MetodoPago.seleccionarMetodoPago(rs.getInt("m_pago"))
                     );
                 }else {
                     rs = conn.ejecutarSQL("select * from empleado where email='" + user + "' or dni='" + user + "' and pass='" + pass + "'");
@@ -93,6 +94,42 @@ public class ConsultasBBDD {
         }
         conn.desconectarBBDD();
         return mapaPagos;
+    }
+    // Lista Clientes
+    public List<Cliente> recogerListaClientes(List<Cliente> clientes){
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs;
+        try {
+            conn.conectarBBDD();
+            conn.crearSentencia();
+            rs = conn.ejecutarSQL("select * from cliente");
+            while (rs.next()) {
+
+                Cliente cliente = new Cliente(rs.getString("dni"),
+                        rs.getString("nombre"),
+                        rs.getString("apellidos"),
+                        rs.getString("telefono"),
+                        rs.getString("f_nacimiento"),
+                        rs.getString("email"),
+                        rs.getString("pass"),
+                        rs.getBoolean("activo"),
+                        rs.getString("direccion"),
+                        rs.getBoolean("tarjeta_fidelizacion"),
+                        rs.getFloat("saldo_cuenta"),
+                        rs.getString("dir_envio"),
+                        rs.getInt("num_pedidos"),
+                        MetodoPago.seleccionarMetodoPago(rs.getInt("m_pago"))
+                );
+
+                clientes.add(cliente);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            conn.desconectarBBDD();
+        }
+        return clientes;
+
     }
 
     //MATERIALES -------------------------------------------------------------------------------------------------------
