@@ -1,25 +1,31 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.Conexiones.InsercionesBBDD;
 import com.example.tiendaropa.model.MetodoPago;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Controlador_registroUsuario {
+    @FXML
+    private CheckBox chbxFidelizacion;
+    @FXML
+    private DatePicker dpFecha;
     @FXML
     private TextField txtUsuario;
     @FXML
@@ -38,13 +44,13 @@ public class Controlador_registroUsuario {
     private TextField txtDireccion;
     @FXML
     private ComboBox<String> combList;
+    private HashMap<Integer,MetodoPago> mapaPagos = MetodoPago.getMapaMetodoPago();
+    private int fidelizacion=0;
     public void initialize(){
-        HashMap<Integer,MetodoPago> mapaPagos = MetodoPago.getMapaMetodoPago();
         ObservableList<String> soList = FXCollections.observableArrayList();
         for (Integer k:mapaPagos.keySet()) {
             soList.add(mapaPagos.get(k).getDescripcion());
         }
-
         combList.setItems(soList);
     }
     public void registrar(MouseEvent event) throws IOException {
@@ -56,13 +62,28 @@ public class Controlador_registroUsuario {
         String email = txtEmail.getText();
         String dni = txtDni.getText();
         String direccion = txtDireccion.getText();
+        String pago = combList.getValue();
+        String fecha = String.valueOf(dpFecha.getValue());
+        int mPago = 0;
         if (!dni.equals("") && !nombre.equals("") && !apellidos.equals("") && !email.equals("") && !direccion.equals("") && !contra.equals("")){
-            ok=InsercionesBBDD.insercionRegistro(nombre,contra,apellidos,telefono,email,dni,direccion);
+            for (Integer k:mapaPagos.keySet()) {
+                if (mapaPagos.get(k).getDescripcion().equals(pago)){
+                    mPago = k;
+                }
+            }
+            ok=InsercionesBBDD.insercionRegistro(nombre,contra,apellidos,telefono,email,dni,direccion,mPago,fecha,fidelizacion);
         }else {
             System.out.println("\nRegistro: Te has dejado algún campo importante\n");
         }
         if (ok>0){mostrarLogin(event);}
 
+    }
+    public void pulsadoAceptar(ActionEvent actionEvent) {
+        if(chbxFidelizacion.isSelected()){
+            fidelizacion = 1;
+        }else{
+            fidelizacion = 0;
+        }
     }
 
 

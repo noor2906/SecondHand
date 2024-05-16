@@ -137,7 +137,7 @@
                                     </HBox>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnAdministrarUsuarios" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                              <Button fx:id="btnAdministrarUsuarios" onMouseClicked="#mostrarListaUsuarios" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
