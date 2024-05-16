@@ -23,6 +23,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -112,10 +113,8 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
         imagenProducto.setImage(imgArticulo);
 
 
-        if (articulo instanceof Ropa){
-            //Propiedades de la ropa ---------------------------------------------------------------------------------------
-
-            Ropa ropa = (Ropa) articulo;
+        if (articulo instanceof Ropa ropa){ //en vez de la variable Ropa ropa; lo ponemos en el if
+            //Propiedades de la ropa -----------------------------------------------------------------------------------
 
             String [] propiedadesRopa = {String.valueOf(ropa.getMaterial()), ropa.getTalla(), ropa.getColor(), ropa.getTipoCierre()};
 
@@ -131,13 +130,16 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
 
                 hBoxPropiedadesArticulo.getChildren().add(txtfPropiedadesRopa = new TextField(propiedadesRopa[i]));
 
-                txtfPropiedadesRopa.setPrefWidth(148);
-                txtfPropiedadesRopa.setPrefHeight(57);
-                txtfPropiedadesRopa.setAlignment(Pos.CENTER);
-                txtfPropiedadesRopa.setEditable(false);
-                txtfPropiedadesRopa.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
-                        "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                textFieldPropiedades(txtfPropiedadesRopa);
+            }
 
+            // Migas de pan -> con el tipo_ropa ----------------------------------------------------------------------------
+            String tipoRopa = ropa.getTipoRopa();
+
+            if (Objects.equals(tipoRopa, "Camisa") || Objects.equals(tipoRopa, "Chaqueta") || Objects.equals(tipoRopa, "Pantalón")){
+                txtfMigasPanTipoArticulo.setText("Ropa");
+                txtfMigasPanSubtipo.setText(tipoRopa);
+                txtfMigasPanNombreProducto.setText(ropa.getNombre());
             }
 
 
@@ -157,12 +159,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
                 for (int i = 0; i < propiedadesCamisa.length; i++) {
                     hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesCamisa[i]));
 
-                    txtfPropiedadesSubtipo.setPrefWidth(148);
-                    txtfPropiedadesSubtipo.setPrefHeight(57);
-                    txtfPropiedadesSubtipo.setAlignment(Pos.CENTER);
-                    txtfPropiedadesSubtipo.setEditable(false);
-                    txtfPropiedadesSubtipo.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
-                            "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                    textFieldPropiedades(txtfPropiedadesSubtipo);
                 }
 
 
@@ -181,12 +178,7 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
                 for (int i = 0; i < propiedadesChaqueta.length; i++) {
                     hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesChaqueta[i]));
 
-                    txtfPropiedadesSubtipo.setPrefWidth(148);
-                    txtfPropiedadesSubtipo.setPrefHeight(57);
-                    txtfPropiedadesSubtipo.setAlignment(Pos.CENTER);
-                    txtfPropiedadesSubtipo.setEditable(false);
-                    txtfPropiedadesSubtipo.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
-                            "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                    textFieldPropiedades(txtfPropiedadesSubtipo);
                 }
 
             } else if (articulo instanceof Pantalon) {
@@ -204,19 +196,13 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
                 for (int i = 0; i < propiedadesPantalon.length; i++) {
                     hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesPantalon[i]));
 
-                    txtfPropiedadesSubtipo.setPrefWidth(148);
-                    txtfPropiedadesSubtipo.setPrefHeight(57);
-                    txtfPropiedadesSubtipo.setAlignment(Pos.CENTER);
-                    txtfPropiedadesSubtipo.setEditable(false);
-                    txtfPropiedadesSubtipo.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
-                            "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                    textFieldPropiedades(txtfPropiedadesSubtipo);
                 }
 
             }
 
-        } else if (articulo instanceof Accesorios) {
-            //Propiedades de accesorio -------------------------------------------------------------------------------------
-            Accesorios accesorio = (Accesorios) articulo;
+        } else if (articulo instanceof Accesorios accesorio) { //en vez de la variable Accesorio accesorio; lo ponemos en el if
+            //Propiedades de accesorio ---------------------------------------------------------------------------------
 
             String personalizado = "";
 
@@ -240,27 +226,52 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
 
                 hBoxPropiedadesArticulo.getChildren().add(txtfPropiedadesAccesorio = new TextField(propiedadesAccesorio[i]));
 
-                txtfPropiedadesAccesorio.setPrefWidth(148);
-                txtfPropiedadesAccesorio.setPrefHeight(57);
-                txtfPropiedadesAccesorio.setAlignment(Pos.CENTER);
-                txtfPropiedadesAccesorio.setEditable(false);
-                txtfPropiedadesAccesorio.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
-                        "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                textFieldPropiedades(txtfPropiedadesAccesorio);
 
+            }
+
+            // Migas de pan -> con el tipo_accesorio -----------------------------------------------------------------------
+            String tipoAccesorio = accesorio.getTipoAccesorio();
+
+            if (tipoAccesorio.equals("Bolso") || tipoAccesorio.equals("Zapatos")){
+                txtfMigasPanTipoArticulo.setText("Accesorio");
+                txtfMigasPanSubtipo.setText(tipoAccesorio);
+                txtfMigasPanNombreProducto.setText(accesorio.getNombre());
             }
 
 
 
             if (articulo instanceof Bolso){
                //propiedades bolso
+                String [] propiedadesBolso = {String.valueOf(((Bolso) articulo).getCapacidad() + "L"), "Cierre: " +( (Bolso) articulo).getTipoCierre()};
+
+                for (int i = 0; i < propiedadesBolso.length; i++) {
+                    hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesBolso[i]));
+
+                    textFieldPropiedades(txtfPropiedadesSubtipo);
+                }
 
             } else if (articulo instanceof Zapatos) {
                 //propiedades zapatos
+                String [] propiedadesZapatos = {((Zapatos) articulo).getTipoSuela(), String.valueOf(((Zapatos) articulo).getTalla())};
 
+                for (int i = 0; i < propiedadesZapatos.length; i++) {
+                    hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesZapatos[i]));
+
+                    textFieldPropiedades(txtfPropiedadesSubtipo);
+                }
             }
         }
+    }
 
-
+    //Método para construir el textField de las propiedades
+    public void textFieldPropiedades(TextField txtfPropiedades){
+        txtfPropiedades.setPrefWidth(148);
+        txtfPropiedades.setPrefHeight(57);
+        txtfPropiedades.setAlignment(Pos.CENTER);
+        txtfPropiedades.setEditable(false);
+        txtfPropiedades.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
+                "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
     }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
