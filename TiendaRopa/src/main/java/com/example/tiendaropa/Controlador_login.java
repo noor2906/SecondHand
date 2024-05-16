@@ -33,7 +33,6 @@ public class Controlador_login {
         usuario=consulta.login(user,pass);
         if (usuario instanceof Cliente){
             mostrarHome(actionEvent);
-            // distinguir entre empleado --> panel admin y cliente --> home
             System.out.println(usuario.toString()); //! Borrar más adelante --> Ver si el usuario se ha creado correctamente
         } else if (usuario instanceof Empleado) {
             mostrarPanelAdmin(actionEvent);
@@ -46,7 +45,7 @@ public class Controlador_login {
     }
 
 
-      public void mostrarHome(ActionEvent event) throws IOException {
+    public void mostrarHome(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXML_home_Noor.fxml")));

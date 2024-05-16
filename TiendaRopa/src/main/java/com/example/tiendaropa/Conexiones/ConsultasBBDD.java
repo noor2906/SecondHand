@@ -57,10 +57,9 @@ public class ConsultasBBDD {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        } /* (Comentario de: CAROL) finally {
-            conn.desconectarBBDD(); //Esto deberia ir aqui dentro para que siempre se cierre la conexion, aun que haya errores. Prevenir mas q nah.
-        }*/
-        conn.desconectarBBDD();
+        }finally {
+            conn.desconectarBBDD();
+        }
         return usuario;
 
     }
@@ -79,6 +78,21 @@ public class ConsultasBBDD {
         }
         conn.desconectarBBDD();
         return mapaDepartamentos;
+    }
+    //METODO PAGO ------------------------------------------------------------------------------------------------------
+    public HashMap<Integer,MetodoPago> crearMetodosPago(HashMap<Integer,MetodoPago> mapaPagos) throws SQLException {
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs;
+        MetodoPago mPago = null;
+        conn.conectarBBDD();
+        conn.crearSentencia();
+        rs=conn.ejecutarSQL("select * from metodo_pago");
+        while (rs.next()) {
+            mPago = new MetodoPago(rs.getInt("codigo"), rs.getString("descripcion"));
+            mapaPagos.put(rs.getInt("codigo"),mPago);
+        }
+        conn.desconectarBBDD();
+        return mapaPagos;
     }
 
     //MATERIALES -------------------------------------------------------------------------------------------------------
