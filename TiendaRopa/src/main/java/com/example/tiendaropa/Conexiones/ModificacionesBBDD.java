@@ -3,33 +3,38 @@ package com.example.tiendaropa.Conexiones;
 import com.example.tiendaropa.model.Departamento;
 import com.example.tiendaropa.model.Empleado;
 
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ModificacionesBBDD {
 
-    /*public void listaEmpleados(){
+    // Método para actualizar los datos de un empleado
+    public void actualizarEmpleado(String dni, String nombre, String apellidos, String telefono, String fNacimiento, String email, String direccion, boolean tienePrivilegios) throws SQLException {
+
         ConexionBBDD conn = new ConexionBBDD();
-        ResultSet rs;
-        List<Empleado> empleados = new ArrayList<>();
+        String query = "UPDATE empleado SET nombre = ?, apellidos = ?, telefono = ?, f_nacimiento = ?, email = ?, direccion = ?, tiene_privilegios = ? WHERE DNI = ?";
+
         try {
             conn.conectarBBDD();
-            conn.crearSentencia();
-            rs = conn.ejecutarSQL("UPDATE empleados SET nombre = ?, apellidos = ?, telefono = ?, f_nacimiento = ?, email = ?, direccion = ?, tienePrivilegios = ? WHERE dni = ?" );
-            while (rs.next()) {
+            PreparedStatement pstmt = conn.getPreparedStatement(query);
 
-                Empleado empleado = new Empleado(
-                        rs.getString("dni"),
-                        rs.getString("nombre"),
-                        rs.getString("apellidos"),
-                        rs.getString("telefono"),
-                        rs.getString("f_nacimiento"),
-                        rs.getString("email"),
-                        rs.getString("pass"),
-                        rs.getBoolean("activo"),
-                        rs.getString("direccion"),
-                        rs.getBoolean("tiene_privilegios"),
-                        Departamento.seleccionarDpto(rs.getInt("dpto"))
-                );*/
+            pstmt.setString(1, nombre);
+            pstmt.setString(2, apellidos);
+            pstmt.setString(3, telefono);
+            pstmt.setString(4, fNacimiento);
+            pstmt.setString(5, email);
+            pstmt.setString(6, direccion);
+            pstmt.setBoolean(7, tienePrivilegios);
+            pstmt.setString(8, dni);
+
+            pstmt.executeUpdate();
+            System.out.println("Empleado actualizado correctamente.");
+
+        } catch (SQLException e) {
+            throw new SQLException("Error al actualizar los datos del empleado", e);
+        } finally {
+            conn.desconectarBBDD();
+        }
+    }
 }

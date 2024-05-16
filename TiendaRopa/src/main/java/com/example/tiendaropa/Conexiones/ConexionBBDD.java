@@ -49,7 +49,6 @@ public class ConexionBBDD {
         }
     }
 
-
     //Método para ejecutar la sentencia creada de la BBDD - Noor
 
     public ResultSet ejecutarSQL(String sql) {
@@ -79,6 +78,10 @@ public class ConexionBBDD {
             ok=-1;
         }
         return ok;
+    }
+
+    public PreparedStatement getPreparedStatement(String query) throws SQLException {
+        return conexion.prepareStatement(query);
     }
 
 

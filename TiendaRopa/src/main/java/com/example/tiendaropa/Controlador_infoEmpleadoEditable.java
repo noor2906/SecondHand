@@ -1,13 +1,8 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.Conexiones.ConsultasBBDD;
-import com.example.tiendaropa.model.Articulo;
 import com.example.tiendaropa.model.Empleado;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,27 +10,23 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+
+import com.example.tiendaropa.Conexiones.ModificacionesBBDD;
 
 
 public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
+
+    private ModificacionesBBDD modificacionesBBDD = new ModificacionesBBDD();
 
     @FXML
     private Button btnVolverListaEmpleado;
@@ -52,7 +43,10 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
     @FXML
     Text textNombreApellidos;
 
-    boolean edicionHabilitada = false;
+    @FXML
+    Button btnEditarGuardar;
+
+    boolean edicionBloqueada = true;
 
 
 
@@ -87,17 +81,46 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         }
     }
 
-    public void actualizarEdicionHabilitada(){
+    public void actualizarEdicionHabilitada() {
+        edicionBloqueada = !edicionBloqueada;
+        txtTelefono.setDisable(edicionBloqueada);
+        txtEmail.setDisable(edicionBloqueada);
+        txtNumApellidos.setDisable(edicionBloqueada);
+        txtDireccion.setDisable(edicionBloqueada);
+        cbTarjetaFidl.setDisable(edicionBloqueada);
+        dpFechaNacimiento.setDisable(edicionBloqueada);
 
-        edicionHabilitada = !edicionHabilitada;
-        txtDNI.setDisable(edicionHabilitada);
-        txtTelefono.setDisable(edicionHabilitada);
-        txtEmail.setDisable(edicionHabilitada);
-        txtNumApellidos.setDisable(edicionHabilitada);
-        txtDireccion.setDisable(edicionHabilitada);
-        cbTarjetaFidl.setDisable(edicionHabilitada);
-        dpFechaNacimiento.setDisable(edicionHabilitada);
+        if (edicionBloqueada) {
+            // Si la edición está habilitada, significa que estamos guardando los cambios
+            guardarCambios();
+            btnEditarGuardar.setText("Modificar");
+        } else {
+            btnEditarGuardar.setText("Guardar");
+        }
+    }
 
+    private void guardarCambios() {
+
+        // Obtener los datos del formulario
+        String dni = txtDNI.getText();
+        String nombre = textNombreApellidos.getText().split(" ")[0]; // Obtener el primer nombre
+        String apellidos = textNombreApellidos.getText().substring(nombre.length()).trim(); // Obtener los apellidos restantes
+        String telefono = txtTelefono.getText();
+        String email = txtEmail.getText();
+        String direccion = txtDireccion.getText();
+        LocalDate fechaNacimiento = dpFechaNacimiento.getValue();
+        boolean tienePrivilegios = cbTarjetaFidl.isSelected();
+
+        // Formatear la fecha de LocalDate a String (si es necesario)
+        String fNacimiento = (fechaNacimiento != null) ? fechaNacimiento.toString() : "";
+
+
+        try {
+            modificacionesBBDD.actualizarEmpleado(dni, nombre, apellidos, telefono, fNacimiento, email, direccion, tienePrivilegios);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
