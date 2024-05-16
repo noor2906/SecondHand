@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_infoEmpleadoEditable">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_infoEmpleadoEditable">
    <children>
       <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -172,7 +172,7 @@
          <children>
             <VBox>
                <children>
-                  <Text fx:id="textNombreApellidos" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre y Apellidos">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre y Apellidos">
                      <font>
                         <Font name="System Bold" size="27.0" />
                      </font>
@@ -189,7 +189,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="txtDNI" prefHeight="25.0" prefWidth="260.0">
+                              <TextField prefHeight="25.0" prefWidth="260.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -203,7 +203,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="txtTelefono" prefHeight="25.0" prefWidth="223.0">
+                              <TextField prefHeight="25.0" prefWidth="223.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -217,7 +217,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="txtEmail" prefHeight="25.0" prefWidth="244.0">
+                              <TextField prefHeight="25.0" prefWidth="244.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -231,7 +231,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="txtNumApellidos" prefHeight="25.0" prefWidth="87.0">
+                              <TextField prefHeight="25.0" prefWidth="87.0">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -257,7 +257,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Text>
-                        <DatePicker fx:id="dpFechaNacimiento">
+                        <DatePicker>
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -271,7 +271,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="txtDireccion">
+                        <TextField>
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -285,7 +285,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Text>
-                        <CheckBox fx:id="cbTarjetaFidl" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" textAlignment="CENTER">
+                        <CheckBox mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" textAlignment="CENTER">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -293,6 +293,20 @@
                               <Insets left="30.0" />
                            </HBox.margin>
                         </CheckBox>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección de envío:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField prefHeight="25.0" prefWidth="162.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
                      </children>
                   </HBox>
                </children>

@@ -11,10 +11,12 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -26,90 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Controlador_infoEmpleado implements Initializable {
-
-    @FXML
-    private HBox hBoxListaEmpleado;
-
-    private List<Empleado> empleados = new ArrayList<>();
-
-    private Empleado empleado;
-
-
-    //Obtenemos artículos
-
-    private List<Empleado> getEmpleados() throws SQLException {
-        List<Empleado> empleados = new ArrayList<>();
-
-        //Llamar a la consulta que me devuelve todos los articulos
-        ConsultasBBDD consulta = new ConsultasBBDD();
-
-        empleados = consulta.listaEmpleados();
-
-        return empleados;
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            empleados.addAll(getEmpleados());
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        int column = 0;
-        int row = 0;
-
-        HBox hbox = new HBox(); // Crea el primer HBox
-
-        try {
-            for (int i = 0; i < empleados.size(); i++) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("FXML_infoEmpleado_Carol.fxml"));
-
-                Parent itemEmpleado = fxmlLoader.load();
-
-                // Obtener el controlador del elemento de empleado
-                Controlador_ItemEmpleado itemController = fxmlLoader.getController();
-
-                // Llamar al método setData() y pasarle el objeto Empleado correspondiente
-                itemController.setData(empleados.get(i));
-
-                //Propiedades Hbox
-                hBoxListaEmpleado.setPrefHeight(hBoxListaEmpleado.getPrefHeight() + 80);
-
-                //Propiedades Hbox
-                hbox.setAlignment(Pos.CENTER_LEFT);
-                hbox.setSpacing(25);
-                hbox.setPadding(new Insets(0,0,0,80));
-
-
-                // Agregar el contenido cargado al hbox
-                hbox.getChildren().add(itemEmpleado);
-
-                column++;
-                // Si el HBox actual tiene tres elementos, crea un nuevo HBox
-                if (column == 2) {
-                    // Agrega el HBox actual al VBox
-                    hBoxListaEmpleado.getChildren().add(hbox);
-                    hBoxListaEmpleado.setAlignment(Pos.CENTER);
-                    // Crea un nuevo HBox para los próximos elementos
-                    hbox = new HBox();
-                    column = 0;
-                    row++;
-                }
-            }
-
-            // Si hay artículos restantes que no llenan una fila completa
-            if (column > 0) {
-                hBoxListaEmpleado.getChildren().add(hbox);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+public class Controlador_infoEmpleado  {
 
 
     //BOTONES ----------------------------------------------------------------------------------------------------------

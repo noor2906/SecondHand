@@ -1,6 +1,6 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.model.Articulo;
+import com.example.tiendaropa.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
