@@ -2,6 +2,7 @@ package com.example.tiendaropa;
 
 import com.example.tiendaropa.model.Departamento;
 import com.example.tiendaropa.model.Material;
+import com.example.tiendaropa.model.MetodoPago;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,6 +23,8 @@ public class Aplicacion extends Application {
         //Cargamos los departamentos, materiales (falta método de pago)
         try {Departamento.rellenarMapaDpto();} catch (SQLException e) {throw new RuntimeException(e);}
         try {Material.rellenarMapaMateriales();} catch (SQLException e) {throw new RuntimeException(e);}
+        try {MetodoPago.rellenarMapaMetodoPago();} catch (SQLException e) {throw new RuntimeException(e);}
+        //try {MetodoPago.recorrerMapa();}catch (Exception e){throw new RuntimeException(e);}
     }
 
 
