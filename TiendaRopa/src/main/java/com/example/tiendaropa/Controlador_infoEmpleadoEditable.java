@@ -38,11 +38,7 @@ import java.util.ResourceBundle;
 public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
 
     @FXML
-    private HBox hBoxListaEmpleado;
-
-    private List<Empleado> empleados = new ArrayList<>();
-
-    private Empleado empleado;
+    private Button btnVolverListaEmpleado;
 
     @FXML
     TextField txtDNI, txtTelefono, txtEmail, txtNumApellidos, txtDireccion;
@@ -56,106 +52,51 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
     @FXML
     Text textNombreApellidos;
 
-    //Obtenemos artículos
-
-   /* private List<Empleado> getEmpleados() throws SQLException {
-        List<Empleado> empleados = new ArrayList<>();
-
-        //Llamar a la consulta que me devuelve todos los articulos
-        ConsultasBBDD consulta = new ConsultasBBDD();
-
-        empleados = consulta.listaEmpleados();
-
-        return empleados;
-    }*/
-
-   /* @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            empleados.addAll(getEmpleados());
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        int column = 0;
-        int row = 0;
-
-        HBox hbox = new HBox(); // Crea el primer HBox
-
-        try {
-            for (int i = 0; i < empleados.size(); i++) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("FXML_infoEmpleadoEditable_Carol.fxml"));
-
-                Parent itemEmpleado = fxmlLoader.load();
-
-                // Obtener el controlador del elemento de empleado
-                Controlador_ItemEmpleado itemController = fxmlLoader.getController();
-
-                // Llamar al método setData() y pasarle el objeto Empleado correspondiente
-                itemController.setData(empleados.get(i));
-
-                //Propiedades Hbox
-                hBoxListaEmpleado.setPrefHeight(hBoxListaEmpleado.getPrefHeight() + 80);
-
-                //Propiedades Hbox
-                hbox.setAlignment(Pos.CENTER_LEFT);
-                hbox.setSpacing(25);
-                hbox.setPadding(new Insets(0,0,0,80));
+    boolean edicionHabilitada = false;
 
 
-                // Agregar el contenido cargado al hbox
-                hbox.getChildren().add(itemEmpleado);
 
-                column++;
-                // Si el HBox actual tiene tres elementos, crea un nuevo HBox
-                if (column == 2) {
-                    // Agrega el HBox actual al VBox
-                    hBoxListaEmpleado.getChildren().add(hbox);
-                    hBoxListaEmpleado.setAlignment(Pos.CENTER);
-                    // Crea un nuevo HBox para los próximos elementos
-                    hbox = new HBox();
-                    column = 0;
-                    row++;
-                }
-            }
-
-            // Si hay artículos restantes que no llenan una fila completa
-            if (column > 0) {
-                hBoxListaEmpleado.getChildren().add(hbox);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
+    //Obtenermos la informacion del empleado en el que hemos clicado y lo cargamos sobre las ranuras que toca.
 
     public void cargarEmpleado(Empleado empleado) throws FileNotFoundException {
 
         //Propiedades de un empleado cualquiera ------------------------------------------------------------------------
 
         textNombreApellidos.setText(empleado.getNombre() + " " + empleado.getApellidos());
-        txtDNI.setText(empleado.getNombre());
+        txtDNI.setText(empleado.getDni());
         txtTelefono.setText(String.valueOf(empleado.getTelefono()));
         txtEmail.setText(empleado.getE_mail());
         txtNumApellidos.setText(String.valueOf(empleado.contarApellidos()));
         txtDireccion.setText(empleado.getDireccion());
         cbTarjetaFidl.setSelected(empleado.isTienePrivilegios());
 
-        // Cargar la fecha de nacimiento del empleado que es un String en un DataPicker.
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        String fechaNacimientoStr = empleado.getfNacimiento(); // Obtener la cadena de fecha del empleado
+
+        // Definir un formato para convertir la cadena de fecha a LocalDate
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         try {
             // Convertir la cadena de fecha a LocalDate
-            LocalDate fechaNacimiento = LocalDate.parse(empleado.getfNacimiento(), formatter);
+            LocalDate fechaNacimiento = LocalDate.parse(fechaNacimientoStr, formatter);
+
             // Establecer la fecha en el DatePicker
             dpFechaNacimiento.setValue(fechaNacimiento);
         } catch (DateTimeParseException e) {
-            // Manejar el error en caso de que la fecha no pueda ser parseada (Convertir una cadena de texto a un tipo de dato especifico, como un numero, fecha, etc)
+            // Manejar el error en caso de que la fecha no pueda ser parseada
             System.err.println("Error al parsear la fecha de nacimiento: " + e.getMessage());
-            dpFechaNacimiento.setValue(null);
         }
+    }
+
+    public void actualizarEdicionHabilitada(){
+
+        edicionHabilitada = !edicionHabilitada;
+        txtDNI.setDisable(edicionHabilitada);
+        txtTelefono.setDisable(edicionHabilitada);
+        txtEmail.setDisable(edicionHabilitada);
+        txtNumApellidos.setDisable(edicionHabilitada);
+        txtDireccion.setDisable(edicionHabilitada);
+        cbTarjetaFidl.setDisable(edicionHabilitada);
+        dpFechaNacimiento.setDisable(edicionHabilitada);
 
     }
 
@@ -202,6 +143,14 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    public void mostrarListaEmpleados(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_listaEmpleados_Carol.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();

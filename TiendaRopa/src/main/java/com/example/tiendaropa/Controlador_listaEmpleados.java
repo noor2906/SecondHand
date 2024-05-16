@@ -10,6 +10,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -25,9 +26,12 @@ import java.util.ResourceBundle;
 public class Controlador_listaEmpleados implements Initializable {
 
     private List<Empleado> empleados = new ArrayList<>();
+
     @FXML
     private VBox vBoxEmpleados;
+
     private Empleado empleado;
+
 
 
     //Obtenemos empleados
@@ -116,4 +120,6 @@ public class Controlador_listaEmpleados implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+
 }

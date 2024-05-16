@@ -33,6 +33,8 @@ public class Controlador_ItemEmpleado {
 
     Empleado empleado;
 
+    //Cargamos la informacion del empleado
+
     public void setData(Empleado empleado) throws FileNotFoundException {
 
         this.empleado = empleado;
@@ -40,6 +42,8 @@ public class Controlador_ItemEmpleado {
         txtEmpleadoItem.setText(empleado.getNombre());
 
     }
+
+    //Añadimos infromacion al boton de editar empleado, haciendo que dirija y carge la informacion correspondiente al empleado en el que clicamos.
 
     public void mostrarInfoEmpleado(MouseEvent event) {
         try {
