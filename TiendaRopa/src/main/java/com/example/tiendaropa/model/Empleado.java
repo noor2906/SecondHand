@@ -34,7 +34,98 @@ public class Empleado extends Usuario{
         return nombre;
     }
 
-    //! BORRAR más adelante
+    @Override
+    public void setNombre(String nombre) {
+        super.setNombre(nombre);
+    }
+
+    @Override
+    public String getDni() {
+        return super.getDni();
+    }
+
+    @Override
+    public void setDni(String dni) {
+        super.setDni(dni);
+    }
+
+    @Override
+    public String getApellidos() {
+        return super.getApellidos();
+    }
+
+    @Override
+    public void setApellidos(String apellidos) {
+        super.setApellidos(apellidos);
+    }
+
+    @Override
+    public String getTelefono() {
+        return super.getTelefono();
+    }
+
+    @Override
+    public void setTelefono(String telefono) {
+        super.setTelefono(telefono);
+    }
+
+    @Override
+    public String getfNacimiento() {
+        return super.getfNacimiento();
+    }
+
+    @Override
+    public void setfNacimiento(String fNacimiento) {
+        super.setfNacimiento(fNacimiento);
+    }
+
+    @Override
+    public String getE_mail() {
+        return super.getE_mail();
+    }
+
+    @Override
+    public void setE_mail(String e_mail) {
+        super.setE_mail(e_mail);
+    }
+
+    @Override
+    public String getPass() {
+        return super.getPass();
+    }
+
+    @Override
+    public void setPass(String pass) {
+        super.setPass(pass);
+    }
+
+    @Override
+    public String getDireccion() {
+        return super.getDireccion();
+    }
+
+    @Override
+    public void setDireccion(String direccion) {
+        super.setDireccion(direccion);
+    }
+
+    @Override
+    public boolean isActivo() {
+        return super.isActivo();
+    }
+
+    @Override
+    public void setActivo(boolean activo) {
+        super.setActivo(activo);
+    }
+
+    public int contarApellidos() {
+        if (apellidos == null || apellidos.trim().isEmpty()) {
+            return 0;
+        }
+        return apellidos.trim().split("\\s+").length;
+    }
+
     @Override
     public String toString() {
         return "Empleado{" +

@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_listaEmpleados">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_listaEmpleados">
    <children>
       <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -40,7 +40,7 @@
                   </Group>
                </graphic>
             </Button>
-            <Button fx:id="btnMenu" onMouseClicked="#mostrarMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
+            <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
                <graphic>
                   <Group>
                      <children>
@@ -68,186 +68,15 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <HBox layoutX="1022.0" layoutY="306.0" prefHeight="50.0" prefWidth="130.0" spacing="20.0">
-         <children>
-            <HBox alignment="TOP_CENTER" prefHeight="222.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <children>
-                  <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <children>
-                  <SVGPath content="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM18 4H15.5L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </HBox>
-         </children>
-      </HBox>
-      <HBox layoutX="173.0" layoutY="308.0" prefHeight="60.0" prefWidth="808.0" style="-fx-background-color: #5555;">
-         <children>
-            <SVGPath content="M15.9997 16C18.9463 16 21.333 13.6133 21.333 10.6667C21.333 7.72001 18.9463 5.33334 15.9997 5.33334C13.053 5.33334 10.6663 7.72001 10.6663 10.6667C10.6663 13.6133 13.053 16 15.9997 16ZM15.9997 18.6667C12.4397 18.6667 5.33301 20.4533 5.33301 24V25.3333C5.33301 26.0667 5.93301 26.6667 6.66634 26.6667H25.333C26.0663 26.6667 26.6663 26.0667 26.6663 25.3333V24C26.6663 20.4533 19.5597 18.6667 15.9997 18.6667Z">
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
-               </HBox.margin>
-            </SVGPath>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Usuario" wrappingWidth="786.791015625">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets top="15.0" />
-               </HBox.margin>
-            </Text>
-         </children>
-      </HBox>
-      <HBox layoutX="1022.0" layoutY="415.0" prefHeight="50.0" prefWidth="130.0" spacing="20.0">
-         <children>
-            <HBox alignment="TOP_CENTER" prefHeight="222.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <children>
-                  <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-               <children>
-                  <SVGPath content="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM18 4H15.5L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-      <HBox layoutX="173.0" layoutY="417.0" prefHeight="60.0" prefWidth="808.0" style="-fx-background-color: #5555;">
-         <children>
-            <SVGPath content="M15.9997 16C18.9463 16 21.333 13.6133 21.333 10.6667C21.333 7.72001 18.9463 5.33334 15.9997 5.33334C13.053 5.33334 10.6663 7.72001 10.6663 10.6667C10.6663 13.6133 13.053 16 15.9997 16ZM15.9997 18.6667C12.4397 18.6667 5.33301 20.4533 5.33301 24V25.3333C5.33301 26.0667 5.93301 26.6667 6.66634 26.6667H25.333C26.0663 26.6667 26.6663 26.0667 26.6663 25.3333V24C26.6663 20.4533 19.5597 18.6667 15.9997 18.6667Z">
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
-               </HBox.margin>
-            </SVGPath>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Usuario" wrappingWidth="786.791015625">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets top="15.0" />
-               </HBox.margin>
-            </Text>
-         </children>
-      </HBox>
-      <HBox layoutX="1022.0" layoutY="526.0" prefHeight="50.0" prefWidth="130.0" spacing="20.0">
-         <children>
-            <HBox alignment="TOP_CENTER" prefHeight="222.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <children>
-                  <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-               <children>
-                  <SVGPath content="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM18 4H15.5L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-      <HBox layoutX="173.0" layoutY="528.0" prefHeight="60.0" prefWidth="808.0" style="-fx-background-color: #5555;">
-         <children>
-            <SVGPath content="M15.9997 16C18.9463 16 21.333 13.6133 21.333 10.6667C21.333 7.72001 18.9463 5.33334 15.9997 5.33334C13.053 5.33334 10.6663 7.72001 10.6663 10.6667C10.6663 13.6133 13.053 16 15.9997 16ZM15.9997 18.6667C12.4397 18.6667 5.33301 20.4533 5.33301 24V25.3333C5.33301 26.0667 5.93301 26.6667 6.66634 26.6667H25.333C26.0663 26.6667 26.6663 26.0667 26.6663 25.3333V24C26.6663 20.4533 19.5597 18.6667 15.9997 18.6667Z">
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
-               </HBox.margin>
-            </SVGPath>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Usuario" wrappingWidth="786.791015625">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets top="15.0" />
-               </HBox.margin>
-            </Text>
-         </children>
-      </HBox>
-      <HBox layoutX="1022.0" layoutY="634.0" prefHeight="50.0" prefWidth="130.0" spacing="20.0">
-         <children>
-            <HBox alignment="TOP_CENTER" prefHeight="222.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <children>
-                  <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="40.0" style="-fx-background-color: black;">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-               <children>
-                  <SVGPath content="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM18 4H15.5L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4Z" fill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </SVGPath>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-      <HBox layoutX="173.0" layoutY="636.0" prefHeight="60.0" prefWidth="808.0" style="-fx-background-color: #5555;">
-         <children>
-            <SVGPath content="M15.9997 16C18.9463 16 21.333 13.6133 21.333 10.6667C21.333 7.72001 18.9463 5.33334 15.9997 5.33334C13.053 5.33334 10.6663 7.72001 10.6663 10.6667C10.6663 13.6133 13.053 16 15.9997 16ZM15.9997 18.6667C12.4397 18.6667 5.33301 20.4533 5.33301 24V25.3333C5.33301 26.0667 5.93301 26.6667 6.66634 26.6667H25.333C26.0663 26.6667 26.6663 26.0667 26.6663 25.3333V24C26.6663 20.4533 19.5597 18.6667 15.9997 18.6667Z">
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
-               </HBox.margin>
-            </SVGPath>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Usuario" wrappingWidth="786.791015625">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets top="15.0" />
-               </HBox.margin>
-            </Text>
-         </children>
-      </HBox>
       <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" layoutX="48.0" layoutY="127.0" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="264.0" prefHeight="800.0" prefWidth="1440.0">
+         <content>
+            <Pane>
+               <children>
+                  <VBox fx:id="vBoxEmpleados" prefHeight="800.0" prefWidth="1440.0" spacing="50.0" style="-fx-background-color: white;" />
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
    </children>
 </Pane>

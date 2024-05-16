@@ -12,6 +12,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.SVGPath;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -21,7 +23,7 @@ import java.io.IOException;
 public class Controlador_ItemEmpleado {
 
     @FXML
-    private TextField txtEmpleadoItem;
+    private Text txtEmpleadoItem;
 
     @FXML
     private Button btnEditarEmpleado;
@@ -39,12 +41,23 @@ public class Controlador_ItemEmpleado {
 
     }
 
-    public void mostrarInfoEmpleado(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    public void mostrarInfoEmpleado(MouseEvent event) {
+        try {
+            // Load the target scene FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_infoEmpleadoEditable_Carol.fxml"));
+            Parent root = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_infoEmpleado_Carol.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Usando el evento para obtener la ventana actual
+            Controlador_infoEmpleadoEditable productoController = loader.getController();
+            productoController.cargarEmpleado(this.empleado);
 
-        stage.setScene(new Scene(root));
-        stage.show();
+            // Set the scene for the stage
+            stage.setScene(new Scene(root));
+
+            // Show the target scene
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -6,17 +6,20 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.example.tiendaropa.Controlador_ItemEmpleado">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_ItemEmpleado">
    <children>
       <HBox layoutX="813.0" layoutY="6.0" prefHeight="75.0" prefWidth="180.0" spacing="15.0">
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: black;">
                <children>
-                  <SVGPath fx:id="btnEditarEmpleado" content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE" scaleX="1.5" scaleY="1.5">
+                  <Button fx:id="btnEditarEmpleado" mnemonicParsing="false" onMouseClicked="#mostrarInfoEmpleado" style="-fx-background-color: black;">
+                     <graphic>
+                        <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE" scaleX="1.5" scaleY="1.5" />
+                     </graphic>
                      <HBox.margin>
-                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </HBox.margin>
-                  </SVGPath>
+                  </Button>
                </children>
                <HBox.margin>
                   <Insets />
