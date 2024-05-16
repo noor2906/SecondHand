@@ -1,17 +1,23 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.Conexiones.InsercionesBBDD;
+import com.example.tiendaropa.model.MetodoPago;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Controlador_registroUsuario {
     @FXML
@@ -30,6 +36,17 @@ public class Controlador_registroUsuario {
     private TextField txtDni;
     @FXML
     private TextField txtDireccion;
+    @FXML
+    private ComboBox<String> combList;
+    public void initialize(){
+        HashMap<Integer,MetodoPago> mapaPagos = MetodoPago.getMapaMetodoPago();
+        ObservableList<String> soList = FXCollections.observableArrayList();
+        for (Integer k:mapaPagos.keySet()) {
+            soList.add(mapaPagos.get(k).getDescripcion());
+        }
+
+        combList.setItems(soList);
+    }
     public void registrar(MouseEvent event) throws IOException {
         int ok=0;
         String nombre = txtNombre.getText();
@@ -47,6 +64,7 @@ public class Controlador_registroUsuario {
         if (ok>0){mostrarLogin(event);}
 
     }
+
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
@@ -85,5 +103,28 @@ public class Controlador_registroUsuario {
 
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    // Botones Limpiar
+    public void limpiarNombre(MouseEvent actionEvent) {
+        txtNombre.clear();
+    }
+    public void limpiarApellidos(MouseEvent actionEvent) {
+        txtApellidos.clear();
+    }
+    public void limpiarDni(MouseEvent actionEvent) {
+        txtDni.clear();
+    }
+    public void limpiarEmail(MouseEvent actionEvent) {
+        txtEmail.clear();
+    }
+    public void limpiarContra(MouseEvent actionEvent) {
+        txtContra.clear();
+    }
+    public void limpiarDireccion(MouseEvent actionEvent) {
+        txtDireccion.clear();
+    }
+    public void limpiarTelefono(MouseEvent actionEvent) {
+        txtTelefono.clear();
     }
 }

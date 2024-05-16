@@ -65,7 +65,7 @@ public class ConexionBBDD {
     public void desconectarBBDD(){
         try { rs.close(); } catch (Exception e) {System.out.println("rs no se ha cerrado");}
         try { sentenciaSQL.close(); } catch (Exception e) { System.out.println("Sentencia no se ha cerrado");}
-        try { conexion.close();System.out.println("Conexión cerrada!"); } catch (Exception e) { System.out.println("Conexión no se ha cerrado"); }
+        try { conexion.close();System.out.println("Conexión cerrada!\n"); } catch (Exception e) { System.out.println("Conexión no se ha cerrado"); }
     }
 
     public int updateSQL(String sql) {// Para insertar cosas en la bbdd
