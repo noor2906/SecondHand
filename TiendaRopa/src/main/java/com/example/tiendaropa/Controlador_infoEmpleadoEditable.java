@@ -38,7 +38,7 @@ import java.util.ResourceBundle;
 public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
 
     @FXML
-    private Button btnLogin1;
+    private Button btnVolverListaEmpleado;
 
     @FXML
     TextField txtDNI, txtTelefono, txtEmail, txtNumApellidos, txtDireccion;
@@ -52,6 +52,8 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
     @FXML
     Text textNombreApellidos;
 
+    boolean edicionHabilitada = false;
+
 
 
     //Obtenermos la informacion del empleado en el que hemos clicado y lo cargamos sobre las ranuras que toca.
@@ -61,7 +63,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         //Propiedades de un empleado cualquiera ------------------------------------------------------------------------
 
         textNombreApellidos.setText(empleado.getNombre() + " " + empleado.getApellidos());
-        txtDNI.setText(empleado.getNombre());
+        txtDNI.setText(empleado.getDni());
         txtTelefono.setText(String.valueOf(empleado.getTelefono()));
         txtEmail.setText(empleado.getE_mail());
         txtNumApellidos.setText(String.valueOf(empleado.contarApellidos()));
@@ -83,7 +85,18 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
             // Manejar el error en caso de que la fecha no pueda ser parseada
             System.err.println("Error al parsear la fecha de nacimiento: " + e.getMessage());
         }
+    }
 
+    public void actualizarEdicionHabilitada(){
+
+        edicionHabilitada = !edicionHabilitada;
+        txtDNI.setDisable(edicionHabilitada);
+        txtTelefono.setDisable(edicionHabilitada);
+        txtEmail.setDisable(edicionHabilitada);
+        txtNumApellidos.setDisable(edicionHabilitada);
+        txtDireccion.setDisable(edicionHabilitada);
+        cbTarjetaFidl.setDisable(edicionHabilitada);
+        dpFechaNacimiento.setDisable(edicionHabilitada);
 
     }
 
@@ -130,6 +143,14 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    public void mostrarListaEmpleados(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_listaEmpleados_Carol.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();
