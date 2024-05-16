@@ -49,4 +49,13 @@ public class Controlador_PantallaPrueba {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void mostrarCatalogo(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_catologo_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }
