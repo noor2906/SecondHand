@@ -5,6 +5,8 @@ import com.example.tiendaropa.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
+import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,9 +22,11 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class Controlador_fichaProducto { //es lo que hace que se cargue automáticamente
+public class Controlador_fichaProducto implements Initializable { //es lo que hace que se cargue automáticamente
 
     ConexionBBDD conexion = new ConexionBBDD();
 
@@ -106,6 +110,157 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
 
         Image imgArticulo = new Image(rutaImagen);
         imagenProducto.setImage(imgArticulo);
+
+
+        if (articulo instanceof Ropa){
+            //Propiedades de la ropa ---------------------------------------------------------------------------------------
+
+            Ropa ropa = (Ropa) articulo;
+
+            String [] propiedadesRopa = {String.valueOf(ropa.getMaterial()), ropa.getTalla(), ropa.getColor(), ropa.getTipoCierre()};
+
+            hBoxPropiedadesArticulo.setSpacing(10);
+
+
+            //Instanciamos el textField manualmente
+
+            TextField txtfPropiedadesRopa = null;
+            TextField txtfPropiedadesSubtipo = null;
+
+            for (int i = 0; i < propiedadesRopa.length; i++) {
+
+                hBoxPropiedadesArticulo.getChildren().add(txtfPropiedadesRopa = new TextField(propiedadesRopa[i]));
+
+                txtfPropiedadesRopa.setPrefWidth(148);
+                txtfPropiedadesRopa.setPrefHeight(57);
+                txtfPropiedadesRopa.setAlignment(Pos.CENTER);
+                txtfPropiedadesRopa.setEditable(false);
+                txtfPropiedadesRopa.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
+                        "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+
+            }
+
+
+            if (articulo instanceof Camisa){
+                //propiedades camisa
+
+                String estampado = "";
+
+                if(((Camisa) articulo).isEstampada()){
+                    estampado = "Estampado";
+                } else {
+                    estampado = "No estampado";
+                }
+
+                String [] propiedadesCamisa = {((Camisa) articulo).getTipoManga(), estampado};
+
+                for (int i = 0; i < propiedadesCamisa.length; i++) {
+                    hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesCamisa[i]));
+
+                    txtfPropiedadesSubtipo.setPrefWidth(148);
+                    txtfPropiedadesSubtipo.setPrefHeight(57);
+                    txtfPropiedadesSubtipo.setAlignment(Pos.CENTER);
+                    txtfPropiedadesSubtipo.setEditable(false);
+                    txtfPropiedadesSubtipo.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
+                            "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                }
+
+
+            } else if (articulo instanceof Chaqueta) {
+                //propiedades chaqueta
+                String impermeable = "";
+
+                if(((Chaqueta) articulo).isImpermeable()){
+                    impermeable = "Impermeable";
+                } else{
+                    impermeable = "No impermeable";
+                }
+
+                String [] propiedadesChaqueta = {impermeable};
+
+                for (int i = 0; i < propiedadesChaqueta.length; i++) {
+                    hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesChaqueta[i]));
+
+                    txtfPropiedadesSubtipo.setPrefWidth(148);
+                    txtfPropiedadesSubtipo.setPrefHeight(57);
+                    txtfPropiedadesSubtipo.setAlignment(Pos.CENTER);
+                    txtfPropiedadesSubtipo.setEditable(false);
+                    txtfPropiedadesSubtipo.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
+                            "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                }
+
+            } else if (articulo instanceof Pantalon) {
+                //propiedades pantalon
+                String tieneBolsillos = "";
+
+                if(((Pantalon) articulo).isTieneBolsillos()){
+                    tieneBolsillos = "Con bolsillos";
+                } else{
+                    tieneBolsillos = "Sin bolsillos";
+                }
+
+                String [] propiedadesPantalon = {tieneBolsillos};
+
+                for (int i = 0; i < propiedadesPantalon.length; i++) {
+                    hBoxPropiedadesSubtipo.getChildren().add(txtfPropiedadesSubtipo = new TextField(propiedadesPantalon[i]));
+
+                    txtfPropiedadesSubtipo.setPrefWidth(148);
+                    txtfPropiedadesSubtipo.setPrefHeight(57);
+                    txtfPropiedadesSubtipo.setAlignment(Pos.CENTER);
+                    txtfPropiedadesSubtipo.setEditable(false);
+                    txtfPropiedadesSubtipo.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
+                            "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+                }
+
+            }
+
+        } else if (articulo instanceof Accesorios) {
+            //Propiedades de accesorio -------------------------------------------------------------------------------------
+            Accesorios accesorio = (Accesorios) articulo;
+
+            String personalizado = "";
+
+            if(accesorio.isPersonalizado()){
+                personalizado = "Estampado";
+            } else {
+                personalizado = "No estampado";
+            }
+
+
+            String [] propiedadesAccesorio = {String.valueOf(articulo.getMaterial()), ((Accesorios) articulo).getEstilo(), personalizado};
+
+            hBoxPropiedadesArticulo.setSpacing(10);
+
+            //Instanciamos el textField manualmente
+
+            TextField txtfPropiedadesAccesorio= null;
+            TextField txtfPropiedadesSubtipo = null;
+
+            for (int i = 0; i < propiedadesAccesorio.length; i++) {
+
+                hBoxPropiedadesArticulo.getChildren().add(txtfPropiedadesAccesorio = new TextField(propiedadesAccesorio[i]));
+
+                txtfPropiedadesAccesorio.setPrefWidth(148);
+                txtfPropiedadesAccesorio.setPrefHeight(57);
+                txtfPropiedadesAccesorio.setAlignment(Pos.CENTER);
+                txtfPropiedadesAccesorio.setEditable(false);
+                txtfPropiedadesAccesorio.setStyle("-fx-margin: 1px; -fx-font-size: 18px; -fx-font-weight: bold; " +
+                        "-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 30;");
+
+            }
+
+
+
+            if (articulo instanceof Bolso){
+               //propiedades bolso
+
+            } else if (articulo instanceof Zapatos) {
+                //propiedades zapatos
+
+            }
+        }
+
+
     }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
@@ -166,4 +321,8 @@ public class Controlador_fichaProducto { //es lo que hace que se cargue automát
         stage.show();
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

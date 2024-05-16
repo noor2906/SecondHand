@@ -17,11 +17,34 @@ public class Accesorios extends Articulo {
         this.tipoAccesorio = tipoAccesorio;
     }
 
+    //GETTERS Y SETTERS
 
+
+    public String getEstilo() {
+        return estilo;
+    }
+
+    public void setEstilo(String estilo) {
+        this.estilo = estilo;
+    }
+
+    public boolean isPersonalizado() {
+        return personalizado;
+    }
+
+    public void setPersonalizado(boolean personalizado) {
+        this.personalizado = personalizado;
+    }
+
+    public String getTipoAccesorio() {
+        return tipoAccesorio;
+    }
+
+    public void setTipoAccesorio(String tipoAccesorio) {
+        this.tipoAccesorio = tipoAccesorio;
+    }
 
     //METODOS
-
-
     @Override
     public String toString() {
         return "Accesorios{" +
