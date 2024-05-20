@@ -7,21 +7,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_PantallaPrueba">
    <content>
-      <Pane fx:id="btnFEstadoPedidoBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: h;">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: h;">
          <children>
-            <Button fx:id="btnFPFrecuentesBack" layoutX="560.0" layoutY="324.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="314.0" style="-fx-background-color: black;" text="Volver al Inicio" textFill="WHITE">
+            <Button fx:id="btnFAyudaBack" onMouseClicked="#mostrarCatalogo" layoutX="560.0" layoutY="324.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="314.0" style="-fx-background-color: black;" text="Volver al Inicio" textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font>
             </Button>
-            <Text layoutX="558.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
+            <Text layoutX="637.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayuda">
                <font>
                   <Font size="53.0" />
                </font>
             </Text>
-            <Text fx:id="btnFDevolucionesBack" layoutX="598.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Relleno para el Estado">
+            <Text layoutX="610.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zona Para preguntas">
                <font>
                   <Font size="25.0" />
                </font>
