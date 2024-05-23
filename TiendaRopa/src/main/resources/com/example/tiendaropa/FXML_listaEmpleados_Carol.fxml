@@ -31,7 +31,7 @@
                   </Group>
                </graphic>
             </Button>
-            <Button layoutX="1369.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-10.0">
+            <Button fx:id="btnCarrito" layoutX="1369.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#mostrarCarrito" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-10.0">
                <graphic>
                   <Group>
                      <children>
@@ -58,7 +58,7 @@
             <Line endX="1314.0" layoutX="126.0" layoutY="96.0" startX="-126.0" />
          </children>
       </Pane>
-      <Button fx:id="btnVolverListaEmpleado"  cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="40.0" layoutY="129.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
+      <Button fx:id="btnVolverPanelAdmin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="40.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#mostrarPanelAdmin" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
          <graphic>
             <Group />
          </graphic>

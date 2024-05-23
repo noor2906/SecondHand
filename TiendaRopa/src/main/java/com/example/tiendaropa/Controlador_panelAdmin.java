@@ -65,4 +65,24 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void mostrarListaEmpleados(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_listaEmpleados_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarPedidos(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_home_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+
 }

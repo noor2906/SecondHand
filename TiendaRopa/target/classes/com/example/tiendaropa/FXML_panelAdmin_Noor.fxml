@@ -19,7 +19,7 @@
          <children>
             <HBox layoutX="94.0" layoutY="155.0" spacing="20.0">
                <children>
-                  <Button fx:id="btnRetrocederPanelAdmin" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
+                  <Button fx:id="btnRetrocederHome" mnemonicParsing="false" onMouseClicked="#mostrarHome" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
                      <graphic>
                         <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
                      </graphic>
@@ -69,7 +69,7 @@
                                     </HBox>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnAdministrarProductos" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                              <Button fx:id="btnAdministrarProductos" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarPedidos" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
@@ -105,7 +105,7 @@
                         </HBox>
                         <HBox prefHeight="163.0" prefWidth="474.0" spacing="60.0">
                            <children>
-                              <Button fx:id="btnAdministrarEmpleados" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="91.0" prefWidth="217.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                              <Button fx:id="btnAdministrarEmpleados" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaEmpleados" prefHeight="91.0" prefWidth="217.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
