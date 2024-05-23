@@ -14,22 +14,23 @@ import java.sql.SQLException;
 public class Aplicacion extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Aplicacion.class.getResource("FXML_listaEmpleados_Carol.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Aplicacion.class.getResource("FXML_panelAdmin_Noor.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1440, 1000);
         stage.setTitle("Second Hand - Noor | Carolina | Verónica");
         stage.setScene(scene);
         stage.show();
 
-        //Cargamos los departamentos, materiales (falta método de pago)
+        //Cargamos los departamentos, materiales y método de pago
         try {Departamento.rellenarMapaDpto();} catch (SQLException e) {throw new RuntimeException(e);}
         try {Material.rellenarMapaMateriales();} catch (SQLException e) {throw new RuntimeException(e);}
         try {MetodoPago.rellenarMapaMetodoPago();} catch (SQLException e) {throw new RuntimeException(e);}
-        //try {MetodoPago.recorrerMapa();}catch (Exception e){throw new RuntimeException(e);}
+        try {MetodoPago.recorrerMapa();}catch (Exception e){throw new RuntimeException(e);}
     }
 
 
     public static void main(String[] args) {
         launch();
     }
+    /**/
 
 }
