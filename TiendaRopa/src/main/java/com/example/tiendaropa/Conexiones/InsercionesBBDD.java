@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class InsercionesBBDD {
 
-    public static int insercionRegistro( String nombre,String contra, String apellidos,String telefono,String email,String dni,String direccion,int metodoPago,String fecha, int fidelizacion){
+    public static int insercionRegistro( String nombre,String contra, String apellidos,String telefono,String email,String dni,String direccion,int metodoPago,String fecha, boolean fidelizacion){
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
         conn.crearSentencia();

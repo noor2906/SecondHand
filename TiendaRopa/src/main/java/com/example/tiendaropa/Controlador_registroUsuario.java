@@ -45,7 +45,7 @@ public class Controlador_registroUsuario {
     @FXML
     private ComboBox<String> combList;
     private HashMap<Integer,MetodoPago> mapaPagos = MetodoPago.getMapaMetodoPago();
-    private int fidelizacion=0;
+    private boolean fidelizacion;
     public void initialize(){
         ObservableList<String> soList = FXCollections.observableArrayList();
         for (Integer k:mapaPagos.keySet()) {
@@ -64,9 +64,10 @@ public class Controlador_registroUsuario {
         String direccion = txtDireccion.getText();
         String pago = combList.getValue();
         String fecha = String.valueOf(dpFecha.getValue());
+        fidelizacion = chbxFidelizacion.isSelected();
         int mPago = 0;
         if (!dni.equals("") && !nombre.equals("") && !apellidos.equals("") && !email.equals("") && !direccion.equals("") && !contra.equals("")){
-            for (Integer k:mapaPagos.keySet()) {
+            for (Integer k:mapaPagos.keySet()) { // sacar este método
                 if (mapaPagos.get(k).getDescripcion().equals(pago)){
                     mPago = k;
                 }
@@ -78,14 +79,6 @@ public class Controlador_registroUsuario {
         if (ok>0){mostrarLogin(event);}
 
     }
-    public void pulsadoAceptar(ActionEvent actionEvent) {
-        if(chbxFidelizacion.isSelected()){
-            fidelizacion = 1;
-        }else{
-            fidelizacion = 0;
-        }
-    }
-
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 

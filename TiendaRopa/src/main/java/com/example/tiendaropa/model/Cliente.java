@@ -8,6 +8,8 @@ public class Cliente extends Usuario{
     private float saldoCuenta;
     private int numPedidos;
 
+
+
     private MetodoPago metodoPago;
 
     // Constructor

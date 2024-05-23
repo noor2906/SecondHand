@@ -1,15 +1,22 @@
 package com.example.tiendaropa;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Controlador_panelAdmin {
+    @FXML
+    Button btnLogin;
+    public void initialize(){
+        btnLogin.setDisable(true);
+    }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 

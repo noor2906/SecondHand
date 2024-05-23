@@ -35,13 +35,12 @@ public class Controlador_login {
         usuario=consulta.login(user,pass);
         if (usuario instanceof Cliente){
             mostrarHome(actionEvent);
-            System.out.println(usuario.toString()); //! Borrar más adelante --> Ver si el usuario se ha creado correctamente
         } else if (usuario instanceof Empleado) {
             mostrarPanelAdmin(actionEvent);
         } else {
             a.setAlertType(Alert.AlertType.INFORMATION);
             a.setHeaderText(null);
-            a.setContentText("El usuario no existe :(");
+            a.setContentText("El usuario no existe");
             a.show();
         }
     }
