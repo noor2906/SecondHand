@@ -64,10 +64,11 @@ public class Controlador_listaUsuarios {
                 // Obtener el controlador del elemento de artículo
                 Controlador_itemCliente itemController = fxmlLoader.getController();
 
-                // Llamar al método setData() y pasarle el objeto Articulo correspondiente
+                // Llamar al método setData() y pasarle el objeto Cliente correspondiente
                 itemController.setData(clientes.get(i));
 
                 hbox.getChildren().add(itemClientes);
+
                 hbox.setAlignment(Pos.CENTER_LEFT);
                 hbox.setSpacing(25);
                 hbox.setPadding(new Insets(10,0,0,80));
@@ -76,6 +77,8 @@ public class Controlador_listaUsuarios {
                 // Agrega el HBox actual al VBox
                 vBoxClientes.getChildren().add(hbox);
                 vBoxClientes.setAlignment(Pos.CENTER);
+                //Propiedades Vbox
+                vBoxClientes.setPrefHeight(vBoxClientes.getPrefHeight() + 80);
                 // Crea un nuevo HBox para los próximos elementos
                 hbox = new HBox();
                 row++;
@@ -121,6 +124,15 @@ public class Controlador_listaUsuarios {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_carrito_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void volverPanelAdmin(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_panelAdmin_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();

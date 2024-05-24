@@ -1,15 +1,13 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.Conexiones.ModificacionesBBDD;
 import com.example.tiendaropa.model.Cliente;
-import com.example.tiendaropa.model.Empleado;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -19,25 +17,51 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Controlador_itemCliente {
+
+    public Button btnActivo;
     @FXML
     private Text txtCliente;
-    @FXML
-    private CheckBox chbxActivo;
     private Cliente cliente;
     public void initialize(){
-        chbxActivo.setSelected(true);
+
     }
     public void setData(Cliente cliente) throws FileNotFoundException {
 
         this.cliente = cliente;
+        if (cliente.isActivo()){
+            btnActivo.setText("Habilitar");
+        }else {
+            btnActivo.setText("Deshabilitar");
+        }
 
         txtCliente.setText(cliente.getE_mail()+" | "+cliente.getDni());
 
     }
-    public void chbxActivado(ActionEvent actionEvent) {
+/*    public void desactivar(ActionEvent actionEvent) {
         ModificacionesBBDD modificacion = new ModificacionesBBDD();
-        if(!chbxActivo.isSelected()){
+        if(chbxActivo.selectedProperty()){
+            modificacion.habilitarUsuario(cliente);
+        } else{
+            modificacion.deshabilitarUsuario(cliente);
         }
+
+    }*/
+    public void activarYDesactivarCliente(MouseEvent actionEvent) {
+        ModificacionesBBDD modificacion = new ModificacionesBBDD();
+        int habilitado;
+         habilitado=modificacion.deshabilitarYHabilitarUsuario(cliente);
+         switch (habilitado){
+             case 0:
+                 cliente.setActivo(false);
+                 btnActivo.setText("Habilitar");
+                 break;
+             case 1:
+                 cliente.setActivo(true);
+                 btnActivo.setText("Deshabilitar");
+                 break;
+             case -1:
+                 System.out.println("No se ha podido hacer la modificación");
+         }
     }
 
     public void mostrarInfoCliente(MouseEvent event) throws IOException {

@@ -1,7 +1,9 @@
 package com.example.tiendaropa.Conexiones;
 
+import com.example.tiendaropa.model.Cliente;
 import com.example.tiendaropa.model.Departamento;
 import com.example.tiendaropa.model.Empleado;
+import com.example.tiendaropa.model.Usuario;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -37,4 +39,48 @@ public class ModificacionesBBDD {
             conn.desconectarBBDD();
         }
     }
+
+    public int deshabilitarYHabilitarUsuario(Usuario usuario){//devuelve int que será -1 si ha dado error el método, 1 si se ha habilitado el usuario y 0 si se ha deshabilitado
+        ConexionBBDD conn = new ConexionBBDD();
+        int habilitado = -1;
+        try{
+            conn.conectarBBDD();
+            conn.crearSentencia();
+            String tabla;
+            if(usuario instanceof Cliente){
+                tabla = "cliente";
+            } else if (usuario instanceof Empleado) {
+                tabla = "empleado";
+            }else {tabla = null;}
+            if (usuario.isActivo()==true){
+                conn.updateSQL("update "+tabla+" set activo = 0 where dni = '"+usuario.getDni()+"';" );
+                System.out.println("Se ha deshabilitado el usuario");
+                habilitado=0;
+            }else if (usuario.isActivo()==false){
+                conn.updateSQL("update "+tabla+" set activo = 1 where dni = '"+usuario.getDni()+"';" );
+                System.out.println("Se ha habilitado el usuario");
+                habilitado=1;
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }finally{
+            conn.desconectarBBDD();
+        }
+        return habilitado;
+    }
+
+/*    public void habilitarUsuario(Usuario usuario){
+        ConexionBBDD conn = new ConexionBBDD();
+        conn.conectarBBDD();
+        conn.crearSentencia();
+        String tabla;
+        if(usuario instanceof Cliente){
+            tabla = "cliente";
+        } else if (usuario instanceof Empleado) {
+            tabla = "empleado";
+        }else {tabla = null;}
+
+        conn.updateSQL("update "+tabla+" set activo = true where "+ usuario.getDni()+"= dni;" );
+        conn.desconectarBBDD();
+    }*/
 }
