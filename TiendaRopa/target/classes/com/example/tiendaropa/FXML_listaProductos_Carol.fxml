@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_listaProductos">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_listaProductos">
    <children>
       <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -41,7 +46,7 @@
                   </Group>
                </graphic>
             </Button>
-            <Button fx:id="btnMenu" onMouseClicked="#mostrarMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
+            <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="49.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-15.0" translateY="-6.0">
                <graphic>
                   <Group>
                      <children>
@@ -50,455 +55,40 @@
                   </Group>
                </graphic>
             </Button>
-            <TextField layoutX="1087.0" layoutY="33.0" prefHeight="33.0" prefWidth="168.0" promptText="      Buscar" style="-fx-border-color: grey; -fx-border-width: 1px; -fx-border-radius: 2px;">
+            <TextField layoutX="1086.0" layoutY="34.0" prefHeight="33.0" prefWidth="168.0" promptText="      Buscar" style="-fx-border-color: grey; -fx-border-width: 1px; -fx-border-radius: 2px;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </TextField>
             <Line endX="1314.0" layoutX="126.0" layoutY="96.0" startX="-126.0" />
-            <SVGPath content="M15.5 14H14.71L14.43 13.73C15.63 12.33 16.25 10.42 15.91 8.39002C15.44 5.61002 13.12 3.39002 10.32 3.05002C6.09001 2.53002 2.53002 6.09001 3.05002 10.32C3.39002 13.12 5.61002 15.44 8.39002 15.91C10.42 16.25 12.33 15.63 13.73 14.43L14 14.71V15.5L18.25 19.75C18.66 20.16 19.33 20.16 19.74 19.75C20.15 19.34 20.15 18.67 19.74 18.26L15.5 14ZM9.50002 14C7.01002 14 5.00002 11.99 5.00002 9.50002C5.00002 7.01002 7.01002 5.00002 9.50002 5.00002C11.99 5.00002 14 7.01002 14 9.50002C14 11.99 11.99 14 9.50002 14Z" fill="#999999" layoutX="1090.0" layoutY="39.0" />
+            <SVGPath content="M15.5 14H14.71L14.43 13.73C15.63 12.33 16.25 10.42 15.91 8.39002C15.44 5.61002 13.12 3.39002 10.32 3.05002C6.09001 2.53002 2.53002 6.09001 3.05002 10.32C3.39002 13.12 5.61002 15.44 8.39002 15.91C10.42 16.25 12.33 15.63 13.73 14.43L14 14.71V15.5L18.25 19.75C18.66 20.16 19.33 20.16 19.74 19.75C20.15 19.34 20.15 18.67 19.74 18.26L15.5 14ZM9.50002 14C7.01002 14 5.00002 11.99 5.00002 9.50002C5.00002 7.01002 7.01002 5.00002 9.50002 5.00002C11.99 5.00002 14 7.01002 14 9.50002C14 11.99 11.99 14 9.50002 14Z" fill="#999999" layoutX="1088.0" layoutY="40.0" />
          </children>
       </Pane>
-      <Button fx:id="btnLogin1" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="40.0" layoutY="129.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
-         <graphic>
-            <Group />
-         </graphic>
-      </Button>
-      <Text layoutX="90.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Productos">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-      </Text>
-      <VBox layoutY="244.0" prefHeight="730.0" prefWidth="1440.0">
+      <HBox layoutX="52.0" layoutY="132.0">
          <children>
-            <VBox prefHeight="830.0" prefWidth="1440.0" spacing="50.0">
-               <children>
-                  <HBox prefHeight="952.0" prefWidth="1440.0" spacing="20.0">
-                     <children>
-                        <VBox prefHeight="854.0" prefWidth="934.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="117.0" prefWidth="1017.0" spacing="600.0" style="-fx-background-color: EEEEEE;">
-                                 <children>
-                                    <HBox prefHeight="47.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <children>
-                                          <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" left="15.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Producto">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                          <Text fill="#868686" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Ruta de navegación">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                       </children>
-                                       <padding>
-                                          <Insets top="20.0" />
-                                       </padding>
-                                    </HBox>
-                                    <HBox prefHeight="117.0" prefWidth="52.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets left="90.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </VBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <children>
-                              <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </SVGPath>
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                        </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                           <children>
-                              <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </CheckBox>
-                           </children>
-                        </HBox>
-                     </children>
-                     <VBox.margin>
-                        <Insets top="50.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox cache="true" cacheHint="SCALE" prefHeight="0.0" prefWidth="1440.0" spacing="20.0">
-                     <children>
-                        <VBox prefHeight="854.0" prefWidth="934.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="69.0" prefWidth="856.0" spacing="600.0" style="-fx-background-color: EEEEEE;">
-                                 <children>
-                                    <HBox prefHeight="47.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <children>
-                                          <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" left="15.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Producto">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                          <Text fill="#868686" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Ruta de navegación">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                       </children>
-                                       <padding>
-                                          <Insets top="20.0" />
-                                       </padding>
-                                    </HBox>
-                                    <HBox prefHeight="69.0" prefWidth="194.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets left="90.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <children>
-                              <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </SVGPath>
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                        </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                           <children>
-                              <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </CheckBox>
-                           </children>
-                        </HBox>
-                     </children>
-                     <padding>
-                        <Insets top="-750.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox cache="true" cacheHint="SCALE" prefHeight="0.0" prefWidth="1440.0" spacing="20.0">
-                     <children>
-                        <VBox prefHeight="854.0" prefWidth="934.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="69.0" prefWidth="856.0" spacing="600.0" style="-fx-background-color: EEEEEE;">
-                                 <children>
-                                    <HBox prefHeight="47.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <children>
-                                          <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" left="15.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Producto">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                          <Text fill="#868686" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Ruta de navegación">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                       </children>
-                                       <padding>
-                                          <Insets top="20.0" />
-                                       </padding>
-                                    </HBox>
-                                    <HBox prefHeight="69.0" prefWidth="194.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets left="90.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <children>
-                              <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </SVGPath>
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                        </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                           <children>
-                              <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </CheckBox>
-                           </children>
-                        </HBox>
-                     </children>
-                     <padding>
-                        <Insets top="-750.0" />
-                     </padding>
-                  </HBox>
-                  <HBox cache="true" cacheHint="SCALE" prefHeight="0.0" prefWidth="1440.0" spacing="20.0">
-                     <children>
-                        <VBox prefHeight="854.0" prefWidth="934.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="69.0" prefWidth="856.0" spacing="600.0" style="-fx-background-color: EEEEEE;">
-                                 <children>
-                                    <HBox prefHeight="47.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <children>
-                                          <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" left="15.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Producto">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                          <Text fill="#868686" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Ruta de navegación">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                       </children>
-                                       <padding>
-                                          <Insets top="20.0" />
-                                       </padding>
-                                    </HBox>
-                                    <HBox prefHeight="69.0" prefWidth="194.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets left="90.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <children>
-                              <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </SVGPath>
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                        </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                           <children>
-                              <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </CheckBox>
-                           </children>
-                        </HBox>
-                     </children>
-                     <padding>
-                        <Insets top="-750.0" />
-                     </padding>
-                  </HBox>
-                  <HBox cache="true" cacheHint="SCALE" prefHeight="0.0" prefWidth="1440.0" spacing="20.0">
-                     <children>
-                        <VBox prefHeight="854.0" prefWidth="934.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="69.0" prefWidth="856.0" spacing="600.0" style="-fx-background-color: EEEEEE;">
-                                 <children>
-                                    <HBox prefHeight="47.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <children>
-                                          <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" left="15.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Producto">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                          <Text fill="#868686" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Ruta de navegación">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="30.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                       </children>
-                                       <padding>
-                                          <Insets top="20.0" />
-                                       </padding>
-                                    </HBox>
-                                    <HBox prefHeight="69.0" prefWidth="194.0" spacing="10.0" style="-fx-background-color: EEEEEE;">
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets left="90.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <children>
-                              <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE">
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </SVGPath>
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                        </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                           <children>
-                              <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                 </HBox.margin>
-                              </CheckBox>
-                           </children>
-                        </HBox>
-                     </children>
-                     <padding>
-                        <Insets top="-750.0" />
-                     </padding>
-                  </HBox>
-                  <HBox cache="true" cacheHint="SCALE" prefHeight="0.0" prefWidth="1440.0" spacing="20.0">
-                     <children>
-                        <VBox prefHeight="854.0" prefWidth="934.0" />
-                        <HBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="59.0" style="-fx-background-color: black;">
-                           <HBox.margin>
-                              <Insets bottom="790.0" top="20.0" />
-                           </HBox.margin>
-                        </HBox>
-                     </children>
-                     <padding>
-                        <Insets top="-750.0" />
-                     </padding>
-                  </HBox>
-               </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </VBox>
+            <Button fx:id="btnRetrocederEditarEmp" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
+               <graphic>
+                  <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
+               </graphic>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de productos">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
          </children>
-      </VBox>
-      <Text layoutX="1303.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activo">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Text>
-      <Button fx:id="btnLogin11" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1009.0" layoutY="123.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" scaleShape="false" style="-fx-background-color: black; -fx-effect: null;" text="+ Nuevo Producto" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" layoutX="41.0" layoutY="129.0" />
+      </HBox>
+      <Pane layoutY="187.0" prefHeight="1083.0" prefWidth="1441.0" style="-fx-background-color: white;">
+         <children>
+            <ScrollPane fx:id="scrollPaneListaProductos" fitToHeight="true" hbarPolicy="NEVER" hmax="5.0" pannable="true" style="-fx-background-color: white;" vbarPolicy="ALWAYS" vmax="5.0">
+               <content>
+                  <VBox fx:id="vBoxProductos" prefHeight="1078.0" prefWidth="1218.0" style="-fx-background-color: white;" />
+               </content>
+               <padding>
+                  <Insets left="150.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+      </Pane>
    </children>
 </Pane>

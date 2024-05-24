@@ -78,12 +78,15 @@
             </Text>
          </children>
       </HBox>
-      <Pane layoutY="187.0" prefHeight="1083.0" prefWidth="1441.0">
+      <Pane layoutY="187.0" prefHeight="1083.0" prefWidth="1441.0" style="-fx-background-color: white;">
          <children>
-            <ScrollPane prefHeight="1084.0" prefWidth="1440.0" style="-fx-background-color: white;">
+            <ScrollPane fx:id="scrollPaneListaProductos" fitToHeight="true" hbarPolicy="NEVER" hmax="5.0" pannable="true" style="-fx-background-color: white;" vbarPolicy="ALWAYS" vmax="5.0">
                <content>
-                  <VBox fx:id="vBoxClientes" prefHeight="1077.0" prefWidth="1425.0" style="-fx-background-color: white;" />
+                  <VBox fx:id="vBoxProductos" prefHeight="1078.0" prefWidth="1218.0" style="-fx-background-color: white;" />
                </content>
+               <padding>
+                  <Insets left="150.0" />
+               </padding>
             </ScrollPane>
          </children>
       </Pane>

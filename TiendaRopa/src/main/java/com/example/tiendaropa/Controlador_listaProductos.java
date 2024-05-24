@@ -1,15 +1,90 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.Conexiones.ConsultasBBDD;
+import com.example.tiendaropa.model.Articulo;
+import com.example.tiendaropa.model.Cliente;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Controlador_listaProductos {
+
+    private List<Articulo> productos = new ArrayList<>();
+    @FXML
+    private VBox vBoxProductos;
+
+    private List<Articulo> getProducto() throws SQLException {
+        List<Articulo> productos = new ArrayList<>();
+        Articulo articulo = null;
+
+        //Llamar a la consulta que me devuelve todos los articulos
+        ConsultasBBDD consulta = new ConsultasBBDD();
+
+        productos = consulta.consultaArticulos(productos);
+
+        return productos;
+    }
+
+    public void initialize() throws IOException {
+        try {
+            productos.addAll(getProducto());
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        HBox hbox = new HBox(); // Crea el primer HBox
+        try {
+            for (int i = 0; i < productos.size(); i++) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("FXML_itemProducto.fxml"));
+
+                Parent itemClientes = fxmlLoader.load();
+
+                // Obtener el controlador del elemento de artículo
+                Controlador_itemProducto itemController = fxmlLoader.getController();
+
+                // Llamar al método setData() y pasarle el objeto Articulo correspondiente
+                itemController.setData(productos.get(i));
+
+                //Propiedades Vbox
+                vBoxProductos.setPrefHeight(vBoxProductos.getPrefHeight() - 25);
+                vBoxProductos.setAlignment(Pos.CENTER);
+                vBoxProductos.setSpacing(20);
+                vBoxProductos.layout();
+
+                //Propiedades Hbox
+                hbox.getChildren().add(itemClientes);
+                hbox.setAlignment(Pos.CENTER_LEFT);
+                hbox.setSpacing(575);
+
+                // Agrega el HBox actual al VBox
+                vBoxProductos.getChildren().add(hbox);
+                vBoxProductos.setAlignment(Pos.CENTER);
+
+                // Crea un nuevo HBox para los próximos elementos
+                hbox = new HBox();
+
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
