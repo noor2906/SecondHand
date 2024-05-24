@@ -69,8 +69,12 @@ public class Controlador_catalogo implements Initializable {
                 // Obtener el controlador del elemento de artículo
                 Controlador_itemCatalogo itemController = fxmlLoader.getController();
 
+                Controlador_itemProducto itemProducto = fxmlLoader.getController();
+
                 // Llamar al método setData() y pasarle el objeto Articulo correspondiente
                 itemController.setData(articulos.get(i));
+
+                itemProducto.setData(articulos.get(i));
 
                 //Propiedades Vbox
                 vBoxArticulos.setPrefHeight(vBoxArticulos.getPrefHeight() + 80);
