@@ -28,13 +28,10 @@ public class Controlador_catalogo implements Initializable {
     private VBox vBoxArticulos;
     private List<Articulo> articulos = new ArrayList<>();
 
-    private Articulo articulo;
 
-
-    //Obtenemos artículos
+    //Obtenemos artículos y los guardamos el una List
     private List<Articulo> getArticulos() throws SQLException {
         List<Articulo> articulos = new ArrayList<>();
-        Articulo articulo = null;
 
         //Llamar a la consulta que me devuelve todos los articulos
         ConsultasBBDD consulta = new ConsultasBBDD();
@@ -48,6 +45,7 @@ public class Controlador_catalogo implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
+            //Añadimos a la lista de ésta clase los artículos obtenidos desde getArticulos()
             articulos.addAll(getArticulos());
 
         } catch (SQLException e) {
@@ -55,26 +53,24 @@ public class Controlador_catalogo implements Initializable {
         }
 
         int column = 0;
-        int row = 0;
 
         HBox hbox = new HBox(); // Crea el primer HBox
 
         try {
             for (int i = 0; i < articulos.size(); i++) {
+
+                //Instanciamos un FXML loader y como recurso indicamos el item FXML a usar
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("FXML_itemArticuloCatalogo.fxml"));
 
+                //Cargamos el FXML (devuelve la raíz del gráfico de la escena)
                 Parent itemArticulo = fxmlLoader.load();
 
-                // Obtener el controlador del elemento de artículo
+                //Instanciamos el controlador del elemento de artículo
                 Controlador_itemCatalogo itemController = fxmlLoader.getController();
 
-                Controlador_itemProducto itemProducto = fxmlLoader.getController();
-
-                // Llamar al método setData() y pasarle el objeto Articulo correspondiente
+                //Por cada artículo del ArrayList introducimos en el item los datos indicados en el método setData()
                 itemController.setData(articulos.get(i));
-
-                itemProducto.setData(articulos.get(i));
 
                 //Propiedades Vbox
                 vBoxArticulos.setPrefHeight(vBoxArticulos.getPrefHeight() + 80);
@@ -88,7 +84,9 @@ public class Controlador_catalogo implements Initializable {
                 // Agregar el contenido cargado al hbox
                 hbox.getChildren().add(itemArticulo);
 
+                //Vamos aumentando el número de columnas
                 column++;
+
                 // Si el HBox actual tiene tres elementos, crea un nuevo HBox
                 if (column == 3) {
                     // Agrega el HBox actual al VBox
@@ -97,7 +95,6 @@ public class Controlador_catalogo implements Initializable {
                     // Crea un nuevo HBox para los próximos elementos
                     hbox = new HBox();
                     column = 0;
-                    row++;
                 }
             }
 
