@@ -73,7 +73,7 @@ public class Controlador_catalogo implements Initializable {
                 itemController.setData(articulos.get(i));
 
                 //Propiedades Vbox
-                vBoxArticulos.setPrefHeight(vBoxArticulos.getPrefHeight() + 80);
+                vBoxArticulos.setPrefHeight(vBoxArticulos.getPrefHeight() - 80);
 
                 //Propiedades Hbox
                 hbox.setAlignment(Pos.CENTER_LEFT);
