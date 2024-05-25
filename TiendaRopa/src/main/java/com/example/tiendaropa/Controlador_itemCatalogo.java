@@ -29,6 +29,7 @@ public class Controlador_itemCatalogo{
     private TextField txtfPrecioItemCatalogo;
 
 
+    //Paso de variable a la ficha producto con el método mostrarFichaProducto()
     Articulo articulo;
 
     public void setData(Articulo articulo) throws FileNotFoundException {
@@ -50,18 +51,29 @@ public class Controlador_itemCatalogo{
 
     public void mostrarFichaProducto(MouseEvent event) {
         try {
-            // Load the target scene FXML file
+            //Instanciamos un FXML loader y como recurso indicamos el item FXML a usar
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_fichaProducto_Carol.fxml"));
+
+            //Cargamos el FXML (devuelve la raíz del gráfico de la escena)
             Parent root = loader.load();
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Usando el evento para obtener la ventana actual
+            // Utiliza el evento del mouse para obtener la ventana (Stage) actual.
+            // Esto se hace obteniendo la fuente del evento (el nodo que disparó el evento),
+            // luego la escena de ese nodo, y finalmente la ventana de esa escena.
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            //Instanciamos el controlador de la ficha producto
             Controlador_fichaProducto productoController = loader.getController();
+
+            //Por cada artículo que se esté cargando en el setData() lo guardo en una variable de instancia y cargo
+            //los datos de dicho artículo con el método cargarArticulo()
             productoController.cargarArticulo(this.articulo);
 
-            // Set the scene for the stage
+            //Crea una nueva escena con la raíz del gráfico de la escena cargada y la establece en la ventana (stage).
             stage.setScene(new Scene(root));
 
-            // Show the target scene
+            //Muestra la nueva escena en la ventan
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

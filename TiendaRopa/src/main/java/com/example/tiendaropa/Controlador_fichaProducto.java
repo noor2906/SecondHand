@@ -27,7 +27,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 
-public class Controlador_fichaProducto implements Initializable { //es lo que hace que se cargue automáticamente
+public class Controlador_fichaProducto {
 
     ConexionBBDD conexion = new ConexionBBDD();
 
@@ -78,9 +78,6 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
 
     @FXML
     private HBox hBoxPropiedadesSubtipo;
-
-
-    Articulo articulo;
 
 
     // INITIALIZE  -----------------------------------------------------------------------------------------------------
@@ -410,8 +407,4 @@ public class Controlador_fichaProducto implements Initializable { //es lo que ha
         stage.show();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
 }
