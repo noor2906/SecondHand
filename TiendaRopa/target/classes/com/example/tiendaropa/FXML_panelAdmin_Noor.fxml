@@ -37,7 +37,7 @@
                      <children>
                         <HBox prefHeight="163.0" prefWidth="474.0" spacing="62.0">
                            <children>
-                              <Button fx:id="btnAltaProducto" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                              <Button fx:id="btnAltaProducto" onMouseClicked="#mostrarAltaProducto" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
@@ -69,7 +69,7 @@
                                     </HBox>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnAdministrarProductos" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarPedidos" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                              <Button fx:id="btnAdministrarProductos" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaProductos" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                                  <font>
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
