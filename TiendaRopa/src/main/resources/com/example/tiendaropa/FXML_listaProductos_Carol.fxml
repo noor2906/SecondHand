@@ -23,7 +23,7 @@
                   <Font name="Inter Regular" size="50.0" />
                </font>
             </Text>
-            <Text layoutX="673.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hand" translateY="-1.0">
+            <Text layoutX="685.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hand" translateY="-1.0">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
@@ -64,9 +64,9 @@
             <SVGPath content="M15.5 14H14.71L14.43 13.73C15.63 12.33 16.25 10.42 15.91 8.39002C15.44 5.61002 13.12 3.39002 10.32 3.05002C6.09001 2.53002 2.53002 6.09001 3.05002 10.32C3.39002 13.12 5.61002 15.44 8.39002 15.91C10.42 16.25 12.33 15.63 13.73 14.43L14 14.71V15.5L18.25 19.75C18.66 20.16 19.33 20.16 19.74 19.75C20.15 19.34 20.15 18.67 19.74 18.26L15.5 14ZM9.50002 14C7.01002 14 5.00002 11.99 5.00002 9.50002C5.00002 7.01002 7.01002 5.00002 9.50002 5.00002C11.99 5.00002 14 7.01002 14 9.50002C14 11.99 11.99 14 9.50002 14Z" fill="#999999" layoutX="1088.0" layoutY="40.0" />
          </children>
       </Pane>
-      <HBox layoutX="52.0" layoutY="132.0">
+      <HBox layoutX="52.0" layoutY="132.0" spacing="20.0">
          <children>
-            <Button fx:id="btnRetrocederEditarEmp" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
+            <Button fx:id="btnRetrocederEditarEmp" mnemonicParsing="false" onMouseClicked="#mostrarPanelAdmin" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
                <graphic>
                   <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
                </graphic>

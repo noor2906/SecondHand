@@ -124,4 +124,13 @@ public class Controlador_listaProductos {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void mostrarPanelAdmin(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_panelAdmin_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }
