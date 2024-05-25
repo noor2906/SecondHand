@@ -16,7 +16,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_altaProducto">
    <children>
       <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
@@ -307,7 +306,7 @@
                                     </VBox>
                                     <VBox prefHeight="80.0" prefWidth="454.0" spacing="10.0">
                                        <children>
-                                          <CheckBox fx:id="checkBActivoAltaProducto" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="204.0" style="-fx-border-radius: black;" text="Activo">
+                                          <CheckBox fx:id="checkBActivoAltaProducto" alignment="CENTER" contentDisplay="RIGHT" disable="true" mnemonicParsing="false" prefHeight="38.0" prefWidth="204.0" selected="true" text="Activo">
                                              <font>
                                                 <Font name="Inter SemiBold" size="24.0" />
                                              </font>
@@ -323,7 +322,7 @@
                   </VBox>
                </content>
             </ScrollPane>
-            <Button fx:id="btnGuardarCambiosAltaProducto" contentDisplay="CENTER" layoutX="1157.5" layoutY="35.5" mnemonicParsing="false" onMouseClicked="#darAltaProducto" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+            <Button fx:id="btnGuardarCambiosAltaProducto" contentDisplay="CENTER" disable="true" layoutX="1157.5" layoutY="35.5" mnemonicParsing="false" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                <font>
                   <Font name="Inter Bold" size="18.0" />
                </font>

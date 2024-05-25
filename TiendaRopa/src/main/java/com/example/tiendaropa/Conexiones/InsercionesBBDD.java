@@ -31,7 +31,7 @@ public class InsercionesBBDD {
         return ok;
     }*/
 
-    public static int insercionProducto(String nombre, String precio, String marca, boolean activo, String imagen, String descripcion, int material) {
+    public static int insercionProducto(String nombre, String precio, String marca, String imagen, String descripcion, int material) {
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
         conn.crearSentencia();
@@ -43,7 +43,7 @@ public class InsercionesBBDD {
             pstmt.setString(2, precio);
             pstmt.setString(3, marca);
             pstmt.setString(4, descripcion);
-            pstmt.setBoolean(5, activo);
+//            pstmt.setBoolean(5, activo);
             pstmt.setString(6, imagen);
             pstmt.setInt(7, material);
 

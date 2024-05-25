@@ -96,7 +96,7 @@ public class Controlador_altaProducto {
         String marca = txtfMarcaAltaProducto.getText();
         String descripcion = txtaDescripcionAltaProducto.getText();
         String imagen = txtfImagenAltaProducto.getText();
-        boolean activo = true;
+        //boolean activo = true;
         String material = cbMaterialAltaProducto.getValue();
 
        /* if (checkBActivoAltaProducto.isSelected()){
@@ -115,7 +115,7 @@ public class Controlador_altaProducto {
                 }
             }
 
-            ok = InsercionesBBDD.insercionProducto(nombre,precio,marca,activo,imagen,descripcion,mat);
+            ok = InsercionesBBDD.insercionProducto(nombre,precio,marca,imagen,descripcion,mat);
 
         } else {
             System.out.println("Te has dejado algún campo importante");
