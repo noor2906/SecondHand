@@ -36,6 +36,14 @@ public class Material {
         this.nombre = nombre;
     }
 
+    public static HashMap<Integer, Material> getMapaMateriales() {
+        return mapaMateriales;
+    }
+
+    public static void setMapaMateriales(HashMap<Integer, Material> mapaMateriales) {
+        Material.mapaMateriales = mapaMateriales;
+    }
+
     //Método donde se rellena el mapa mediante una consulta
     public static void rellenarMapaMateriales() throws SQLException {
         ConsultasBBDD consulta = new ConsultasBBDD();
@@ -47,8 +55,15 @@ public class Material {
         return mapaMateriales.get(id);
     }
 
+    //No quitar, ayuda a mostrar el material en la ficha_Producto
     @Override
     public String toString() {
         return this.nombre;
+    }
+
+    public static void recorrerMapaMateriales(){
+        for (Integer k:mapaMateriales.keySet()) {
+            System.out.println(mapaMateriales.get(k).getNombre());
+        }
     }
 }
