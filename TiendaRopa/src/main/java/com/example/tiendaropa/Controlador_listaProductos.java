@@ -63,7 +63,7 @@ public class Controlador_listaProductos {
                 itemController.setData(productos.get(i));
 
                 //Propiedades Vbox
-                vBoxProductos.setPrefHeight(vBoxProductos.getPrefHeight() - 25);
+                vBoxProductos.setPrefHeight(vBoxProductos.getPrefHeight());
                 vBoxProductos.setAlignment(Pos.CENTER);
                 vBoxProductos.setSpacing(20);
                 vBoxProductos.layout();
