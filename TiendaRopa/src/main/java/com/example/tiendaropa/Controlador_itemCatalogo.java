@@ -68,5 +68,10 @@ public class Controlador_itemCatalogo{
         }
     }
 
+    public void añadirArticuloCarrito(){
+
+        Aplicacion.carrito.add(this.articulo);
+    }
+
 
 }
