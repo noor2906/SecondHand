@@ -12,6 +12,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -31,16 +33,37 @@ public class Controlador_ItemEmpleado {
     @FXML
     private CheckBox chbxDesabilitarEmpleado;
 
-    Empleado empleado;
+    @FXML
+    private Pane paneEmpleado;
 
-    //Cargamos la informacion del empleado
+    @FXML
+    private HBox hboxBotones;
+
+    @FXML
+    private HBox hboxCheckBox;
+
+    private Empleado empleado;
+
+    @FXML
+    public void initialize() {
+        chbxDesabilitarEmpleado.selectedProperty().addListener((observable, habilitado, deshabilitado) -> {
+            if (deshabilitado) {
+                btnEditarEmpleado.setDisable(true);
+                paneEmpleado.setStyle("-fx-background-color: #D0B0A5;");
+                hboxCheckBox.setStyle("-fx-background-color: #D0B0A5;");
+                hboxBotones.setStyle("-fx-background-color: #D0B0A5;");
+            } else {
+                btnEditarEmpleado.setDisable(false);
+                paneEmpleado.setStyle("-fx-background-color: #E6F5F2;");
+                hboxCheckBox.setStyle("-fx-background-color: #E6F5F2;");
+                hboxBotones.setStyle("-fx-background-color: #E6F5F2;");
+            }
+        });
+    }
 
     public void setData(Empleado empleado) throws FileNotFoundException {
-
         this.empleado = empleado;
-
-        txtEmpleadoItem.setText(empleado.getNombre());
-
+        txtEmpleadoItem.setText(empleado.getNombre() + " " + empleado.getApellidos());
     }
 
     //Añadimos infromacion al boton de editar empleado, haciendo que dirija y carge la informacion correspondiente al empleado en el que clicamos.
