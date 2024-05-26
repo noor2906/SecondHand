@@ -44,6 +44,8 @@ public class Controlador_ItemEmpleado {
 
     private Empleado empleado;
 
+    private Controlador_login controladorLogin;
+
     @FXML
     public void initialize() {
         chbxDesabilitarEmpleado.selectedProperty().addListener((observable, habilitado, deshabilitado) -> {
@@ -60,6 +62,7 @@ public class Controlador_ItemEmpleado {
             }
         });
     }
+
 
     public void setData(Empleado empleado) throws FileNotFoundException {
         this.empleado = empleado;
