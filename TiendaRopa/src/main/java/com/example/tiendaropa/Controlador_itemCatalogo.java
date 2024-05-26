@@ -28,8 +28,6 @@ public class Controlador_itemCatalogo{
     @FXML
     private TextField txtfPrecioItemCatalogo;
 
-
-    //Paso de variable a la ficha producto con el método mostrarFichaProducto()
     Articulo articulo;
 
     public void setData(Articulo articulo) throws FileNotFoundException {
@@ -42,7 +40,7 @@ public class Controlador_itemCatalogo{
         //Imagen -------------------------------------------------------------------------------------------------------
 
         // Cargar la imagen desde el archivo
-        FileInputStream rutaImagen = new FileInputStream("TiendaRopa/src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
+        FileInputStream rutaImagen = new FileInputStream("src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
 
         Image imgArticulo = new Image(rutaImagen);
         imgItemCatalogo.setImage(imgArticulo);
@@ -80,7 +78,7 @@ public class Controlador_itemCatalogo{
         }
     }
 
-    public void añadirArticuloCarrito(){
+    public void addArticuloCarrito(){
 
         Aplicacion.carrito.add(this.articulo);
     }
