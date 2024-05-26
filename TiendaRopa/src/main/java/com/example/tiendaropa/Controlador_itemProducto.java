@@ -43,7 +43,7 @@ public class Controlador_itemProducto {
         //Imagen -------------------------------------------------------------------------------------------------------
 
         // Cargar la imagen desde el archivo
-        FileInputStream rutaImagen = new FileInputStream("TiendaRopa/src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
+        FileInputStream rutaImagen = new FileInputStream("src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
 
         Image imgArticulo = new Image(rutaImagen);
         imgProducto.setImage(imgArticulo);

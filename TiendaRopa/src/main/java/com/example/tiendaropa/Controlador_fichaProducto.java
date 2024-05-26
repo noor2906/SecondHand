@@ -104,7 +104,7 @@ public class Controlador_fichaProducto {
 
         //Imagen -------------------------------------------------------------------------------------------------------
 
-        FileInputStream rutaImagen = new FileInputStream("TiendaRopa/src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
+        FileInputStream rutaImagen = new FileInputStream("src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
 
         Image imgArticulo = new Image(rutaImagen);
         imagenProducto.setImage(imgArticulo);
