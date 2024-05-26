@@ -1,5 +1,6 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.model.Articulo;
 import com.example.tiendaropa.model.Departamento;
 import com.example.tiendaropa.model.Material;
 import com.example.tiendaropa.model.MetodoPago;
@@ -10,8 +11,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aplicacion extends Application {
+
+    public static List<Articulo> carrito = new ArrayList<>();
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Aplicacion.class.getResource("FXML_listaProductos_Carol.fxml"));
