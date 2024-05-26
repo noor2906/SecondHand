@@ -1,6 +1,5 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.model.Articulo;
 import com.example.tiendaropa.model.Empleado;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,16 +8,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -34,7 +29,7 @@ public class Controlador_ItemEmpleado {
     private CheckBox chbxDesabilitarEmpleado;
 
     @FXML
-    private Pane paneEmpleado;
+    private Pane pnEmpleado;
 
     @FXML
     private HBox hboxBotones;
@@ -51,12 +46,12 @@ public class Controlador_ItemEmpleado {
         chbxDesabilitarEmpleado.selectedProperty().addListener((observable, habilitado, deshabilitado) -> {
             if (deshabilitado) {
                 btnEditarEmpleado.setDisable(true);
-                paneEmpleado.setStyle("-fx-background-color: #D0B0A5;");
+                pnEmpleado.setStyle("-fx-background-color: #D0B0A5;");
                 hboxCheckBox.setStyle("-fx-background-color: #D0B0A5;");
                 hboxBotones.setStyle("-fx-background-color: #D0B0A5;");
             } else {
                 btnEditarEmpleado.setDisable(false);
-                paneEmpleado.setStyle("-fx-background-color: #E6F5F2;");
+                pnEmpleado.setStyle("-fx-background-color: #E6F5F2;");
                 hboxCheckBox.setStyle("-fx-background-color: #E6F5F2;");
                 hboxBotones.setStyle("-fx-background-color: #E6F5F2;");
             }

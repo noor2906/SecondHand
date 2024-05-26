@@ -35,7 +35,7 @@
                <children>
                   <HBox prefHeight="163.0" prefWidth="474.0" spacing="62.0">
                      <children>
-                        <Button fx:id="btnAltaProducto" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarAltaProducto" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                        <Button fx:id="btnAltaProducto" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarAltaEmpleado" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                            <font>
                               <Font name="Inter Bold" size="18.0" />
                            </font>
