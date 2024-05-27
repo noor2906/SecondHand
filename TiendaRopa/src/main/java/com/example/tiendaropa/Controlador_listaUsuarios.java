@@ -3,6 +3,8 @@ package com.example.tiendaropa;
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.model.Articulo;
 import com.example.tiendaropa.model.Cliente;
+import com.example.tiendaropa.model.Empleado;
+import com.example.tiendaropa.model.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -62,7 +64,7 @@ public class Controlador_listaUsuarios {
 
                 Parent itemClientes = fxmlLoader.load();
 
-                // Obtener el controlador del elemento de artículo
+                // Obtener el controlador del elemento de cliente
                 Controlador_itemCliente itemController = fxmlLoader.getController();
 
                 // Llamar al método setData() y pasarle el objeto Cliente correspondiente
@@ -114,9 +116,20 @@ public class Controlador_listaUsuarios {
     }
     // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
+        // Usuario,String path y el if hecho por: Vero
+        Usuario usuario = Controlador_login.getUsuario();
+        String path;
+        if (usuario instanceof Cliente){
+            path = "";
+        } else if (usuario instanceof Empleado) {
+            path = "FXML_panelAdmin_Noor.fxml";
+        }else {
+            path = "FXML_login_Carol.fxml";
+        }
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_login_Carol.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(path));
 
         stage.setScene(new Scene(root));
         stage.show();

@@ -108,6 +108,7 @@ public class Controlador_catalogo implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
@@ -133,9 +134,20 @@ public class Controlador_catalogo implements Initializable {
     }
     // Hecho por: Noor
     public void mostrarLogin(MouseEvent event) throws IOException {
+        // Usuario,String path y el if hecho por: Vero
+        Usuario usuario = Controlador_login.getUsuario();
+        String path;
+        if (usuario instanceof Cliente){
+            path = "";
+        } else if (usuario instanceof Empleado) {
+            path = "FXML_panelAdmin_Noor.fxml";
+        }else {
+            path = "FXML_login_Carol.fxml";
+        }
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_login_Carol.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(path));
 
         stage.setScene(new Scene(root));
         stage.show();
