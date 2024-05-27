@@ -31,7 +31,6 @@ public class Aplicacion extends Application {
         try {Material.rellenarMapaMateriales();} catch (SQLException e) {throw new RuntimeException(e);}
         try {MetodoPago.rellenarMapaMetodoPago();} catch (SQLException e) {throw new RuntimeException(e);}
         try {MetodoPago.recorrerMapa();}catch (Exception e){throw new RuntimeException(e);}
-        try {Material.recorrerMapaMateriales();}catch (Exception e){throw new RuntimeException(e);}
     }
 
 

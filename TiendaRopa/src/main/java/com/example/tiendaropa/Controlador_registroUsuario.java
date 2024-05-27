@@ -46,6 +46,7 @@ public class Controlador_registroUsuario {
     private ComboBox<String> combList;
     private HashMap<Integer,MetodoPago> mapaPagos = MetodoPago.getMapaMetodoPago();
     private boolean fidelizacion;
+    // Hecho por: Vero
     public void initialize(){
         ObservableList<String> soList = FXCollections.observableArrayList();
         for (Integer k:mapaPagos.keySet()) {
@@ -53,6 +54,7 @@ public class Controlador_registroUsuario {
         }
         combList.setItems(soList);
     }
+    // Hecho por: Vero
     public void registrar(MouseEvent event) throws IOException {
         int ok=0;
         String nombre = txtNombre.getText();
@@ -83,6 +85,7 @@ public class Controlador_registroUsuario {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -91,7 +94,7 @@ public class Controlador_registroUsuario {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -100,7 +103,7 @@ public class Controlador_registroUsuario {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -109,7 +112,7 @@ public class Controlador_registroUsuario {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -119,7 +122,7 @@ public class Controlador_registroUsuario {
         stage.show();
     }
 
-    // Botones Limpiar
+    // Botones Limpiar hechos por: Vero
     public void limpiarNombre(MouseEvent actionEvent) {
         txtNombre.clear();
     }

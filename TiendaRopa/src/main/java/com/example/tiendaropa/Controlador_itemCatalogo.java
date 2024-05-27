@@ -29,7 +29,7 @@ public class Controlador_itemCatalogo{
     private TextField txtfPrecioItemCatalogo;
 
     Articulo articulo;
-
+    // Hecho por: Noor
     public void setData(Articulo articulo) throws FileNotFoundException {
 
         this.articulo = articulo;
@@ -46,7 +46,7 @@ public class Controlador_itemCatalogo{
         imgItemCatalogo.setImage(imgArticulo);
 
     }
-
+    // Hecho por: Noor
     public void mostrarFichaProducto(MouseEvent event) {
         try {
             //Instanciamos un FXML loader y como recurso indicamos el item FXML a usar
@@ -77,7 +77,7 @@ public class Controlador_itemCatalogo{
             e.printStackTrace();
         }
     }
-
+    // Hecho por: Carol
     public void addArticuloCarrito(){
 
         Aplicacion.carrito.add(this.articulo);

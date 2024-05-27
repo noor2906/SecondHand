@@ -25,6 +25,7 @@ public class Controlador_itemCliente {
     public void initialize(){
 
     }
+    // Hecho por: Vero
     public void setData(Cliente cliente) throws FileNotFoundException {
 
         this.cliente = cliente;
@@ -37,15 +38,7 @@ public class Controlador_itemCliente {
         txtCliente.setText(cliente.getE_mail()+" | "+cliente.getDni());
 
     }
-/*    public void desactivar(ActionEvent actionEvent) {
-        ModificacionesBBDD modificacion = new ModificacionesBBDD();
-        if(chbxActivo.selectedProperty()){
-            modificacion.habilitarUsuario(cliente);
-        } else{
-            modificacion.deshabilitarUsuario(cliente);
-        }
-
-    }*/
+    // Hecho por: Vero
     public void activarYDesactivarCliente(MouseEvent actionEvent) {
         ModificacionesBBDD modificacion = new ModificacionesBBDD();
         int habilitado;
@@ -63,7 +56,7 @@ public class Controlador_itemCliente {
                  System.out.println("No se ha podido hacer la modificación");
          }
     }
-
+    // Hecho por: Vero
     public void mostrarInfoCliente(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

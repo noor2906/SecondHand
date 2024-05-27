@@ -29,7 +29,7 @@ public class Controlador_itemCarrito {
     @FXML
     private ImageView imgCarritoArticulo;
 
-
+    // Hecho por: Carol
     public void setData(Articulo articulo) throws FileNotFoundException {
         this.articulo = articulo;
         txtCarritoTituloArticulo.setText(articulo.getNombre());

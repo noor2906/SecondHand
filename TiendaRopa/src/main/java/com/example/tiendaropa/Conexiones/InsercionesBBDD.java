@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class InsercionesBBDD {
 
-
+    // Hecho por: Vero
     public static int insercionRegistro( String nombre,String contra, String apellidos,String telefono,String email,String dni,String direccion,int metodoPago,String fecha, boolean fidelizacion){
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
@@ -31,7 +31,7 @@ public class InsercionesBBDD {
         conn.desconectarBBDD();
         return ok;
     }*/
-
+    // Hecho por: Noor
     public static int insercionProducto(String nombre, String precio, String marca, String imagen, String descripcion, int material) {
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
@@ -57,7 +57,7 @@ public class InsercionesBBDD {
         }
     }
 
-
+    // Hecho por: Noor
     public static int insercionCamisa(String talla, String color, String tipoCierre,  String tipoManga, boolean estampada){
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
@@ -73,6 +73,7 @@ public class InsercionesBBDD {
     }
 
     //Empleado ---------------------------------------------------------------------------------------------------------
+    // Hecho por: Carol
 
     public void insertarEmpleado(String dni, String nombre, String apellidos, String telefono, String fechaNacimiento, String email, String direccion, boolean tienePrivilegios, String pass, int tipoEmpleado) throws SQLException {
         ConexionBBDD conn = new ConexionBBDD();

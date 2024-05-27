@@ -40,7 +40,7 @@ public class Controlador_ItemEmpleado {
     private Empleado empleado;
 
     private Controlador_login controladorLogin;
-
+    // Hecho por: Carol
     @FXML
     public void initialize() {
         chbxDesabilitarEmpleado.selectedProperty().addListener((observable, habilitado, deshabilitado) -> {
@@ -58,14 +58,14 @@ public class Controlador_ItemEmpleado {
         });
     }
 
-
+    // Hecho por: Carol
     public void setData(Empleado empleado) throws FileNotFoundException {
         this.empleado = empleado;
         txtEmpleadoItem.setText(empleado.getNombre() + " " + empleado.getApellidos());
     }
 
     //Añadimos infromacion al boton de editar empleado, haciendo que dirija y carge la informacion correspondiente al empleado en el que clicamos.
-
+    // Hecho por: Carol
     public void mostrarInfoEmpleado(MouseEvent event) {
         try {
             // Load the target scene FXML file

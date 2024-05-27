@@ -27,7 +27,7 @@ public class Controlador_listaUsuarios {
     private List<Cliente> clientes = new ArrayList<>();
     @FXML
     private VBox vBoxClientes;
-
+    // Hecho por: Vero
     private void getClientes() throws SQLException {
         ConsultasBBDD consulta = new ConsultasBBDD();
         clientes = consulta.recogerListaClientes(clientes);
@@ -43,6 +43,7 @@ public class Controlador_listaUsuarios {
 
         return clientes;
     }
+    // Hecho por: Vero
     public void initialize() throws IOException {
         try {
             clientes.addAll(getCliente());
@@ -93,6 +94,7 @@ public class Controlador_listaUsuarios {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -101,7 +103,7 @@ public class Controlador_listaUsuarios {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -110,7 +112,7 @@ public class Controlador_listaUsuarios {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -119,7 +121,7 @@ public class Controlador_listaUsuarios {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -128,7 +130,7 @@ public class Controlador_listaUsuarios {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Vero
     public void volverPanelAdmin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

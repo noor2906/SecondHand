@@ -31,7 +31,7 @@ public class Controlador_itemProducto {
     private Text txtNombreProducto;
 
     Articulo articulo;
-
+    // Hecho por: Noor
     public void setData(Articulo articulo) throws FileNotFoundException {
 
         this.articulo = articulo;
@@ -49,7 +49,7 @@ public class Controlador_itemProducto {
         imgProducto.setImage(imgArticulo);
 
     }
-
+    // Hecho por: Noor
     public void mostrarInfoProducto(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

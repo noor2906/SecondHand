@@ -45,7 +45,7 @@ public class Controlador_altaProducto {
     private HashMap<Integer, Material> mapaMateriales = Material.getMapaMateriales();
 
     private Parent itemActual;
-
+    // Hecho por: Noor
     @FXML
     public void initialize() throws IOException {
         System.out.println("initialize called"); // Debug statement

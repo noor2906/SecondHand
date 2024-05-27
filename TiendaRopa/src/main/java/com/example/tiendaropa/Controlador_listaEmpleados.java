@@ -32,6 +32,7 @@ public class Controlador_listaEmpleados implements Initializable {
     private Empleado empleado;
 
     // Obtenemos empleados
+    // Hecho por: Carol
     private List<Empleado> getEmpleados() throws SQLException {
         List<Empleado> empleados = new ArrayList<>();
         // Llamar a la consulta que me devuelve todos los empleados
@@ -39,7 +40,7 @@ public class Controlador_listaEmpleados implements Initializable {
         empleados = consulta.listaEmpleados();
         return empleados;
     }
-
+    // Hecho por: Carol
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -80,27 +81,28 @@ public class Controlador_listaEmpleados implements Initializable {
     // BOTONES ----------------------------------------------------------------------------------------------------------
 
     // Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("FXML_menuHamburguesa_Carol.fxml"));
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("FXML_login_Carol.fxml"));
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("FXML_carrito_Noor.fxml"));
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarPanelAdmin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("FXML_panelAdmin_Noor.fxml"));

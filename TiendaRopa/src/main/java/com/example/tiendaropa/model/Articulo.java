@@ -1,7 +1,7 @@
 package com.example.tiendaropa.model;
 
 public abstract class Articulo {
-
+    // Creada por: Carol y editada por: Noor
     //ATRIBUTOS
     private int codigo;
     private String nombre;
