@@ -51,7 +51,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
 
 
     //Obtenermos la informacion del empleado en el que hemos clicado y lo cargamos sobre las ranuras que toca.
-
+    // Hecho por: Carol
     public void cargarEmpleado(Empleado empleado) throws FileNotFoundException {
 
         //Propiedades de un empleado cualquiera ------------------------------------------------------------------------
@@ -80,7 +80,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
             System.err.println("Error al parsear la fecha de nacimiento: " + e.getMessage());
         }
     }
-
+    // Hecho por: Carol
     public void actualizarEdicionHabilitada() {
         edicionBloqueada = !edicionBloqueada;
         txtTelefono.setDisable(edicionBloqueada);
@@ -98,7 +98,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
             btnEditarGuardar.setText("Guardar");
         }
     }
-
+    // Hecho por: Carol
     private void guardarCambios() {
 
         // Obtener los datos del formulario
@@ -126,6 +126,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -134,7 +135,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -143,7 +144,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -152,7 +153,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -161,7 +162,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -170,6 +171,7 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         stage.setScene(new Scene(root));
         stage.show();
     }
+    // Hecho por: Carol
     public void mostrarListaEmpleados(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Controlador_PantallaPrueba {
+    /// Hecho por: Carol (toda la clase)
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 

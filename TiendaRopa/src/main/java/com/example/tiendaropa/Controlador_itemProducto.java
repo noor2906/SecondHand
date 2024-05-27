@@ -31,7 +31,7 @@ public class Controlador_itemProducto {
     private Text txtNombreProducto;
 
     Articulo articulo;
-
+    // Hecho por: Noor
     public void setData(Articulo articulo) throws FileNotFoundException {
 
         this.articulo = articulo;
@@ -43,13 +43,13 @@ public class Controlador_itemProducto {
         //Imagen -------------------------------------------------------------------------------------------------------
 
         // Cargar la imagen desde el archivo
-        FileInputStream rutaImagen = new FileInputStream("TiendaRopa/src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
+        FileInputStream rutaImagen = new FileInputStream("src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
 
         Image imgArticulo = new Image(rutaImagen);
         imgProducto.setImage(imgArticulo);
 
     }
-
+    // Hecho por: Noor
     public void mostrarInfoProducto(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

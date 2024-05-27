@@ -93,6 +93,7 @@ public class Controlador_fichaProducto {
     //ROPA -------------------------------------------------------------------------------------------------------------
 
     //Cargamos la ropa en la pantalla
+    // Hecho por: Noor
     public void cargarArticulo(Articulo articulo) throws FileNotFoundException {
 
         //Propiedades de un artículo cualquiera ------------------------------------------------------------------------
@@ -104,7 +105,7 @@ public class Controlador_fichaProducto {
 
         //Imagen -------------------------------------------------------------------------------------------------------
 
-        FileInputStream rutaImagen = new FileInputStream("TiendaRopa/src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
+        FileInputStream rutaImagen = new FileInputStream("src/main/resources/com/example/tiendaropa/images/" + articulo.getImagen());
 
         Image imgArticulo = new Image(rutaImagen);
         imagenProducto.setImage(imgArticulo);
@@ -262,6 +263,7 @@ public class Controlador_fichaProducto {
     }
 
     //Método para construir el textField de las propiedades
+    // Hecho por: Noor
     public void textFieldPropiedades(TextField txtfPropiedades){
         txtfPropiedades.setPrefWidth(148);
         txtfPropiedades.setPrefHeight(57);
@@ -274,6 +276,7 @@ public class Controlador_fichaProducto {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -282,7 +285,7 @@ public class Controlador_fichaProducto {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -291,7 +294,7 @@ public class Controlador_fichaProducto {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -300,7 +303,7 @@ public class Controlador_fichaProducto {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

@@ -12,6 +12,7 @@ import java.util.List;
 public class ModificacionesBBDD {
 
     // Método para actualizar los datos de un empleado
+    // Hecho por: Carol
     public void actualizarEmpleado(String dni, String nombre, String apellidos, String telefono, String fNacimiento, String email, String direccion, boolean tienePrivilegios) throws SQLException {
 
         ConexionBBDD conn = new ConexionBBDD();
@@ -40,6 +41,7 @@ public class ModificacionesBBDD {
         }
     }
 
+    // Hecho por: Vero
     public int deshabilitarYHabilitarUsuario(Usuario usuario){//devuelve int que será -1 si ha dado error el método, 1 si se ha habilitado el usuario y 0 si se ha deshabilitado
         ConexionBBDD conn = new ConexionBBDD();
         int habilitado = -1;
@@ -68,19 +70,4 @@ public class ModificacionesBBDD {
         }
         return habilitado;
     }
-
-/*    public void habilitarUsuario(Usuario usuario){
-        ConexionBBDD conn = new ConexionBBDD();
-        conn.conectarBBDD();
-        conn.crearSentencia();
-        String tabla;
-        if(usuario instanceof Cliente){
-            tabla = "cliente";
-        } else if (usuario instanceof Empleado) {
-            tabla = "empleado";
-        }else {tabla = null;}
-
-        conn.updateSQL("update "+tabla+" set activo = true where "+ usuario.getDni()+"= dni;" );
-        conn.desconectarBBDD();
-    }*/
 }

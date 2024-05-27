@@ -27,7 +27,7 @@ public class Controlador_listaProductos {
     private List<Articulo> productos = new ArrayList<>();
     @FXML
     private VBox vBoxProductos;
-
+    // Hecho por: Noor
     private List<Articulo> getProducto() throws SQLException {
         List<Articulo> productos = new ArrayList<>();
         Articulo articulo = null;
@@ -39,7 +39,7 @@ public class Controlador_listaProductos {
 
         return productos;
     }
-
+    // Hecho por: Noor
     public void initialize() throws IOException {
         try {
             productos.addAll(getProducto());
@@ -63,7 +63,7 @@ public class Controlador_listaProductos {
                 itemController.setData(productos.get(i));
 
                 //Propiedades Vbox
-                vBoxProductos.setPrefHeight(vBoxProductos.getPrefHeight() - 25);
+                vBoxProductos.setPrefHeight(vBoxProductos.getPrefHeight());
                 vBoxProductos.setAlignment(Pos.CENTER);
                 vBoxProductos.setSpacing(20);
                 vBoxProductos.layout();
@@ -89,6 +89,7 @@ public class Controlador_listaProductos {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -97,7 +98,7 @@ public class Controlador_listaProductos {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -106,7 +107,7 @@ public class Controlador_listaProductos {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -115,7 +116,7 @@ public class Controlador_listaProductos {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -124,7 +125,7 @@ public class Controlador_listaProductos {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Noor
     public void mostrarPanelAdmin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

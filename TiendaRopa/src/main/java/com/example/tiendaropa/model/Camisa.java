@@ -2,6 +2,7 @@ package com.example.tiendaropa.model;
 
 
 public class Camisa extends Ropa{
+    // Creada por: Carol y editada por: Noor
 
     //ATRIBUTOS
     private String tipoManga;

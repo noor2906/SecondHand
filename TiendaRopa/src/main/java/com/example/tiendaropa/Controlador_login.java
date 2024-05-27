@@ -26,7 +26,7 @@ public class Controlador_login {
     @FXML
     private TextField txtDatoLogin;
 
-
+    // Hecho por: Vero
     public void login(ActionEvent actionEvent) throws IOException {
         Alert a = new Alert(Alert.AlertType.NONE);
         Usuario usuario;
@@ -45,7 +45,7 @@ public class Controlador_login {
         }
     }
 
-
+    // Hecho por: Vero
     public void mostrarHome(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -54,6 +54,7 @@ public class Controlador_login {
         stage.setScene(new Scene(root));
         stage.show();
     }
+    // Hecho por: Vero
     public void mostrarPanelAdmin(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -62,7 +63,7 @@ public class Controlador_login {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Vero
     public void mostrarRegistro(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -71,18 +72,18 @@ public class Controlador_login {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Vero
     public void limpiarUser(ActionEvent actionEvent) {
         txtDatoLogin.clear();
     }
-
+    // Hecho por: Vero
     public void limpiarContra(ActionEvent actionEvent) {
         txtContraLogin.clear();
     }
 
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -91,7 +92,7 @@ public class Controlador_login {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -100,7 +101,7 @@ public class Controlador_login {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarVolverHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -110,11 +111,4 @@ public class Controlador_login {
         stage.show();
     }
 
-    /*public void botonesActivos() throws IOException{
-
-        Botones btnActivos = new Botones();
-
-        btnActivos.mostrarPantallaPrueba(MouseEvent event);
-
-    }*/
 }

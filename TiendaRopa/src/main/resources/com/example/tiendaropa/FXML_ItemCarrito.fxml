@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="68.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="68.0" prefWidth="440.0">
+         <children>
+            <ImageView fx:id="imgCarritoArticuloi" fitHeight="68.0" fitWidth="88.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@noor/imagenes%20pantalla4/img6.jpg" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="300.0" minY="42.0" width="400.0" />
+               </viewport>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="66.0" prefWidth="310.0" style="-fx-background-color: black;">
+               <children>
+                  <HBox spacing="47.0">
+                     <children>
+                        <Text fx:id="txtCarritoTituloArticulo" fill="WHITE" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pantalones cortos">
+                           <font>
+                              <Font name="Inter Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtCarritoPrecioArticulo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="19.90 €">
+                           <font>
+                              <Font name="Inter Black" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

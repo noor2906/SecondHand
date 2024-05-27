@@ -2,6 +2,7 @@ package com.example.tiendaropa.model;
 import java.util.List;
 
 public class Chaqueta extends Ropa {
+    // Creada por: Carol y editada por: Noor
     protected boolean impermeable;
 
     //CONSTRUCTOR

@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public class ConsultasBBDD {
     //LOGIN ------------------------------------------------------------------------------------------------------------
+    // Hecho por: Vero
     public Usuario login(String user, String pass){
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs;
@@ -66,6 +67,7 @@ public class ConsultasBBDD {
     }
 
     //DEPARTAMENTOS ----------------------------------------------------------------------------------------------------
+    // Hecho por: Vero
     public HashMap<Integer,Departamento> crearDepartamentos(HashMap<Integer,Departamento> mapaDepartamentos) throws SQLException {
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs;
@@ -81,6 +83,7 @@ public class ConsultasBBDD {
         return mapaDepartamentos;
     }
     //METODO PAGO ------------------------------------------------------------------------------------------------------
+    // Hecho por: Vero
     public HashMap<Integer,MetodoPago> crearMetodosPago(HashMap<Integer,MetodoPago> mapaPagos) throws SQLException {
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs;
@@ -96,6 +99,7 @@ public class ConsultasBBDD {
         return mapaPagos;
     }
     // Lista Clientes
+    // Hecho por: Vero
     public List<Cliente> recogerListaClientes(List<Cliente> clientes){
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs;
@@ -133,6 +137,7 @@ public class ConsultasBBDD {
     }
 
     //MATERIALES -------------------------------------------------------------------------------------------------------
+    // Hecho por: Noor
     public HashMap<Integer,Material> crearMateriales(HashMap<Integer, Material> mapaMateriales) throws SQLException {
         ConexionBBDD con = new ConexionBBDD();
         ResultSet rs;
@@ -151,6 +156,7 @@ public class ConsultasBBDD {
     }
 
     //ARTICULOS --------------------------------------------------------------------------------------------------------
+    // Hecho por: Noor
     public List<Articulo> consultaArticulos(List<Articulo> arrayArticulos) throws SQLException {
         ConexionBBDD con = new ConexionBBDD();
         ResultSet rs;
@@ -247,7 +253,7 @@ public class ConsultasBBDD {
     }
 
     //EMPLEADOS --------------------------------------------------------------------------------------------------------
-
+    // Hecho por: Carol
     public List<Empleado> listaEmpleados(){
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs;

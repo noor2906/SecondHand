@@ -30,6 +30,7 @@ public class Controlador_catalogo implements Initializable {
 
 
     //Obtenemos artículos y los guardamos el una List
+    // Hecho por: Noor
     private List<Articulo> getArticulos() throws SQLException {
         List<Articulo> articulos = new ArrayList<>();
 
@@ -42,6 +43,7 @@ public class Controlador_catalogo implements Initializable {
     }
 
     //Tercer intento
+    // Hecho por: Noor
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -111,6 +113,7 @@ public class Controlador_catalogo implements Initializable {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -119,7 +122,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Noor
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -128,7 +131,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Noor
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -137,7 +140,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Noor
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -146,7 +149,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarAyudaPantalla(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -155,7 +158,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarPrecFrec(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -164,7 +167,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarEstadoPedido(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -173,7 +176,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarDevoluciones(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -182,6 +185,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+    // Hecho por: Carol
     public void mostrarEnviosPantalla(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -190,7 +194,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarFPPBack(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -199,7 +203,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarFCCBack(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -208,6 +212,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+    // Hecho por: Carol
     public void mostrarFPCBack(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -216,6 +221,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+    // Hecho por: Carol
     public void mostrarFPrefCBack(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

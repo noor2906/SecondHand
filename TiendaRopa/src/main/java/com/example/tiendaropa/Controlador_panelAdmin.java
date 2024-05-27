@@ -21,6 +21,7 @@ public class Controlador_panelAdmin {
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
+    // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -29,7 +30,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -38,7 +39,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarCarrito(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -47,7 +48,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Carol
     public void mostrarHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -56,7 +57,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Vero
     public void mostrarListaUsuarios(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -65,7 +66,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Vero
     public void mostrarListaEmpleados(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -74,7 +75,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Noor
     public void mostrarListaProductos(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -83,7 +84,7 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Vero
     public void mostrarPedidos(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -92,11 +93,20 @@ public class Controlador_panelAdmin {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    // Hecho por: Noor
     public void mostrarAltaProducto(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_altaProducto_Noor.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarAltaEmpleado(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_altaEdicionEmpleado_Noor.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();

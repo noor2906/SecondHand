@@ -1,6 +1,7 @@
 package com.example.tiendaropa.model;
 
 public class Accesorios extends Articulo {
+    // Creada por: Carol y editada por: Noor
 
     //ATRIBUTOS
     protected String estilo;

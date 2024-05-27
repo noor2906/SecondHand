@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.SVGPath?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<ScrollPane hbarPolicy="NEVER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_panelAdmin">
+<ScrollPane hbarPolicy="NEVER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_panelAdmin">
    <content>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -31,211 +25,243 @@
                   </Text>
                </children>
             </HBox>
-            <VBox alignment="CENTER" layoutX="450.0" layoutY="508.0" prefHeight="221.0" prefWidth="570.0" spacing="100.0" style="-fx-background-color: white;">
+            <VBox layoutX="450.0" layoutY="408.0" prefHeight="520.0" prefWidth="574.0" spacing="40.0">
                <children>
-                  <VBox prefHeight="151.0" prefWidth="570.0" spacing="40.0">
+                  <HBox prefHeight="163.0" prefWidth="474.0" spacing="62.0">
                      <children>
-                        <HBox prefHeight="163.0" prefWidth="474.0" spacing="62.0">
-                           <children>
-                              <Button fx:id="btnAltaProducto" onMouseClicked="#mostrarAltaProducto" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-                                 <font>
-                                    <Font name="Inter Bold" size="18.0" />
-                                 </font>
+                        <Button fx:id="btnAltaProducto" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarAltaProducto" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M27.7083 4.375H7.29167C5.67292 4.375 4.375 5.6875 4.375 7.29167V27.7083C4.375 29.3125 5.67292 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29167C30.625 5.6875 29.3125 4.375 27.7083 4.375ZM23.3333 18.9583H18.9583V23.3333C18.9583 24.1354 18.3021 24.7917 17.5 24.7917C16.6979 24.7917 16.0417 24.1354 16.0417 23.3333V18.9583H11.6667C10.8646 18.9583 10.2083 18.3021 10.2083 17.5C10.2083 16.6979 10.8646 16.0417 11.6667 16.0417H16.0417V11.6667C16.0417 10.8646 16.6979 10.2083 17.5 10.2083C18.3021 10.2083 18.9583 10.8646 18.9583 11.6667V16.0417H23.3333C24.1354 16.0417 24.7917 16.6979 24.7917 17.5C24.7917 18.3021 24.1354 18.9583 23.3333 18.9583Z" fill="WHITE" />
+                                    <VBox>
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dar de alta">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="producto">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
                                  <padding>
                                     <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                                  </padding>
-                                 <graphic>
-                                    <HBox alignment="CENTER" spacing="30.0">
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAltaEmpleado" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarAltaEmpleado" prefHeight="91.0" prefWidth="306.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M27.7083 4.375H7.29167C5.67292 4.375 4.375 5.6875 4.375 7.29167V27.7083C4.375 29.3125 5.67292 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29167C30.625 5.6875 29.3125 4.375 27.7083 4.375ZM23.3333 18.9583H18.9583V23.3333C18.9583 24.1354 18.3021 24.7917 17.5 24.7917C16.6979 24.7917 16.0417 24.1354 16.0417 23.3333V18.9583H11.6667C10.8646 18.9583 10.2083 18.3021 10.2083 17.5C10.2083 16.6979 10.8646 16.0417 11.6667 16.0417H16.0417V11.6667C16.0417 10.8646 16.6979 10.2083 17.5 10.2083C18.3021 10.2083 18.9583 10.8646 18.9583 11.6667V16.0417H23.3333C24.1354 16.0417 24.7917 16.6979 24.7917 17.5C24.7917 18.3021 24.1354 18.9583 23.3333 18.9583Z" fill="WHITE" />
+                                    <VBox>
                                        <children>
-                                          <SVGPath content="M27.7083 4.375H7.29167C5.67292 4.375 4.375 5.6875 4.375 7.29167V27.7083C4.375 29.3125 5.67292 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29167C30.625 5.6875 29.3125 4.375 27.7083 4.375ZM23.3333 18.9583H18.9583V23.3333C18.9583 24.1354 18.3021 24.7917 17.5 24.7917C16.6979 24.7917 16.0417 24.1354 16.0417 23.3333V18.9583H11.6667C10.8646 18.9583 10.2083 18.3021 10.2083 17.5C10.2083 16.6979 10.8646 16.0417 11.6667 16.0417H16.0417V11.6667C16.0417 10.8646 16.6979 10.2083 17.5 10.2083C18.3021 10.2083 18.9583 10.8646 18.9583 11.6667V16.0417H23.3333C24.1354 16.0417 24.7917 16.6979 24.7917 17.5C24.7917 18.3021 24.1354 18.9583 23.3333 18.9583Z" fill="WHITE" />
-                                          <VBox>
-                                             <children>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dar de alta">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="producto">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </VBox>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dar de alta">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="empleado">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
                                        </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="btnAdministrarProductos" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaProductos" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-                                 <font>
-                                    <Font name="Inter Bold" size="18.0" />
-                                 </font>
+                                    </VBox>
+                                 </children>
                                  <padding>
                                     <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                                  </padding>
-                                 <graphic>
-                                    <HBox alignment="CENTER" spacing="30.0">
-                                       <children>
-                                          <SVGPath content="M31.5001 26.5417L18.9585 17.1354V15.8083C21.3647 15.0937 23.0418 12.6437 22.5022 9.90207C22.1231 7.99166 20.6064 6.40207 18.696 5.96457C16.1293 5.38124 13.7814 6.73749 12.8335 8.85207C12.396 9.82916 13.096 10.9375 14.1606 10.9375C14.7293 10.9375 15.2543 10.6167 15.473 10.1062C15.8085 9.30416 16.5814 8.74999 17.5001 8.74999C18.7105 8.74999 19.6876 9.72707 19.6876 10.9375C19.6876 12.1625 18.6814 13.1542 17.4564 13.125C16.6689 13.1104 16.0418 13.7812 16.0418 14.5687V17.1354L3.50013 26.5417C2.37722 27.3875 2.97513 29.1667 4.37513 29.1667H17.5001H30.6251C32.0251 29.1667 32.623 27.3875 31.5001 26.5417ZM8.75013 26.25L17.5001 19.6875L26.2501 26.25H8.75013Z" fill="WHITE" />
-                                          <VBox>
-                                             <children>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrar">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="productos">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="163.0" prefWidth="474.0" spacing="60.0">
-                           <children>
-                              <Button fx:id="btnAdministrarEmpleados" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaEmpleados" prefHeight="91.0" prefWidth="217.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-                                 <font>
-                                    <Font name="Inter Bold" size="18.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                 </padding>
-                                 <graphic>
-                                    <HBox alignment="CENTER" spacing="30.0">
-                                       <children>
-                                          <SVGPath content="M27.7083 4.37498H21.6125C21 2.68331 19.3958 1.45831 17.5 1.45831C15.6042 1.45831 14 2.68331 13.3875 4.37498H7.29167C5.6875 4.37498 4.375 5.68748 4.375 7.29165V27.7083C4.375 29.3125 5.6875 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29165C30.625 5.68748 29.3125 4.37498 27.7083 4.37498ZM17.5 4.37498C18.3021 4.37498 18.9583 5.03123 18.9583 5.83331C18.9583 6.6354 18.3021 7.29165 17.5 7.29165C16.6979 7.29165 16.0417 6.6354 16.0417 5.83331C16.0417 5.03123 16.6979 4.37498 17.5 4.37498ZM17.5 10.2083C19.9208 10.2083 21.875 12.1625 21.875 14.5833C21.875 17.0041 19.9208 18.9583 17.5 18.9583C15.0792 18.9583 13.125 17.0041 13.125 14.5833C13.125 12.1625 15.0792 10.2083 17.5 10.2083ZM26.25 27.7083H8.75V25.6666C8.75 22.75 14.5833 21.1458 17.5 21.1458C20.4167 21.1458 26.25 22.75 26.25 25.6666V27.7083Z" fill="WHITE" />
-                                          <VBox>
-                                             <children>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrar">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="empleados">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="btnAdministrarUsuarios" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaUsuarios" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-                                 <font>
-                                    <Font name="Inter Bold" size="18.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                 </padding>
-                                 <graphic>
-                                    <HBox alignment="CENTER" spacing="30.0">
-                                       <children>
-                                          <SVGPath content="M13.1248 17.5C15.9394 17.5 18.229 15.2104 18.229 12.3959C18.229 9.58127 15.9394 7.29169 13.1248 7.29169C10.3103 7.29169 8.02067 9.58127 8.02067 12.3959C8.02067 15.2104 10.3103 17.5 13.1248 17.5ZM13.1248 10.2084C14.3353 10.2084 15.3123 11.1854 15.3123 12.3959C15.3123 13.6063 14.3353 14.5834 13.1248 14.5834C11.9144 14.5834 10.9373 13.6063 10.9373 12.3959C10.9373 11.1854 11.9144 10.2084 13.1248 10.2084ZM13.1248 20.0521C9.71234 20.0521 2.9165 21.7584 2.9165 25.1563V26.25C2.9165 27.0521 3.57275 27.7084 4.37484 27.7084H21.8748C22.6769 27.7084 23.3332 27.0521 23.3332 26.25V25.1563C23.3332 21.7584 16.5373 20.0521 13.1248 20.0521ZM6.329 24.7917C7.554 23.9459 10.5144 22.9688 13.1248 22.9688C15.7353 22.9688 18.6957 23.9459 19.9207 24.7917H6.329ZM23.3915 20.1396C25.0832 21.3646 26.2498 22.9979 26.2498 25.1563V27.7084H30.6248C31.4269 27.7084 32.0832 27.0521 32.0832 26.25V25.1563C32.0832 22.2104 26.979 20.5334 23.3915 20.1396ZM21.8748 17.5C24.6894 17.5 26.979 15.2104 26.979 12.3959C26.979 9.58127 24.6894 7.29169 21.8748 7.29169C21.0873 7.29169 20.3582 7.48127 19.6873 7.8021C20.6061 9.10002 21.1457 10.6896 21.1457 12.3959C21.1457 14.1021 20.6061 15.6917 19.6873 16.9896C20.3582 17.3104 21.0873 17.5 21.8748 17.5Z" fill="WHITE" />
-                                          <VBox>
-                                             <children>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminsitrar">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="usuarios">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="163.0" prefWidth="474.0" spacing="60.0">
-                           <children>
-                              <Button fx:id="btnAdministrarEmpleados1" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="254.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-                                 <font>
-                                    <Font name="Inter Bold" size="18.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                 </padding>
-                                 <graphic>
-                                    <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="136.0" spacing="30.0">
-                                       <children>
-                                          <SVGPath content="M27.7083 4.37498H21.6125C21 2.68331 19.3958 1.45831 17.5 1.45831C15.6042 1.45831 14 2.68331 13.3875 4.37498H7.29167C5.6875 4.37498 4.375 5.68748 4.375 7.29165V27.7083C4.375 29.3125 5.6875 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29165C30.625 5.68748 29.3125 4.37498 27.7083 4.37498ZM17.5 4.37498C18.3021 4.37498 18.9583 5.03123 18.9583 5.83331C18.9583 6.6354 18.3021 7.29165 17.5 7.29165C16.6979 7.29165 16.0417 6.6354 16.0417 5.83331C16.0417 5.03123 16.6979 4.37498 17.5 4.37498ZM17.5 10.2083C19.9208 10.2083 21.875 12.1625 21.875 14.5833C21.875 17.0041 19.9208 18.9583 17.5 18.9583C15.0792 18.9583 13.125 17.0041 13.125 14.5833C13.125 12.1625 15.0792 10.2083 17.5 10.2083ZM26.25 27.7083H8.75V25.6666C8.75 22.75 14.5833 21.1458 17.5 21.1458C20.4167 21.1458 26.25 22.75 26.25 25.6666V27.7083Z" fill="WHITE" />
-                                          <VBox alignment="CENTER">
-                                             <children>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar perfil">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="btnAdministrarUsuarios1" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaUsuarios" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-                                 <font>
-                                    <Font name="Inter Bold" size="18.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                 </padding>
-                                 <graphic>
-                                    <HBox alignment="CENTER" spacing="30.0">
-                                       <children>
-                                          <SVGPath content="M13.1248 17.5C15.9394 17.5 18.229 15.2104 18.229 12.3959C18.229 9.58127 15.9394 7.29169 13.1248 7.29169C10.3103 7.29169 8.02067 9.58127 8.02067 12.3959C8.02067 15.2104 10.3103 17.5 13.1248 17.5ZM13.1248 10.2084C14.3353 10.2084 15.3123 11.1854 15.3123 12.3959C15.3123 13.6063 14.3353 14.5834 13.1248 14.5834C11.9144 14.5834 10.9373 13.6063 10.9373 12.3959C10.9373 11.1854 11.9144 10.2084 13.1248 10.2084ZM13.1248 20.0521C9.71234 20.0521 2.9165 21.7584 2.9165 25.1563V26.25C2.9165 27.0521 3.57275 27.7084 4.37484 27.7084H21.8748C22.6769 27.7084 23.3332 27.0521 23.3332 26.25V25.1563C23.3332 21.7584 16.5373 20.0521 13.1248 20.0521ZM6.329 24.7917C7.554 23.9459 10.5144 22.9688 13.1248 22.9688C15.7353 22.9688 18.6957 23.9459 19.9207 24.7917H6.329ZM23.3915 20.1396C25.0832 21.3646 26.2498 22.9979 26.2498 25.1563V27.7084H30.6248C31.4269 27.7084 32.0832 27.0521 32.0832 26.25V25.1563C32.0832 22.2104 26.979 20.5334 23.3915 20.1396ZM21.8748 17.5C24.6894 17.5 26.979 15.2104 26.979 12.3959C26.979 9.58127 24.6894 7.29169 21.8748 7.29169C21.0873 7.29169 20.3582 7.48127 19.6873 7.8021C20.6061 9.10002 21.1457 10.6896 21.1457 12.3959C21.1457 14.1021 20.6061 15.6917 19.6873 16.9896C20.3582 17.3104 21.0873 17.5 21.8748 17.5Z" fill="WHITE" />
-                                          <VBox>
-                                             <children>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminsitrar">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="pedidos">
-                                                   <font>
-                                                      <Font name="Inter Bold" size="20.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </HBox>
+                              </HBox>
+                           </graphic>
+                        </Button>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox prefHeight="163.0" prefWidth="474.0" spacing="60.0">
+                     <children>
+                        <Button fx:id="btnAdministrarPedidos" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M13.1248 17.5C15.9394 17.5 18.229 15.2104 18.229 12.3959C18.229 9.58127 15.9394 7.29169 13.1248 7.29169C10.3103 7.29169 8.02067 9.58127 8.02067 12.3959C8.02067 15.2104 10.3103 17.5 13.1248 17.5ZM13.1248 10.2084C14.3353 10.2084 15.3123 11.1854 15.3123 12.3959C15.3123 13.6063 14.3353 14.5834 13.1248 14.5834C11.9144 14.5834 10.9373 13.6063 10.9373 12.3959C10.9373 11.1854 11.9144 10.2084 13.1248 10.2084ZM13.1248 20.0521C9.71234 20.0521 2.9165 21.7584 2.9165 25.1563V26.25C2.9165 27.0521 3.57275 27.7084 4.37484 27.7084H21.8748C22.6769 27.7084 23.3332 27.0521 23.3332 26.25V25.1563C23.3332 21.7584 16.5373 20.0521 13.1248 20.0521ZM6.329 24.7917C7.554 23.9459 10.5144 22.9688 13.1248 22.9688C15.7353 22.9688 18.6957 23.9459 19.9207 24.7917H6.329ZM23.3915 20.1396C25.0832 21.3646 26.2498 22.9979 26.2498 25.1563V27.7084H30.6248C31.4269 27.7084 32.0832 27.0521 32.0832 26.25V25.1563C32.0832 22.2104 26.979 20.5334 23.3915 20.1396ZM21.8748 17.5C24.6894 17.5 26.979 15.2104 26.979 12.3959C26.979 9.58127 24.6894 7.29169 21.8748 7.29169C21.0873 7.29169 20.3582 7.48127 19.6873 7.8021C20.6061 9.10002 21.1457 10.6896 21.1457 12.3959C21.1457 14.1021 20.6061 15.6917 19.6873 16.9896C20.3582 17.3104 21.0873 17.5 21.8748 17.5Z" fill="WHITE" />
+                                    <VBox>
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminsitrar">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="pedidos">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAdministrarProductos" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaProductos" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M31.5001 26.5417L18.9585 17.1354V15.8083C21.3647 15.0937 23.0418 12.6437 22.5022 9.90207C22.1231 7.99166 20.6064 6.40207 18.696 5.96457C16.1293 5.38124 13.7814 6.73749 12.8335 8.85207C12.396 9.82916 13.096 10.9375 14.1606 10.9375C14.7293 10.9375 15.2543 10.6167 15.473 10.1062C15.8085 9.30416 16.5814 8.74999 17.5001 8.74999C18.7105 8.74999 19.6876 9.72707 19.6876 10.9375C19.6876 12.1625 18.6814 13.1542 17.4564 13.125C16.6689 13.1104 16.0418 13.7812 16.0418 14.5687V17.1354L3.50013 26.5417C2.37722 27.3875 2.97513 29.1667 4.37513 29.1667H17.5001H30.6251C32.0251 29.1667 32.623 27.3875 31.5001 26.5417ZM8.75013 26.25L17.5001 19.6875L26.2501 26.25H8.75013Z" fill="WHITE" />
+                                    <VBox>
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrar">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="productos">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="163.0" prefWidth="474.0" spacing="60.0">
+                     <children>
+                        <Button fx:id="btnAdministrarEmpleados" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaEmpleados" prefHeight="91.0" prefWidth="217.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M27.7083 4.37498H21.6125C21 2.68331 19.3958 1.45831 17.5 1.45831C15.6042 1.45831 14 2.68331 13.3875 4.37498H7.29167C5.6875 4.37498 4.375 5.68748 4.375 7.29165V27.7083C4.375 29.3125 5.6875 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29165C30.625 5.68748 29.3125 4.37498 27.7083 4.37498ZM17.5 4.37498C18.3021 4.37498 18.9583 5.03123 18.9583 5.83331C18.9583 6.6354 18.3021 7.29165 17.5 7.29165C16.6979 7.29165 16.0417 6.6354 16.0417 5.83331C16.0417 5.03123 16.6979 4.37498 17.5 4.37498ZM17.5 10.2083C19.9208 10.2083 21.875 12.1625 21.875 14.5833C21.875 17.0041 19.9208 18.9583 17.5 18.9583C15.0792 18.9583 13.125 17.0041 13.125 14.5833C13.125 12.1625 15.0792 10.2083 17.5 10.2083ZM26.25 27.7083H8.75V25.6666C8.75 22.75 14.5833 21.1458 17.5 21.1458C20.4167 21.1458 26.25 22.75 26.25 25.6666V27.7083Z" fill="WHITE" />
+                                    <VBox>
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrar">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="empleados">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAdministrarUsuarios" contentDisplay="CENTER" mnemonicParsing="false"  prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M13.1248 17.5C15.9394 17.5 18.229 15.2104 18.229 12.3959C18.229 9.58127 15.9394 7.29169 13.1248 7.29169C10.3103 7.29169 8.02067 9.58127 8.02067 12.3959C8.02067 15.2104 10.3103 17.5 13.1248 17.5ZM13.1248 10.2084C14.3353 10.2084 15.3123 11.1854 15.3123 12.3959C15.3123 13.6063 14.3353 14.5834 13.1248 14.5834C11.9144 14.5834 10.9373 13.6063 10.9373 12.3959C10.9373 11.1854 11.9144 10.2084 13.1248 10.2084ZM13.1248 20.0521C9.71234 20.0521 2.9165 21.7584 2.9165 25.1563V26.25C2.9165 27.0521 3.57275 27.7084 4.37484 27.7084H21.8748C22.6769 27.7084 23.3332 27.0521 23.3332 26.25V25.1563C23.3332 21.7584 16.5373 20.0521 13.1248 20.0521ZM6.329 24.7917C7.554 23.9459 10.5144 22.9688 13.1248 22.9688C15.7353 22.9688 18.6957 23.9459 19.9207 24.7917H6.329ZM23.3915 20.1396C25.0832 21.3646 26.2498 22.9979 26.2498 25.1563V27.7084H30.6248C31.4269 27.7084 32.0832 27.0521 32.0832 26.25V25.1563C32.0832 22.2104 26.979 20.5334 23.3915 20.1396ZM21.8748 17.5C24.6894 17.5 26.979 15.2104 26.979 12.3959C26.979 9.58127 24.6894 7.29169 21.8748 7.29169C21.0873 7.29169 20.3582 7.48127 19.6873 7.8021C20.6061 9.10002 21.1457 10.6896 21.1457 12.3959C21.1457 14.1021 20.6061 15.6917 19.6873 16.9896C20.3582 17.3104 21.0873 17.5 21.8748 17.5Z" fill="WHITE" />
+                                    <VBox>
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminsitrar">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="usuarios">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="163.0" prefWidth="474.0" spacing="60.0">
+                     <children>
+                        <Button fx:id="btnEditarPerfil" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="254.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="136.0" spacing="30.0">
+                                 <children>
+                                    <SVGPath content="M27.7083 4.37498H21.6125C21 2.68331 19.3958 1.45831 17.5 1.45831C15.6042 1.45831 14 2.68331 13.3875 4.37498H7.29167C5.6875 4.37498 4.375 5.68748 4.375 7.29165V27.7083C4.375 29.3125 5.6875 30.625 7.29167 30.625H27.7083C29.3125 30.625 30.625 29.3125 30.625 27.7083V7.29165C30.625 5.68748 29.3125 4.37498 27.7083 4.37498ZM17.5 4.37498C18.3021 4.37498 18.9583 5.03123 18.9583 5.83331C18.9583 6.6354 18.3021 7.29165 17.5 7.29165C16.6979 7.29165 16.0417 6.6354 16.0417 5.83331C16.0417 5.03123 16.6979 4.37498 17.5 4.37498ZM17.5 10.2083C19.9208 10.2083 21.875 12.1625 21.875 14.5833C21.875 17.0041 19.9208 18.9583 17.5 18.9583C15.0792 18.9583 13.125 17.0041 13.125 14.5833C13.125 12.1625 15.0792 10.2083 17.5 10.2083ZM26.25 27.7083H8.75V25.6666C8.75 22.75 14.5833 21.1458 17.5 21.1458C20.4167 21.1458 26.25 22.75 26.25 25.6666V27.7083Z" fill="WHITE" />
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar perfil">
+                                             <font>
+                                                <Font name="Inter Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <Line endX="1440.0" layoutY="97.0" />
@@ -321,21 +347,13 @@
                   </Button>
                </children>
             </Pane>
-            <HBox alignment="CENTER" layoutX="500.0" layoutY="311.0" nodeOrientation="LEFT_TO_RIGHT">
+            <HBox alignment="CENTER" layoutX="590.0" layoutY="271.0" nodeOrientation="LEFT_TO_RIGHT">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="¡bienvenidx, " wrappingWidth="330.8891906738281">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="¡bienvenidx" wrappingWidth="303.6891174316406">
                      <font>
                         <Font name="Inter Light" size="56.0" />
                      </font>
                   </Text>
-                  <TextField alignment="CENTER_RIGHT" editable="false" prefHeight="106.0" prefWidth="127.0" style="-fx-background-color: none; -fx-background-width: none;" text="Joan">
-                     <font>
-                        <Font name="Inter Light" size="56.0" />
-                     </font>
-                     <padding>
-                        <Insets right="-1.0" />
-                     </padding>
-                  </TextField>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="!" wrappingWidth="17.289206981658936">
                      <font>
                         <Font name="Inter Light" size="56.0" />

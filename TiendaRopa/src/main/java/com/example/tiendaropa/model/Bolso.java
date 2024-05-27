@@ -2,6 +2,7 @@ package com.example.tiendaropa.model;
 import java.util.List;
 
 public class Bolso extends Accesorios {
+    // Creada por: Carol y editada por: Noor
 
     //Atributos bolso
     private int capacidad;
