@@ -25,11 +25,11 @@ public class Controlador_login {
     private TextField txtContraLogin;
     @FXML
     private TextField txtDatoLogin;
+    private static Usuario usuario;
 
     // Hecho por: Vero
     public void login(ActionEvent actionEvent) throws IOException {
         Alert a = new Alert(Alert.AlertType.NONE);
-        Usuario usuario;
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
         usuario=consulta.login(user,pass);
@@ -43,6 +43,10 @@ public class Controlador_login {
             a.setContentText("El usuario no existe");
             a.show();
         }
+    }
+    //Hecho por: Vero
+    public static Usuario getUsuario() {
+        return usuario;
     }
 
     // Hecho por: Vero

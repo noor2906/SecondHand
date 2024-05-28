@@ -3,6 +3,8 @@ package com.example.tiendaropa;
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
 import com.example.tiendaropa.model.Articulo;
 import com.example.tiendaropa.model.Cliente;
+import com.example.tiendaropa.model.Empleado;
+import com.example.tiendaropa.model.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -70,16 +72,16 @@ public class Controlador_listaUsuarios {
 
                 hbox.getChildren().add(itemClientes);
 
-                hbox.setAlignment(Pos.CENTER_LEFT);
+                hbox.setAlignment(Pos.CENTER);
                 hbox.setSpacing(25);
-                hbox.setPadding(new Insets(10,0,0,80));
+                hbox.setPadding(new Insets(10));
 
 
                 // Agrega el HBox actual al VBox
                 vBoxClientes.getChildren().add(hbox);
-                vBoxClientes.setAlignment(Pos.CENTER);
+                vBoxClientes.setAlignment(Pos.TOP_CENTER);
                 //Propiedades Vbox
-                vBoxClientes.setPrefHeight(vBoxClientes.getPrefHeight() + 80);
+                vBoxClientes.setPrefHeight(vBoxClientes.getPrefHeight() + 60);
                 // Crea un nuevo HBox para los próximos elementos
                 hbox = new HBox();
                 row++;
@@ -114,9 +116,21 @@ public class Controlador_listaUsuarios {
     }
     // Hecho por: Carol
     public void mostrarLogin(MouseEvent event) throws IOException {
+        // Usuario,String path y el if hecho por: Vero
+        // Controla que el usuario haya hecho login o lo redirige al login
+        Usuario usuario = Controlador_login.getUsuario();
+        String path;
+        if (usuario instanceof Cliente){// Si el usuario es cliente redirige a su edición
+            path = "FXML_edicionUsuario_Carol.fxml";
+        } else if (usuario instanceof Empleado) {// Si el usuario es empleado redirige a Panel Admin
+            path = "FXML_panelAdmin_Noor.fxml";
+        }else {// En el caso de que no sea ni empleado ni cliente significaria que no ha hecho login
+            path = "FXML_login_Carol.fxml";
+        }
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_login_Carol.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(path));
 
         stage.setScene(new Scene(root));
         stage.show();
