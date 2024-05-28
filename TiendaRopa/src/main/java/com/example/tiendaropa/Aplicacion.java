@@ -26,11 +26,10 @@ public class Aplicacion extends Application {
         stage.setScene(scene);
         stage.show();
 
-        //Cargamos los departamentos, materiales y método de pago
+        //Cargamos los departamentos, materiales y métodos de pago
         try {Departamento.rellenarMapaDpto();} catch (SQLException e) {throw new RuntimeException(e);}
         try {Material.rellenarMapaMateriales();} catch (SQLException e) {throw new RuntimeException(e);}
         try {MetodoPago.rellenarMapaMetodoPago();} catch (SQLException e) {throw new RuntimeException(e);}
-        try {MetodoPago.recorrerMapa();}catch (Exception e){throw new RuntimeException(e);}
     }
 
 
