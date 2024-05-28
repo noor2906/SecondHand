@@ -21,6 +21,9 @@ public class Ropa extends Articulo {
         this.tipoRopa = tipoRopa;
     }
 
+    public Ropa(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen, Material material) {
+        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material);
+    }
 
     //GET Y SET
 

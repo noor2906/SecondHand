@@ -5,8 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5137aad3-3be3-4ec2-9d73-a6898c9e817b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Aplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Aplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_altaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_altaProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_itemAltaCamisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_itemAltaCamisa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/model/Camisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/model/Camisa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/model/Ropa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/model/Ropa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaProducto_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaProducto_Noor.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Aplicacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Aplicacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ConsultasBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ConsultasBBDD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/InsercionesBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/InsercionesBBDD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ModificacionesBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ModificacionesBBDD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_ItemEmpleado.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_ItemEmpleado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_PantallaPrueba.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_PantallaPrueba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_carrito.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_carrito.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_catalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_catalogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_fichaProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_fichaProducto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_infoEmpleado.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_infoEmpleado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_infoEmpleadoEditable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_infoEmpleadoEditable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemPropiedadFichaProducto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaEmpleados.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaEmpleados.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaProductos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaProductos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaUsuarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_menuHamburguesa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_menuHamburguesa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_panelAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_panelAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_registroUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_registroUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemCliente.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemEmpleado_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemEmpleado_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemProducto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemProducto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Accesorios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Accesorios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Bolso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Bolso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Camisa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Camisa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Chaqueta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Chaqueta.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +65,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "Noor",
+    "last_opened_file_path": "C:/Users/alumnoM/Documents/GitHub/SecondHand/TiendaRopa"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

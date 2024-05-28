@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.SVGPath?>
@@ -15,7 +14,7 @@
             <children>
                 <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="80.0" style="-fx-background-color: black;">
                     <children>
-                        <Button fx:id="btnEditarCliente" onMouseClicked="#mostrarInfoCliente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="44.0" style="-fx-background-color: black;">
+                        <Button fx:id="btnEditarCliente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarInfoCliente" prefHeight="45.0" prefWidth="44.0" style="-fx-background-color: black;">
                             <graphic>
                                 <SVGPath content="M34 37.46V40.5C34 40.78 34.22 41 34.5 41H37.54C37.67 41 37.8 40.95 37.89 40.85L48.81 29.94L45.06 26.19L34.15 37.1C34.05 37.2 34 37.32 34 37.46ZM51.71 27.04C52.1 26.65 52.1 26.02 51.71 25.63L49.37 23.29C48.98 22.9 48.35 22.9 47.96 23.29L46.13 25.12L49.88 28.87L51.71 27.04Z" fill="WHITE" layoutY="10.0" />
                             </graphic>
@@ -33,14 +32,11 @@
                         <Insets />
                     </HBox.margin>
                <children>
-                        <CheckBox fx:id="chbxActivo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="29.0" textAlignment="CENTER" textFill="WHITE">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                            </HBox.margin>
-                        </CheckBox>
+                  <Button fx:id="btnActivo" mnemonicParsing="false" onMouseClicked="#activarYDesactivarCliente" text="Activar">
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
                 </HBox>
             </children>

@@ -5,6 +5,7 @@ import com.example.tiendaropa.model.Material;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,17 +13,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class Controlador_altaProducto {
 
+    //Primera parte alta producto --------------------------------------------------------------------------------------
 
     @FXML
-    private Button btnClear1,btnClear2,btnClear3,btnClear4;
+    private Button btnClearArt1, btnClearArt2, btnClearArt3;
+
+    @FXML
+    private Button btnClearArt4;
 
     @FXML
     private Button btnCarrito, btnGuardarCambiosAltaProducto,btnLogin,btnMenu,btnRetrocederAltaProducto,btnTituloHeader;
@@ -40,12 +47,158 @@ public class Controlador_altaProducto {
     private TextArea txtaDescripcionAltaProducto;
 
     @FXML
-    private VBox vBoxPropiedadesAlta;
+    private VBox vBoxPropiedadesAlta, vBoxPropiedades;
+
+    @FXML
+    private HBox hBoxAltaBolso, hBoxAltaCamisa, hBoxAltaChaqueta , hBoxAltaPantalon,hBoxAltaZapato;
 
     private HashMap<Integer, Material> mapaMateriales = Material.getMapaMateriales();
 
     private Parent itemActual;
+
+    //Atributos alta camisa --------------------------------------------------------------------------------------------
+
+    @FXML
+    private Button btnClearCamisa1, btnClearCamisa2, btnClearCamisa3, btnClearCamisa4;
+
+    @FXML
+    private CheckBox chBoxEstampadaAltaProducto;
+
+    @FXML
+    private TextField txtfColorAltaProducto, txtfTallaAltaProducto, txtfTipoCierreAltaProducto,
+                      txtfTipoMangaAltaProducto;
+
+
+    //Atributos alta pantalon ------------------------------------------------------------------------------------------
+
+    @FXML
+    private Button btnClearPantalon1, btnClearPantalon2, btnClearPantalon3, btnClearPantalon4;
+
+
+    //Atributos alta chaqueta ------------------------------------------------------------------------------------------
+
+    @FXML
+    private Button btnClearChaqueta1, btnClearChaqueta2, btnClearChaqueta3;
+
+
+    //Atributos alta bolso ---------------------------------------------------------------------------------------------
+
+    @FXML
+    private Button btnClearBolso1, btnClearBolso2, btnClearBolso3;
+
+
+    //Atributos alta zapato --------------------------------------------------------------------------------------------
+
+    @FXML
+    private Button btnClearZapato1, btnClearZapato2, btnClearZapato3;
+
+
     // Hecho por: Noor
+    @FXML
+    public void initialize() throws IOException {
+        System.out.println("initialize called");
+
+        //Deshabilitamos todos los hbox
+        deshabilitarHbox();
+
+
+        ObservableList<String> soListMateriales = FXCollections.observableArrayList();
+        for (Integer k : mapaMateriales.keySet()) {
+            soListMateriales.add(mapaMateriales.get(k).getNombre());
+        }
+        cbMaterialAltaProducto.setItems(soListMateriales);
+
+        //NOTA: Averiguar + adelante como hacerlo + genérico
+        ObservableList<String> soList = FXCollections.observableArrayList("Camisa", "Pantalon", "Chaqueta", "Bolso", "Zapato");
+        cbTipoProducto.setItems(soList);
+
+
+        cbTipoProducto.setOnAction(actionEvent -> {
+                    String tipoSeleccionado = cbTipoProducto.getValue();
+
+                    if (Objects.equals(tipoSeleccionado, "Camisa")){
+                        hBoxAltaCamisa.setVisible(true);
+                    } else if (Objects.equals(tipoSeleccionado, "Pantalon")) {
+                        hBoxAltaPantalon.setVisible(true);
+                    }
+
+                }
+
+
+
+                    /*cbTipoProducto.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                        //Para pasar datos de controlador a controlador
+                        @Override
+                        public void handle(MouseEvent event) {
+
+                        }
+                    });*/
+
+        );
+
+    }
+
+   public void deshabilitarHbox(){
+       //Ocultar todos los hBox
+       hBoxAltaCamisa.setVisible(false);
+       hBoxAltaPantalon.setVisible(false);
+       hBoxAltaChaqueta.setVisible(false);
+       hBoxAltaBolso.setVisible(false);
+       hBoxAltaZapato.setVisible(false);
+   }
+
+
+    public void darAltaProducto(MouseEvent event) throws IOException {
+        int ok = 0;
+        int ok2 = 0;
+
+        //Propiedades articulo
+        String nombre = txtfNombreAltaProducto.getText();
+        String precio = txtfPrecioAltaProducto.getText();
+        String marca = txtfMarcaAltaProducto.getText();
+        String descripcion = txtaDescripcionAltaProducto.getText();
+        String imagen = txtfImagenAltaProducto.getText();
+        boolean activo = true;
+        String material = cbMaterialAltaProducto.getValue();
+
+        if (checkBActivoAltaProducto.isSelected()){
+            activo = true;
+        }else{
+            activo = false;
+        }
+
+        //Material
+        int mat = 0;
+
+        if(!nombre.equals("") && !precio.equals("") && !marca.equals("") && !descripcion.equals("") && !imagen.equals("")){
+            for (Integer k : mapaMateriales.keySet()){
+                if (mapaMateriales.get(k).getNombre().equals(material)){
+                    mat = k;
+                }
+            }
+
+            ok = InsercionesBBDD.insercionProducto(nombre,precio,marca,imagen,descripcion,mat);
+
+        } else {
+            System.out.println("Te has dejado algún campo importante");
+        }
+
+        if (ok > 0 && ok2 > 0){
+            mostrarListaProductos(event);
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+ /*   // Hecho por: Noor
     @FXML
     public void initialize() throws IOException {
         System.out.println("initialize called"); // Debug statement
@@ -64,6 +217,14 @@ public class Controlador_altaProducto {
         cbTipoProducto.setOnAction(actionEvent -> {
                     String tipoSeleccionado = cbTipoProducto.getValue();
                     loadItem(tipoSeleccionado);
+
+                    btnGuardarCambiosAltaProducto.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                        //Para pasar datos de controlador a controlador
+                        @Override
+                        public void handle(MouseEvent event) {
+                            //l
+                        }
+                    });
                 }
         );
 
@@ -96,14 +257,14 @@ public class Controlador_altaProducto {
         String marca = txtfMarcaAltaProducto.getText();
         String descripcion = txtaDescripcionAltaProducto.getText();
         String imagen = txtfImagenAltaProducto.getText();
-        //boolean activo = true;
+        boolean activo = true;
         String material = cbMaterialAltaProducto.getValue();
 
-       /* if (checkBActivoAltaProducto.isSelected()){
+        if (checkBActivoAltaProducto.isSelected()){
             activo = true;
         }else{
             activo = false;
-        }*/
+        }
 
         //Material
         int mat = 0;
@@ -127,7 +288,7 @@ public class Controlador_altaProducto {
 
 
     }
-
+*/
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
