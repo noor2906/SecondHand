@@ -42,23 +42,25 @@ public class ModificacionesBBDD {
     }
 
     // Hecho por: Vero
-    public int deshabilitarYHabilitarUsuario(Usuario usuario){//devuelve int que será -1 si ha dado error el método, 1 si se ha habilitado el usuario y 0 si se ha deshabilitado
+    public int deshabilitarYHabilitarUsuario(Usuario usuario){
+        //Funciona junto con el método activarYDesactivarCliente en Controlador_itemCliente
+        //Le pasas un cliente o empleado y mira si el usuario está activo o no y lo cambia en la base de datos
         ConexionBBDD conn = new ConexionBBDD();
         int habilitado = -1;
         try{
             conn.conectarBBDD();
             conn.crearSentencia();
             String tabla;
-            if(usuario instanceof Cliente){
+            if(usuario instanceof Cliente){ // Si el usuario es cliente hace el update en la tabla cliente
                 tabla = "cliente";
-            } else if (usuario instanceof Empleado) {
+            } else if (usuario instanceof Empleado) {// Si el usuario es empleado hace el update en la tabla empleado
                 tabla = "empleado";
             }else {tabla = null;}
-            if (usuario.isActivo()==true){
+            if (usuario.isActivo()==true){//para deshabilitar el usuario
                 conn.updateSQL("update "+tabla+" set activo = 0 where dni = '"+usuario.getDni()+"';" );
                 System.out.println("Se ha deshabilitado el usuario");
                 habilitado=0;
-            }else if (usuario.isActivo()==false){
+            }else if (usuario.isActivo()==false){//para habilitar el usuario
                 conn.updateSQL("update "+tabla+" set activo = 1 where dni = '"+usuario.getDni()+"';" );
                 System.out.println("Se ha habilitado el usuario");
                 habilitado=1;
@@ -68,6 +70,7 @@ public class ModificacionesBBDD {
         }finally{
             conn.desconectarBBDD();
         }
+        //devuelve int que será -1 si ha dado error el método, 1 si se ha habilitado el usuario y 0 si se ha deshabilitado
         return habilitado;
     }
 }
