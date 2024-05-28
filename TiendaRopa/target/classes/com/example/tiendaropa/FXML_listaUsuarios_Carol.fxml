@@ -66,7 +66,7 @@
       </Pane>
       <HBox layoutX="52.0" layoutY="132.0">
          <children>
-            <Button fx:id="btnRetrocederEditarEmp" onMouseClicked="#volverPanelAdmin" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
+            <Button fx:id="btnRetrocederEditarEmp" mnemonicParsing="false" onMouseClicked="#volverPanelAdmin" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
                <graphic>
                   <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
                </graphic>
@@ -87,5 +87,10 @@
             </ScrollPane>
          </children>
       </Pane>
+      <Text layoutX="1001.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar | Activo" textAlignment="CENTER" wrappingWidth="132.212890625">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

@@ -89,7 +89,7 @@
                         <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
                      </graphic>
                   </Button>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil">
                      <font>
                         <Font name="Inter Bold" size="28.0" />
                      </font>

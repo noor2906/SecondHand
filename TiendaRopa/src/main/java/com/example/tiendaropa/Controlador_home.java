@@ -51,7 +51,7 @@ public class Controlador_home {
         Usuario usuario = Controlador_login.getUsuario();
         String path;
         if (usuario instanceof Cliente){// Si el usuario es cliente redirige a su edición
-            path = "";
+            path = "FXML_edicionUsuario_Carol.fxml";
         } else if (usuario instanceof Empleado) {// Si el usuario es empleado redirige a Panel Admin
             path = "FXML_panelAdmin_Noor.fxml";
         }else {// En el caso de que no sea ni empleado ni cliente significaria que no ha hecho login
