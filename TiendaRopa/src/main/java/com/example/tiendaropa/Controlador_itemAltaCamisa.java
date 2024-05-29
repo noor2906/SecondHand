@@ -23,6 +23,12 @@ public class Controlador_itemAltaCamisa {
     private String talla;
     private String color;
 
+    Controlador_itemAltaCamisa itemAltaCamisa;
+
+    //se podría hacer así
+    public Controlador_itemAltaCamisa getItemAltaCamisa() {
+        return itemAltaCamisa;
+    }
 
     public void setData(){
 
