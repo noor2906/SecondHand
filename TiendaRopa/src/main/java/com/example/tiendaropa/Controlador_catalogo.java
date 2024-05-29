@@ -135,13 +135,14 @@ public class Controlador_catalogo implements Initializable {
     // Hecho por: Noor
     public void mostrarLogin(MouseEvent event) throws IOException {
         // Usuario,String path y el if hecho por: Vero
+        // Controla que el usuario haya hecho login o lo redirige al login
         Usuario usuario = Controlador_login.getUsuario();
         String path;
-        if (usuario instanceof Cliente){
-            path = "";
-        } else if (usuario instanceof Empleado) {
+        if (usuario instanceof Cliente){// Si el usuario es cliente redirige a su edición
+            path = "FXML_edicionUsuario_Carol.fxml";
+        } else if (usuario instanceof Empleado) {// Si el usuario es empleado redirige a Panel Admin
             path = "FXML_panelAdmin_Noor.fxml";
-        }else {
+        }else {// En el caso de que no sea ni empleado ni cliente significaria que no ha hecho login
             path = "FXML_login_Carol.fxml";
         }
 
