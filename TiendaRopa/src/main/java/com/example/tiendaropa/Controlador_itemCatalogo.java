@@ -1,12 +1,13 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.Conexiones.ConsultasBBDD;
+import com.example.tiendaropa.Conexiones.InsercionesBBDD;
 import com.example.tiendaropa.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,8 +17,11 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Controlador_itemCatalogo{
+
+    private InsercionesBBDD insercionesBBDD = new InsercionesBBDD();
 
     @FXML
     private ImageView imgItemCatalogo;
@@ -29,6 +33,9 @@ public class Controlador_itemCatalogo{
     private TextField txtfPrecioItemCatalogo;
 
     Articulo articulo;
+
+    Usuario usuario = Controlador_login.getUsuario();
+
     // Hecho por: Noor
     public void setData(Articulo articulo) throws FileNotFoundException {
 
@@ -77,11 +84,62 @@ public class Controlador_itemCatalogo{
             e.printStackTrace();
         }
     }
-    // Hecho por: Carol
-    public void addArticuloCarrito(){
 
-        Aplicacion.carrito.add(this.articulo);
+    //Hecho por carol:
+    private void insertarPedidoCarrito() {
+
+        if (usuario == null) {
+            System.out.println("No hay ningún usuario autenticado.");
+            return; // Salir del método para evitar errores
+        }
+
+        String fechaPedido = String.valueOf(Pedido.getFecha());
+        String dirEnvio = usuario.getDireccion();
+        String estado = "En proceso";
+        String dniCliente = usuario.getDni();
+
+        try {
+            // Verificar si insercionesBBDD es nulo antes de llamar al método
+            if (insercionesBBDD != null) {
+                insercionesBBDD.insertarPedido(fechaPedido, dirEnvio, estado, dniCliente);
+                System.out.println("Pedido insertado correctamente.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
     }
 
+    //Hecho por carol:
+    private void insertarLineaPedidoCarrito(Integer numPedido) {
+
+        int codigoArticulo = articulo.getCodigo();
+        int cantidad = 1;
+
+        try {
+            // Verificar si insercionesBBDD es nulo antes de llamar al método
+            if (insercionesBBDD != null) {
+                insercionesBBDD.insertarLineaPedido(codigoArticulo, numPedido, cantidad);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+    }
+
+    //Hecho por carol:
+    public void addArticuloCarrito(MouseEvent event) throws IOException {
+
+        ConsultasBBDD consulta = new ConsultasBBDD();
+        Integer numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+
+        if (numPedido == null){
+            insertarPedidoCarrito();
+            numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+        }
+        insertarLineaPedidoCarrito(numPedido);
+
+
+    }
 
 }

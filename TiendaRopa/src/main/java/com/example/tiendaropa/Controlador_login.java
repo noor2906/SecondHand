@@ -33,6 +33,11 @@ public class Controlador_login {
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
         usuario=consulta.login(user,pass);
+        if (usuario == null) {
+            System.out.println("Login fallido: usuario es null");
+        } else {
+            System.out.println("Login exitoso: " + usuario.getDni());
+        }
         if (usuario instanceof Cliente){
             mostrarHome(actionEvent);
         } else if (usuario instanceof Empleado) {

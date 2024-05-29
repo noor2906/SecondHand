@@ -48,7 +48,7 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <Button fx:id="btnCarritoImg1" mnemonicParsing="false" onMouseClicked="#addArticuloCarrito" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: none; -fx-background-radius: none;">
+                  <Button fx:id="btnCarritoImg" mnemonicParsing="false" onMouseClicked="#addArticuloCarrito" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: none; -fx-background-radius: none;">
                      <graphic>
                         <HBox alignment="CENTER" prefHeight="34.0" prefWidth="98.0" spacing="15.0" style="-fx-background-color: black;">
                            <padding>

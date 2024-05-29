@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Controlador_panelAdmin {
+
     @FXML
     Button btnLogin;
     public void initialize(){

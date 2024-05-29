@@ -2,6 +2,7 @@ package com.example.tiendaropa.Conexiones;
 
 import com.example.tiendaropa.model.*;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -287,6 +288,36 @@ public class ConsultasBBDD {
         }
         return empleados;
 
+    }
+
+//PEDIDO --------------------------------------------------------------------------------------------------------
+
+    public static int getNumeroPedidoEnProceso(Usuario usuario){
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs = null;
+        PreparedStatement stmnt = null;
+        int numPedido = 0;
+
+        try {
+            conn.conectarBBDD();
+            stmnt = conn.getPreparedStatement("select numero from pedido  where estado = 'En proceso' and DNI_cliente = ?");
+            stmnt.setString(1, usuario.getDni());
+            rs = stmnt.executeQuery();
+            if (rs.next()) {
+                numPedido = rs.getInt("numero");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("No encontramos este numero de pedido", e);
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (stmnt != null) stmnt.close();
+                conn.desconectarBBDD();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return numPedido;
     }
 
 }
