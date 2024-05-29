@@ -1,20 +1,19 @@
 package com.example.tiendaropa.model;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class Pedido {
     //Atributos
-    private static int numero;
-    private static String fecha;
-    private static String direccionEnvio;
-    private static String estado;
+    private  int numero;
+    private  String fecha;
+    private  String direccionEnvio;
+    private  String estado;
 
 
 
     //Constructor
 
-    public Pedido(int numero, String fecha, String direccionEnvio, String estado) {
+    public Pedido() {
         this.numero = numero;
         this.fecha = fecha;
         this.direccionEnvio = direccionEnvio;
@@ -24,7 +23,7 @@ public class Pedido {
 
     //Getters y setters
 
-    public static int getNumero() {
+    public int getNumero() {
         return numero;
     }
 
@@ -32,7 +31,7 @@ public class Pedido {
         this.numero = numero;
     }
 
-    public static LocalDate getFecha() {
+    public  LocalDate getFecha() {
         LocalDate fechaActual = LocalDate.now();
         fecha = String.valueOf(fechaActual);
         return fechaActual;
@@ -42,7 +41,7 @@ public class Pedido {
         this.fecha = fecha;
     }
 
-    public static String getDireccionEnvio() {
+    public  String getDireccionEnvio() {
         return direccionEnvio;
     }
 
@@ -50,12 +49,12 @@ public class Pedido {
         this.direccionEnvio = direccionEnvio;
     }
 
-    public static String getEstado() {
+    public  String getEstado() {
         return estado;
     }
 
-    public static void setEstado(String estado) {
-        Pedido.estado = estado;
+    public  void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }

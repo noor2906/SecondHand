@@ -114,7 +114,7 @@ public class InsercionesBBDD {
 
     //Hecho por carol:
     //Insertar datos en la linea de pedido
-    public void insertarPedido(String fechaPedido, String dirEnvio, String estado, String dniCliente) throws SQLException {
+    public void insertarPedido(String fechaPedidoString, String dirEnvio, String estado, String dniCliente) throws SQLException {
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
         conn.crearSentencia();
@@ -128,7 +128,7 @@ public class InsercionesBBDD {
             // Obtener el PreparedStatement
             statement = conn.getPreparedStatement(sql);
 
-            statement.setString(1, fechaPedido);
+            statement.setString(1, fechaPedidoString);
             statement.setString(2, dirEnvio);
             statement.setString(3, estado);
             statement.setString(4, dniCliente);
@@ -166,6 +166,9 @@ public class InsercionesBBDD {
 
             // Ejecutar la consulta
             statement.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
 
         } finally {
             // Cerrar el PreparedStatement y desconectar BBDD

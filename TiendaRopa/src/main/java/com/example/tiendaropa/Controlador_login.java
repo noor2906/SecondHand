@@ -29,6 +29,7 @@ public class Controlador_login {
 
     // Hecho por: Vero
     public void login(ActionEvent actionEvent) throws IOException {
+
         Alert a = new Alert(Alert.AlertType.NONE);
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();

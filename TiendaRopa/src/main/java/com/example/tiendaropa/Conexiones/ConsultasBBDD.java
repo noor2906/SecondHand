@@ -254,6 +254,7 @@ public class ConsultasBBDD {
     }
 
     //EMPLEADOS --------------------------------------------------------------------------------------------------------
+
     // Hecho por: Carol
     public List<Empleado> listaEmpleados(){
         ConexionBBDD conn = new ConexionBBDD();
@@ -292,7 +293,8 @@ public class ConsultasBBDD {
 
 //PEDIDO --------------------------------------------------------------------------------------------------------
 
-    public static int getNumeroPedidoEnProceso(Usuario usuario){
+    //Hecho por carol:
+    public int getNumeroPedidoEnProceso(Usuario usuario){
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs = null;
         PreparedStatement stmnt = null;
@@ -318,6 +320,65 @@ public class ConsultasBBDD {
             }
         }
         return numPedido;
+    }
+
+    //Hecho por carol:
+    public int getCodigoArticulo(int codigoArticulo){
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs = null;
+        PreparedStatement stmnt = null;
+        int cod_art = 0;
+
+        try {
+            conn.conectarBBDD();
+            stmnt = conn.getPreparedStatement("select cod_art from linea_pedido where num_pedido = ?");
+            stmnt.setInt(1, codigoArticulo);
+            rs = stmnt.executeQuery();
+            if (rs.next()) {
+                cod_art = rs.getInt("cod_art");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("No encontramos este codigo de articulo", e);
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (stmnt != null) stmnt.close();
+                conn.desconectarBBDD();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return cod_art;
+    }
+
+    //Hecho por carol:
+    public boolean existeLineaPedido(Integer numPedido, int codigoArticulo){
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs = null;
+        PreparedStatement stmnt = null;
+        boolean existe = false;
+
+        try {
+            conn.conectarBBDD();
+            stmnt = conn.getPreparedStatement("select cod_art, num_pedido from linea_pedido where cod_art = ? and num_pedido = ?");
+            stmnt.setInt(1, codigoArticulo);
+            stmnt.setInt(2, numPedido);
+            rs = stmnt.executeQuery();
+            if (rs.next()) {
+                existe = true;
+            }
+        } catch (SQLException e) {
+                existe = false;
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (stmnt != null) stmnt.close();
+                conn.desconectarBBDD();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return existe;
     }
 
 }

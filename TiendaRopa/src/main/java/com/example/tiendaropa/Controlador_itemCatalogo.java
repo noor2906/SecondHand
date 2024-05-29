@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -18,6 +19,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class Controlador_itemCatalogo{
 
@@ -92,16 +94,17 @@ public class Controlador_itemCatalogo{
             System.out.println("No hay ningún usuario autenticado.");
             return; // Salir del método para evitar errores
         }
+        Pedido pedido = new Pedido();
 
-        String fechaPedido = String.valueOf(Pedido.getFecha());
+        LocalDate fechaPedido = LocalDate.now();
         String dirEnvio = usuario.getDireccion();
         String estado = "En proceso";
         String dniCliente = usuario.getDni();
-
+        String fechaPedidoString = fechaPedido.toString();
         try {
             // Verificar si insercionesBBDD es nulo antes de llamar al método
             if (insercionesBBDD != null) {
-                insercionesBBDD.insertarPedido(fechaPedido, dirEnvio, estado, dniCliente);
+                insercionesBBDD.insertarPedido(fechaPedidoString, dirEnvio, estado, dniCliente);
                 System.out.println("Pedido insertado correctamente.");
             }
         } catch (SQLException e) {
@@ -128,18 +131,29 @@ public class Controlador_itemCatalogo{
     }
 
     //Hecho por carol:
-    public void addArticuloCarrito(MouseEvent event) throws IOException {
+    public void addArticuloCarrito(MouseEvent event){
 
+        Alert a = new Alert(Alert.AlertType.NONE);
         ConsultasBBDD consulta = new ConsultasBBDD();
-        Integer numPedido = consulta.getNumeroPedidoEnProceso(usuario);
 
-        if (numPedido == null){
+        int numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+
+        if (numPedido == 0){
             insertarPedidoCarrito();
             numPedido = consulta.getNumeroPedidoEnProceso(usuario);
         }
-        insertarLineaPedidoCarrito(numPedido);
 
 
+        int codigoArticulo = articulo.getCodigo();
+        boolean existeLineaPedido = consulta.existeLineaPedido(numPedido, codigoArticulo);
+
+        if (!existeLineaPedido){
+            insertarLineaPedidoCarrito(numPedido);
+        } else {
+            a.setAlertType(Alert.AlertType.INFORMATION);
+            a.setHeaderText(null);
+            a.setContentText("Producto Agotado, por favor, seleccione otro");
+            a.show();
+        }
     }
-
 }
