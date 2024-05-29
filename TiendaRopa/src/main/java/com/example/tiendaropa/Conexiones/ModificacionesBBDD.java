@@ -73,4 +73,20 @@ public class ModificacionesBBDD {
         //devuelve int que será -1 si ha dado error el método, 1 si se ha habilitado el usuario y 0 si se ha deshabilitado
         return habilitado;
     }
+    public void actualizarCliente( String nombre,String contra, String apellidos,String telefono,String email,String dni,String direccion,int metodoPago,String fecha, boolean fidelizacion){
+        ConexionBBDD conn = new ConexionBBDD();
+        try {
+            conn.conectarBBDD();
+            conn.crearSentencia();
+            String sql="UPDATE cliente SET nombre = '"+ nombre+"', apellidos = '"+apellidos+
+                    "', telefono = '"+telefono+ "', f_nacimiento = '"+fecha+"', direccion = '"+direccion+
+                    "',email='"+email+"',dir_envio='"+direccion+"', tarjeta_fidelizacion = "+fidelizacion+
+                    ", m_pago = "+metodoPago+" WHERE dni='"+dni+"';";
+            conn.updateSQL(sql);
+        }catch (Exception e){
+            System.out.println(e);
+        }finally {
+            conn.desconectarBBDD();
+        }
+    }
 }

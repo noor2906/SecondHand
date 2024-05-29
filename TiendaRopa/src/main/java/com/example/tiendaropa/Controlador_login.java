@@ -55,6 +55,10 @@ public class Controlador_login {
         return usuario;
     }
 
+    public static void setUsuario(Usuario usuario) {
+        Controlador_login.usuario = usuario;
+    }
+
     // Hecho por: Vero
     public void mostrarHome(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
