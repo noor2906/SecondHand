@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" pannable="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_registroUsuario">
+<ScrollPane hbarPolicy="NEVER" pannable="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_edicionCliente">
    <content>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -33,7 +33,7 @@
                         <Font name="Inter Bold" size="50.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#mostrarLogin" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
+                  <Button fx:id="btnLogin" cacheShape="false" centerShape="false" ellipsisString="" graphicTextGap="0.0" layoutX="1306.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" scaleShape="false" style="-fx-background-color: white; -fx-effect: null;">
                      <graphic>
                         <Group>
                            <children>
@@ -42,7 +42,7 @@
                         </Group>
                      </graphic>
                   </Button>
-                  <Button layoutX="1369.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-10.0">
+                  <Button fx:id="btnCarrito" layoutX="1369.0" layoutY="30.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: WHITE; -fx-effect: null;" translateX="-10.0">
                      <graphic>
                         <Group>
                            <children>
@@ -84,7 +84,7 @@
             </Pane>
             <HBox layoutX="94.0" layoutY="155.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
+                  <Button fx:id="btnRetroceso" mnemonicParsing="false" onMouseClicked="#retroceder" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
                      <graphic>
                         <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
                      </graphic>
@@ -265,7 +265,7 @@
                         </VBox>
                      </children>
                   </VBox>
-                  <VBox spacing="75.0">
+                  <VBox prefHeight="663.0" prefWidth="275.0" spacing="75.0">
                      <children>
                         <VBox spacing="26.0">
                            <children>
@@ -360,14 +360,19 @@
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                </padding>
             </HBox>
-            <Button fx:id="btnRegistro" layoutX="1089.0" layoutY="947.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: black;" text="Registrarse" textFill="WHITE">
+            <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="1082.0" layoutY="947.0" mnemonicParsing="false" onMouseClicked="#actualizarCliente" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: black;" text="Guardar cambios" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="1215.0" layoutY="143.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="90.0" style="-fx-background-color: none; -fx-border-color: black;" text="Editar">
+            <Button fx:id="btnEdicion" layoutX="1115.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#edicion" prefHeight="44.0" prefWidth="111.0" style="-fx-background-color: none; -fx-border-color: black;" text="Editar">
                <font>
                   <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCerrarSesion" alignment="CENTER" contentDisplay="CENTER" layoutX="1244.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#cerrarSesion" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: black;" text="Cerrar Sesión" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
          </children>
