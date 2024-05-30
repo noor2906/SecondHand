@@ -1,6 +1,7 @@
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.ConsultasBBDD;
+import com.example.tiendaropa.Conexiones.InsercionesBBDD;
 import com.example.tiendaropa.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controlador_catalogo implements Initializable {
+
 
     @FXML
     private VBox vBoxArticulos;
@@ -113,6 +115,7 @@ public class Controlador_catalogo implements Initializable {
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
+
     //Método que enlaza el botón del menú hamburguesa a la pantalla del menú
     // Hecho por: Noor
     public void mostrarMenu(MouseEvent event) throws IOException {
@@ -132,7 +135,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-    // Hecho por: Noor
+    // Hecho por: Noor y Vero
     public void mostrarLogin(MouseEvent event) throws IOException {
         // Usuario,String path y el if hecho por: Vero
         // Controla que el usuario haya hecho login o lo redirige al login
@@ -162,6 +165,7 @@ public class Controlador_catalogo implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
     // Hecho por: Carol
     public void mostrarAyudaPantalla(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -17,6 +17,9 @@ public class Camisa extends Ropa{
         this.estampada = estampada;
     }
 
+    public Camisa(int codigo, String nombre, float precio, String marca, String descripcion, boolean activo, String imagen, Material material, String talla, String color, String tipoCierre, String tipoRopa){
+        super(codigo, nombre, precio, marca, descripcion, activo, imagen, material, talla, color, tipoCierre, tipoRopa);
+    }
 
     //GETTER Y SETTER
 
