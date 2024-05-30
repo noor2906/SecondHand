@@ -176,20 +176,93 @@ public class Controlador_infoEmpleadoEditable /*implements Initializable*/ {
         stage.setScene(new Scene(root));
         stage.show();
     }
-    // Hecho por: Carol
-    public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
-
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
     // Hecho por: Carol
     public void mostrarListaEmpleados(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_listaEmpleados_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void mostrarAyudaPantalla(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_1ayudaPantalla_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarPrecFrec(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_2PrecFrecPantalla_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarEstadoPedido(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_3EstadoPedidoPantalla_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarDevoluciones(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_4DevolucionesPantalla_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarEnviosPantalla(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_5EnviosPantalla_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarFPPBack(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_6FPPBack_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarFCCBack(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_7FCCBackPantalla_Carol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarFPCBack(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_8FPCBackPantallaCarol.fxml"));
+
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    // Hecho por: Carol
+    public void mostrarFPrefCBack(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("FXML_9FPrefCBackPantalla_Carol.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();

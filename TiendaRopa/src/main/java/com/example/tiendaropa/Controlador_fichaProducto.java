@@ -324,16 +324,6 @@ public class Controlador_fichaProducto {
         stage.show();
     }
 
-
-    public void mostrarPantallaPrueba(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_PantallaPrueba.fxml"));
-
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
     public void retroceder(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -391,31 +381,6 @@ public class Controlador_fichaProducto {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML_6FPPBack_Carol.fxml"));
-
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
-    public void mostrarFCCBack(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_7FCCBackPantalla_Carol.fxml"));
-
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-    public void mostrarFPCBack(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_8FPCBackPantallaCarol.fxml"));
-
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-    public void mostrarFPrefCBack(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_9FPrefCBackPantalla_Carol.fxml"));
 
         stage.setScene(new Scene(root));
         stage.show();

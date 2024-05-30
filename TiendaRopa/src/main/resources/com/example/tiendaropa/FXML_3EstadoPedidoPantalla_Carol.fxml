@@ -7,9 +7,9 @@
 
 <ScrollPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_PantallaPrueba">
    <content>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0" style="-fx-background-color: h;">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1267.0" prefWidth="1440.0">
          <children>
-            <Button fx:id="btnFEstadoPedidoBack" layoutX="560.0" layoutY="324.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="314.0" style="-fx-background-color: black;" text="Volver al Inicio" textFill="WHITE">
+            <Button fx:id="btnFEstadoPedidoBack" layoutX="560.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#mostrarHome" prefHeight="83.0" prefWidth="314.0" style="-fx-background-color: black;" text="Volver al Inicio" textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font>

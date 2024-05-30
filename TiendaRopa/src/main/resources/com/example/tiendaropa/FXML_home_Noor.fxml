@@ -155,7 +155,7 @@
                   </HBox>
                   <VBox alignment="BOTTOM_LEFT" layoutX="84.0" layoutY="34.0" prefHeight="151.0" prefWidth="175.0" spacing="5.0">
                      <children>
-                        <Button fx:id="btnFAyuda" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
+                        <Button fx:id="btnFAyuda" mnemonicParsing="false" onMouseClicked="#mostrarAyudaPantalla" style="-fx-background-color: none;">
                            <graphic>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AYUDA">
                                  <font>
@@ -166,7 +166,7 @@
                         </Button>
                         <VBox spacing="2.0">
                            <children>
-                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
+                              <Button fx:id="btnFPreguntasFrecuentes" mnemonicParsing="false" onMouseClicked="#mostrarPrecFrec" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preguntas frecuentes" wrappingWidth="170.27113342285156">
                                        <font>
@@ -175,7 +175,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
+                              <Button fx:id="btnFEstadoPedido" mnemonicParsing="false" onMouseClicked="#mostrarEstadoPedido" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de mi pedido">
                                        <font>
@@ -184,7 +184,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
+                              <Button fx:id="btnFDevoluciones" mnemonicParsing="false" onMouseClicked="#mostrarDevoluciones" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Devoluciones">
                                        <font>
@@ -193,7 +193,7 @@
                                     </Text>
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;">
+                              <Button fx:id="btnFEnvio" mnemonicParsing="false" onMouseClicked="#mostrarEnviosPantalla" style="-fx-background-color: none;">
                                  <graphic>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Envío">
                                        <font>
@@ -235,7 +235,7 @@
                   </HBox>
                   <HBox layoutX="378.0" layoutY="214.5" prefHeight="20.0" prefWidth="717.0" spacing="8.0">
                      <children>
-                        <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de privacidad">
+                        <Button fx:id="btnFPP" mnemonicParsing="false" onMouseClicked="#mostrarFPPBack" style="-fx-background-color: none;" text="Política de privacidad">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -251,7 +251,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Condiciones de compra">
+                        <Button fx:id="btnFCC" mnemonicParsing="false" onMouseClicked="#mostrarFCCBack" style="-fx-background-color: none;" text="Condiciones de compra">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -264,7 +264,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Política de cookies">
+                        <Button fx:id="btnFPC" mnemonicParsing="false" onMouseClicked="#mostrarFPCBack" style="-fx-background-color: none;" text="Política de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
@@ -277,7 +277,7 @@
                               <Font name="Inter Light" size="16.0" />
                            </font>
                         </Text>
-                        <Button fx:id="btnFPrefC" mnemonicParsing="false" onMouseClicked="#mostrarPantallaPrueba" style="-fx-background-color: none;" text="Preferencia de cookies">
+                        <Button fx:id="btnFPrefC" mnemonicParsing="false" onMouseClicked="#mostrarFPrefCBack" style="-fx-background-color: none;" text="Preferencia de cookies">
                            <font>
                               <Font name="Inter Light" size="16.0" />
                            </font>
