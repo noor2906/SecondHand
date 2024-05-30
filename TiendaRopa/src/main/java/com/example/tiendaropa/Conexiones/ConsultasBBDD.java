@@ -291,6 +291,32 @@ public class ConsultasBBDD {
 
     }
 
+    public List<LineaPedido> lineaPedido(List<LineaPedido> lineaPedido){
+        ConexionBBDD conn = new ConexionBBDD();
+        ResultSet rs;
+        try {
+            conn.conectarBBDD();
+            conn.crearSentencia();
+            rs = conn.ejecutarSQL("select * from linea_pedido");
+            while (rs.next()) {
+
+                LineaPedido lineaCarrito = new LineaPedido(
+                        rs.getInt("cod_art"),
+                        rs.getInt("num_pedido"),
+                        rs.getInt("cantidad")
+                );
+
+                lineaPedido.add(lineaCarrito);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            conn.desconectarBBDD();
+        }
+        return lineaPedido;
+
+    }
+
 //PEDIDO --------------------------------------------------------------------------------------------------------
 
     //Hecho por carol:
@@ -298,7 +324,7 @@ public class ConsultasBBDD {
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs = null;
         PreparedStatement stmnt = null;
-        int numPedido = 0;
+        Integer numPedido = null;
 
         try {
             conn.conectarBBDD();
@@ -323,7 +349,7 @@ public class ConsultasBBDD {
     }
 
     //Hecho por carol:
-    public int getCodigoArticulo(int codigoArticulo){
+    public int getLineaPedido(int codigoArticulo){
         ConexionBBDD conn = new ConexionBBDD();
         ResultSet rs = null;
         PreparedStatement stmnt = null;
@@ -380,5 +406,7 @@ public class ConsultasBBDD {
         }
         return existe;
     }
+
+
 
 }

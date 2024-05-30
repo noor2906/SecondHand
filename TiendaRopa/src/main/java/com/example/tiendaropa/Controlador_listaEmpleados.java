@@ -36,7 +36,6 @@ public class Controlador_listaEmpleados implements Initializable {
     // Obtenemos empleados
     // Hecho por: Carol
     private List<Empleado> getEmpleados() throws SQLException {
-        List<Empleado> empleados = new ArrayList<>();
         // Llamar a la consulta que me devuelve todos los empleados
         ConsultasBBDD consulta = new ConsultasBBDD();
         empleados = consulta.listaEmpleados();

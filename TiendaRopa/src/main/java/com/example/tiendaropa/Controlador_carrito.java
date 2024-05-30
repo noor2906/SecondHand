@@ -1,22 +1,80 @@
 package com.example.tiendaropa;
 
-import com.example.tiendaropa.model.Cliente;
-import com.example.tiendaropa.model.Empleado;
-import com.example.tiendaropa.model.Usuario;
+import com.example.tiendaropa.Conexiones.ConsultasBBDD;
+import com.example.tiendaropa.model.*;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 public class Controlador_carrito {
 
+    private List<Articulo> listaLineaPedidoCarrito = new ArrayList<>();
 
 
 
+    //Obtenemos artículos y los guardamos el una List
+    // Hecho por: Noor
+    private List<Articulo> getArticulosCarrito() throws SQLException {
+        List<Articulo> articulosCarrito = new ArrayList<>();
+
+        //Llamar a la consulta que me devuelve todos los articulosCarrito
+        ConsultasBBDD consulta = new ConsultasBBDD();
+
+        articulosCarrito = consulta.consultaArticulos(articulosCarrito);
+
+        return articulosCarrito;
+    }
+
+
+
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            listaLineaPedidoCarrito.addAll(getArticulosCarrito());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            for (int i = 0; i < listaLineaPedidoCarrito.size(); i++) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("FXML_ItemCarrito.fxml"));
+
+                Parent itemCarrito = fxmlLoader.load();
+
+                // Obtener el controlador del elemento de empleado
+                Controlador_itemCarrito itemController = fxmlLoader.getController();
+                // Llamar al método setData() y pasarle el objeto Empleado correspondiente
+                itemController.setData(listaLineaPedidoCarrito.get(i));
+
+                // Crear un nuevo HBox para el itemEmpleado y centrarlo
+                HBox hbox = new HBox(itemCarrito);
+                hbox.setAlignment(Pos.CENTER); // Centrar el HBox
+                hbox.setPadding(new Insets(10)); // Añadir padding si es necesario
+
+                /*// Agregar el HBox al VBox
+                vBoxEmpleados.getChildren().add(hbox);*/
+            }
+
+            /*// Asegurar que el VBox esté centrado
+            vBoxEmpleados.setAlignment(Pos.TOP_CENTER);*/
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 

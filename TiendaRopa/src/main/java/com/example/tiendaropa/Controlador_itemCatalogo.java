@@ -94,7 +94,6 @@ public class Controlador_itemCatalogo{
             System.out.println("No hay ningún usuario autenticado.");
             return; // Salir del método para evitar errores
         }
-        Pedido pedido = new Pedido();
 
         LocalDate fechaPedido = LocalDate.now();
         String dirEnvio = usuario.getDireccion();
@@ -133,12 +132,16 @@ public class Controlador_itemCatalogo{
     //Hecho por carol:
     public void addArticuloCarrito(MouseEvent event){
 
-        Alert a = new Alert(Alert.AlertType.NONE);
+        Alert noUsuario = new Alert(Alert.AlertType.NONE);
+
+        if (usuario != null){
+
+        Alert artAgotado = new Alert(Alert.AlertType.NONE);
         ConsultasBBDD consulta = new ConsultasBBDD();
 
-        int numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+        Integer numPedido = consulta.getNumeroPedidoEnProceso(usuario);
 
-        if (numPedido == 0){
+        if (numPedido == null){
             insertarPedidoCarrito();
             numPedido = consulta.getNumeroPedidoEnProceso(usuario);
         }
@@ -150,10 +153,17 @@ public class Controlador_itemCatalogo{
         if (!existeLineaPedido){
             insertarLineaPedidoCarrito(numPedido);
         } else {
-            a.setAlertType(Alert.AlertType.INFORMATION);
-            a.setHeaderText(null);
-            a.setContentText("Producto Agotado, por favor, seleccione otro");
-            a.show();
+            artAgotado.setAlertType(Alert.AlertType.INFORMATION);
+            artAgotado.setHeaderText(null);
+            artAgotado.setContentText("Producto Agotado, por favor, seleccione otro");
+            artAgotado.show();
         }
+        } else {
+            noUsuario.setAlertType(Alert.AlertType.INFORMATION);
+            noUsuario.setHeaderText(null);
+            noUsuario.setContentText("Debe iniciar sesión para añadir articulos al carrito");
+            noUsuario.show();
+        }
+
     }
 }
