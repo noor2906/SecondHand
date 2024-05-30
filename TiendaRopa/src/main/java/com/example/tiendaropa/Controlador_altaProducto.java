@@ -1,3 +1,4 @@
+/*
 package com.example.tiendaropa;
 
 import com.example.tiendaropa.Conexiones.InsercionesBBDD;
@@ -59,99 +60,23 @@ public class Controlador_altaProducto {
 
     private Parent itemActual;
 
-    //Atributos alta camisa --------------------------------------------------------------------------------------------
-
-    @FXML
-    private Button btnClearCamisa1, btnClearCamisa2, btnClearCamisa3, btnClearCamisa4;
-
-    @FXML
-    private CheckBox chBoxEstampadaAltaProducto;
-
-    @FXML
-    private TextField txtfColorAltaProducto, txtfTallaAltaProducto, txtfTipoCierreAltaProducto,
-                      txtfTipoMangaAltaProducto;
-
-
-    //Atributos alta pantalon ------------------------------------------------------------------------------------------
-
-    @FXML
-    private Button btnClearPantalon1, btnClearPantalon2, btnClearPantalon3, btnClearPantalon4;
-
-
-    //Atributos alta chaqueta ------------------------------------------------------------------------------------------
-
-    @FXML
-    private Button btnClearChaqueta1, btnClearChaqueta2, btnClearChaqueta3;
-
-
-    //Atributos alta bolso ---------------------------------------------------------------------------------------------
-
-    @FXML
-    private Button btnClearBolso1, btnClearBolso2, btnClearBolso3;
-
-
-    //Atributos alta zapato --------------------------------------------------------------------------------------------
-
-    @FXML
-    private Button btnClearZapato1, btnClearZapato2, btnClearZapato3;
-
 
     // Hecho por: Noor
     @FXML
     public void initialize() throws IOException {
-        System.out.println("initialize called");
 
-        //Deshabilitamos todos los hbox
-        deshabilitarHbox();
-
-
+        //Cargamos la lista de materiales en el comboBox
         ObservableList<String> soListMateriales = FXCollections.observableArrayList();
         for (Integer k : mapaMateriales.keySet()) {
             soListMateriales.add(mapaMateriales.get(k).getNombre());
         }
         cbMaterialAltaProducto.setItems(soListMateriales);
 
-        //NOTA: Averiguar + adelante como hacerlo + genérico
-        ObservableList<String> soList = FXCollections.observableArrayList("Camisa", "Pantalon", "Chaqueta", "Bolso", "Zapato");
-        cbTipoProducto.setItems(soList);
-
-
-        cbTipoProducto.setOnAction(actionEvent -> {
-                    String tipoSeleccionado = cbTipoProducto.getValue();
-
-                    if (Objects.equals(tipoSeleccionado, "Camisa")){
-                        hBoxAltaCamisa.setVisible(true);
-                    } else if (Objects.equals(tipoSeleccionado, "Pantalon")) {
-                        hBoxAltaPantalon.setVisible(true);
-                    }
-
-                }
-
-
-
-                    /*cbTipoProducto.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                        //Para pasar datos de controlador a controlador
-                        @Override
-                        public void handle(MouseEvent event) {
-
-                        }
-                    });*/
-
-        );
 
     }
 
-   public void deshabilitarHbox(){
-       //Ocultar todos los hBox
-       hBoxAltaCamisa.setVisible(false);
-       hBoxAltaPantalon.setVisible(false);
-       hBoxAltaChaqueta.setVisible(false);
-       hBoxAltaBolso.setVisible(false);
-       hBoxAltaZapato.setVisible(false);
-   }
 
-
-    public void darAltaProducto(MouseEvent event) throws IOException {
+    public void darAltaCamisa(MouseEvent event) throws IOException {
         int ok = 0;
         int ok2 = 0;
 
@@ -161,14 +86,9 @@ public class Controlador_altaProducto {
         String marca = txtfMarcaAltaProducto.getText();
         String descripcion = txtaDescripcionAltaProducto.getText();
         String imagen = txtfImagenAltaProducto.getText();
-        boolean activo = true;
+        boolean activo = checkBActivoAltaProducto.isSelected();
         String material = cbMaterialAltaProducto.getValue();
 
-        if (checkBActivoAltaProducto.isSelected()){
-            activo = true;
-        }else{
-            activo = false;
-        }
 
         //Material
         int mat = 0;
@@ -189,8 +109,6 @@ public class Controlador_altaProducto {
         if (ok > 0 && ok2 > 0){
             mostrarListaProductos(event);
         }
-
-
     }
 
 
@@ -201,7 +119,8 @@ public class Controlador_altaProducto {
 
 
 
- /*   // Hecho por: Noor
+ */
+/*   // Hecho por: Noor
     @FXML
     public void initialize() throws IOException {
         System.out.println("initialize called"); // Debug statement
@@ -291,7 +210,8 @@ public class Controlador_altaProducto {
 
 
     }
-*/
+*//*
+
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
 
@@ -380,3 +300,4 @@ public class Controlador_altaProducto {
 
     //limpiarImagen??
 }
+*/

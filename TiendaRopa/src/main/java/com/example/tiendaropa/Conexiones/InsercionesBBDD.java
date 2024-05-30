@@ -19,20 +19,8 @@ public class InsercionesBBDD {
         return ok;
     }
 
-   /* public static int insercionProducto(String nombre, String precio, String marca, boolean activo, String imagen, String descripcion, String material){
-        ConexionBBDD conn = new ConexionBBDD();
-        conn.conectarBBDD();
-        conn.crearSentencia();
-        String sql= "INSERT INTO ARTICULO (nombre, precio, marca, descripcion, activo, imagen, material) VALUES\n" +
-                "("+ nombre +","+ precio + "," + marca + "," + descripcion + "," +
-                activo + "," + imagen + "," +  material + ")";
-
-        int ok=conn.updateSQL(sql);
-        conn.desconectarBBDD();
-        return ok;
-    }*/
     // Hecho por: Noor
-    public static int insercionProducto(String nombre, String precio, String marca, String imagen, String descripcion, int material) {
+    public static int insercionProducto(String nombre, String precio, String marca, String imagen, String descripcion, boolean activo, int material) {
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
         conn.crearSentencia();
@@ -44,7 +32,7 @@ public class InsercionesBBDD {
             pstmt.setString(2, precio);
             pstmt.setString(3, marca);
             pstmt.setString(4, descripcion);
-//            pstmt.setBoolean(5, activo);
+            pstmt.setBoolean(5, activo);
             pstmt.setString(6, imagen);
             pstmt.setInt(7, material);
 
@@ -58,18 +46,130 @@ public class InsercionesBBDD {
     }
 
     // Hecho por: Noor
-    public static int insercionCamisa(String talla, String color, String tipoCierre,  String tipoManga, boolean estampada){
+    public static int insercionCamisa(String talla, String color, String tipoCierre, String tipoManga, boolean estampada) {
         ConexionBBDD conn = new ConexionBBDD();
         conn.conectarBBDD();
         conn.crearSentencia();
-        String sql= "INSERT INTO ROPA (cod_art, talla, color, tipo_cierre, tipo_manga, estampada, tipo_ropa) VALUES\n" +
-                "((select max(cod_art) from articulo)," + talla + "," + color + "," + tipoCierre + "," + tipoManga + "," + estampada + "'Camisa')";
+        String sql = "INSERT INTO ROPA (cod_art, talla, color, tipo_cierre, tipo_manga, estampada, tipo_ropa) " +
+                "VALUES ((select max(cod_art) from articulo), ?, ?, ?, ?, ?, 'Camisa')";
 
         //distinct last_insert_id()
 
-        int ok=conn.updateSQL(sql);
-        conn.desconectarBBDD();
-        return ok;
+        try (PreparedStatement pstmt = conn.getPreparedStatement(sql)) {
+            pstmt.setString(1, talla);
+            pstmt.setString(2, color);
+            pstmt.setString(3, tipoCierre);
+            pstmt.setString(4, tipoManga);
+            pstmt.setBoolean(5, estampada);
+
+            int ok = pstmt.executeUpdate();
+            conn.desconectarBBDD();
+            return ok;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Hecho por: Noor
+    public static int insercionChaqueta(String talla, String color, String tipoCierre, boolean impermeable) {
+        ConexionBBDD conn = new ConexionBBDD();
+        conn.conectarBBDD();
+        conn.crearSentencia();
+        String sql = "INSERT INTO ROPA (cod_art, talla, color, tipo_cierre, impermeable, tipo_ropa) " +
+                "VALUES ((select max(cod_art) from articulo), ?, ?, ?, ?, 'Chaqueta')";
+
+        //distinct last_insert_id()
+
+        try (PreparedStatement pstmt = conn.getPreparedStatement(sql)) {
+            pstmt.setString(1, talla);
+            pstmt.setString(2, color);
+            pstmt.setString(3, tipoCierre);
+            pstmt.setBoolean(4, impermeable);
+
+            int ok = pstmt.executeUpdate();
+            conn.desconectarBBDD();
+            return ok;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static int insercionPantalon(String talla, String color, String tipoCierre, boolean tieneBolsillos, String tipoPantalon) {
+        ConexionBBDD conn = new ConexionBBDD();
+        conn.conectarBBDD();
+        conn.crearSentencia();
+        String sql = "INSERT INTO ROPA (cod_art, talla, color, tipo_cierre, tipo_pantalon, tien_bolsillos, tipo_ropa) " +
+                "VALUES ((select max(cod_art) from articulo), ?, ?, ?, ?,?, 'Pantalón')";
+
+
+        //distinct last_insert_id()
+
+        try (PreparedStatement pstmt = conn.getPreparedStatement(sql)) {
+            pstmt.setString(1, talla);
+            pstmt.setString(2, color);
+            pstmt.setString(3, tipoCierre);
+            pstmt.setString(4, tipoPantalon);
+            pstmt.setBoolean(5, tieneBolsillos);
+
+            int ok = pstmt.executeUpdate();
+            conn.desconectarBBDD();
+            return ok;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Hecho por: Noor
+    public static int insercionZapatos(String estilo, boolean personalizado, String tipoSuela, int talla) {
+        ConexionBBDD conn = new ConexionBBDD();
+        conn.conectarBBDD();
+        conn.crearSentencia();
+        String sql = "INSERT INTO ACCESORIO (cod_art, estilo, personalizado, tipo_suela, talla, tipo_accesorio) " +
+                "VALUES ((select max(cod_art) from articulo), ?, ?, ?, ?, 'Zapatos')";
+
+        //distinct last_insert_id()
+
+        try (PreparedStatement pstmt = conn.getPreparedStatement(sql)) {
+            pstmt.setString(1, estilo);
+            pstmt.setBoolean(2, personalizado);
+            pstmt.setString(3, tipoSuela);
+            pstmt.setInt(4, talla);
+
+            int ok = pstmt.executeUpdate();
+            conn.desconectarBBDD();
+            return ok;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Hecho por: Noor
+    public static int insercionBolso(String estilo, boolean personalizado, String tipoCierre, int capacidad) {
+        ConexionBBDD conn = new ConexionBBDD();
+        conn.conectarBBDD();
+        conn.crearSentencia();
+        String sql = "INSERT INTO ACCESORIO (cod_art, estilo, personalizado, tipo_cierre, capacidad, tipo_accesorio) " +
+                     "VALUES ((select max(cod_art) from articulo), ?, ?, ?, ?, 'Bolso')";
+
+        //distinct last_insert_id()
+
+        try (PreparedStatement pstmt = conn.getPreparedStatement(sql)) {
+            pstmt.setString(1, estilo);
+            pstmt.setBoolean(2, personalizado);
+            pstmt.setString(3, tipoCierre);
+            pstmt.setInt(4, capacidad);
+
+            int ok = pstmt.executeUpdate();
+            conn.desconectarBBDD();
+            return ok;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     //Empleado ---------------------------------------------------------------------------------------------------------
