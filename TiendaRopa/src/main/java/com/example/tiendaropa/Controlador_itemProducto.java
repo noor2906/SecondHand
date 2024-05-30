@@ -52,7 +52,7 @@ public class Controlador_itemProducto {
         imgProducto.setImage(imgArticulo);
 
     }
-    // Hecho por: Noor
+    /*// Hecho por: Noor
     public void mostrarInfoProducto(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -60,7 +60,7 @@ public class Controlador_itemProducto {
 
         stage.setScene(new Scene(root));
         stage.show();
-    }
+    }*/
 
     public int getCodigoArticulo() {
         return codigoArticulo;

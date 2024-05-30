@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_altaProducto">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="815.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_altaProducto">
    <children>
       <Pane prefHeight="96.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
@@ -100,124 +100,238 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="-0.5" layoutY="96.5" prefWidth="1422.0" style="-fx-background-color: white;">
+      <HBox layoutX="98.5" layoutY="136.5" spacing="20.0">
          <children>
-            <HBox layoutX="98.5" layoutY="41.5" spacing="20.0">
+            <Button fx:id="btnRetrocederAltaProducto" mnemonicParsing="false" onMouseClicked="#mostrarPanelAdmin" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
+               <graphic>
+                  <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
+               </graphic>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dar de alta producto">
+               <font>
+                  <Font name="Inter Bold" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <ScrollPane hbarPolicy="NEVER" layoutX="30.0" layoutY="289.0" prefHeight="500.0" prefWidth="1369.0" style="-fx-background-color: white;" vbarPolicy="ALWAYS">
+         <content>
+            <VBox fx:id="vBoxPropiedadesAlta" alignment="CENTER" fillWidth="false" prefWidth="1368.0" spacing="50.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="btnRetrocederAltaProducto" mnemonicParsing="false" onMouseClicked="#mostrarPanelAdmin" prefHeight="34.0" prefWidth="52.0" style="-fx-background-color: none;">
-                     <graphic>
-                        <SVGPath content="M32 14.6286H5.92941C9.22353 12.48 12.3765 8.82287 14.3059 4.57144H11.0588C8.61176 9.5543 5.45882 12.7543 0 15.9543C5.36471 19.1086 8.75294 22.3543 11.0588 27.4286H14.1647C12.2824 23.3143 9.17647 19.5657 5.97647 17.3714H32V14.6286Z" />
-                     </graphic>
-                  </Button>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dar de alta producto">
-                     <font>
-                        <Font name="Inter Bold" size="28.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <ScrollPane hbarPolicy="NEVER" layoutY="194.0" prefWidth="1440.0">
-               <content>
-                  <VBox fx:id="vBoxPropiedadesAlta" alignment="CENTER" prefHeight="550.0" prefWidth="1440.0" spacing="50.0" style="-fx-background-color: white;">
+                  <HBox alignment="TOP_CENTER" prefWidth="1263.0" spacing="60.0" style="-fx-background-color: white;">
                      <children>
-                        <HBox alignment="TOP_CENTER" prefWidth="1263.0" spacing="60.0" style="-fx-background-color: white;">
+                        <VBox prefHeight="550.0" prefWidth="323.0" spacing="40.0">
                            <children>
-                              <VBox prefHeight="550.0" prefWidth="323.0" spacing="40.0">
+                              <VBox spacing="15.0">
                                  <children>
-                                    <VBox spacing="15.0">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de producto">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="cbTipoProducto" prefHeight="36.0" prefWidth="316.0" style="-fx-background-color: none; -fx-border-color: black; -fx-background-radius: none;" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de producto">
+                                          <TextField fx:id="txtfNombreAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Nombre producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
                                              <font>
-                                                <Font name="Inter SemiBold" size="24.0" />
+                                                <Font name="Inter Regular" size="18.0" />
                                              </font>
-                                          </Text>
-                                          <ComboBox fx:id="cbTipoProducto" prefHeight="36.0" prefWidth="316.0" style="-fx-background-color: none; -fx-border-color: black; -fx-background-radius: none;" />
+                                          </TextField>
+                                          <Button fx:id="btnClearArt1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#limpiarNombre" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                             <graphic>
+                                                <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                             </graphic>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Button>
                                        </children>
-                                    </VBox>
-                                    <VBox spacing="15.0">
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER" prefHeight="39.0" prefWidth="316.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
-                                             <font>
-                                                <Font name="Inter SemiBold" size="24.0" />
-                                             </font>
-                                          </Text>
-                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                          <HBox alignment="CENTER" prefHeight="68.0">
                                              <children>
-                                                <TextField fx:id="txtfNombreAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Nombre producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
-                                                   <opaqueInsets>
-                                                      <Insets />
-                                                   </opaqueInsets>
-                                                   <font>
-                                                      <Font name="Inter Regular" size="18.0" />
-                                                   </font>
-                                                </TextField>
-                                                <Button fx:id="btnClear1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#limpiarNombre" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
-                                                   <graphic>
-                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
-                                                   </graphic>
-                                                   <font>
-                                                      <Font size="24.0" />
-                                                   </font>
-                                                </Button>
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox>
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio">
-                                             <font>
-                                                <Font name="Inter SemiBold" size="24.0" />
-                                             </font>
-                                          </Text>
-                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="316.0">
-                                             <children>
-                                                <HBox alignment="CENTER" prefHeight="68.0">
+                                                <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="318.0">
                                                    <children>
-                                                      <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="318.0">
-                                                         <children>
-                                                            <TextField fx:id="txtfPrecioAltaProducto" prefHeight="38.0" prefWidth="193.0" promptText="Precio producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
-                                                               <opaqueInsets>
-                                                                  <Insets />
-                                                               </opaqueInsets>
-                                                               <font>
-                                                                  <Font name="Inter Regular" size="18.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <TextField editable="false" prefHeight="68.0" prefWidth="103.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 0 0; -fx-prompt-text-fill: grey;" text="€">
-                                                               <opaqueInsets>
-                                                                  <Insets />
-                                                               </opaqueInsets>
-                                                               <font>
-                                                                  <Font name="Inter Bold" size="36.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Button fx:id="btnClear2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#limpiarPrecio" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
-                                                               <graphic>
-                                                                  <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
-                                                               </graphic>
-                                                               <font>
-                                                                  <Font size="24.0" />
-                                                               </font>
-                                                            </Button>
-                                                         </children>
-                                                      </HBox>
+                                                      <TextField fx:id="txtfPrecioAltaProducto" prefHeight="38.0" prefWidth="193.0" promptText="Precio producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <font>
+                                                            <Font name="Inter Regular" size="18.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <TextField editable="false" prefHeight="68.0" prefWidth="103.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 0 0; -fx-prompt-text-fill: grey;" text="€">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <font>
+                                                            <Font name="Inter Bold" size="36.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Button fx:id="btnClearArt2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#limpiarPrecio" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                         <graphic>
+                                                            <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                         </graphic>
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                        </children>
-                                    </VBox>
-                                    <VBox spacing="15.0">
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marca">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marca">
+                                          <TextField fx:id="txtfMarcaAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Marca producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="btnClearArt3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#limpiarMarca" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                             <graphic>
+                                                <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                             </graphic>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Line startY="548.0" />
+                        <VBox prefHeight="548.0" prefWidth="316.0" spacing="40.0">
+                           <children>
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Material">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="cbMaterialAltaProducto" prefHeight="36.0" prefWidth="316.0" style="-fx-background-color: none; -fx-border-color: black; -fx-background-radius: none;" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Añadir imagen del producto">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox prefHeight="28.0" prefWidth="271.0">
+                                       <children>
+                                          <TextField fx:id="txtfImagenAltaProducto" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="316.0" promptText="Subir imagen" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 1 1 1 1; -fx-prompt-text-fill: grey;">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Line startY="548.0" />
+                        <VBox prefHeight="548.0" prefWidth="316.0" spacing="50.0">
+                           <children>
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER" prefHeight="177.0" prefWidth="316.0" spacing="10.0">
+                                       <children>
+                                          <TextArea fx:id="txtaDescripcionAltaProducto" prefHeight="178.0" prefWidth="273.0" style="-fx-background-color: none; -fx-border-width: 1 1 1 1; -fx-border-color: black;">
+                                             <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Button fx:id="btnClearArt4" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onAction="#limpiarDescripcion" onMouseClicked="#limpiarPrecio" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                             <graphic>
+                                                <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                             </graphic>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="80.0" prefWidth="454.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkBActivoAltaProducto" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="204.0" text="Activo">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="24.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <VBox alignment="CENTER_RIGHT" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vBoxPropiedades" prefHeight="1000.0" spacing="50.0">
+                     <children>
+                        <HBox fx:id="hBoxAltaCamisa" alignment="CENTER" prefHeight="462.0" prefWidth="1440.0" spacing="150.0">
+                           <children>
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Talla">
                                              <font>
                                                 <Font name="Inter SemiBold" size="24.0" />
                                              </font>
                                           </Text>
                                           <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
                                              <children>
-                                                <TextField fx:id="txtfMarcaAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Marca producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                <TextField fx:id="txtfTallaAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Talla producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
                                                    <opaqueInsets>
                                                       <Insets />
                                                    </opaqueInsets>
@@ -225,7 +339,65 @@
                                                       <Font name="Inter Regular" size="18.0" />
                                                    </font>
                                                 </TextField>
-                                                <Button fx:id="btnClear3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#limpiarMarca" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                <Button fx:id="btnClearCamisa1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Color">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfColorAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Color producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearCamisa2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo cierre">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTipoCierreAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Tipo cierre producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearCamisa3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
                                                    <graphic>
                                                       <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
                                                    </graphic>
@@ -239,29 +411,19 @@
                                     </VBox>
                                  </children>
                               </VBox>
-                              <Line startY="548.0" />
-                              <VBox prefHeight="548.0" prefWidth="316.0" spacing="40.0">
+                              <Line endX="1.6862154006958008E-4" endY="-47.387027740478516" startX="2.029657334787771E-4" startY="385.7058410644531" />
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
                                  <children>
-                                    <VBox spacing="15.0">
+                                    <VBox alignment="CENTER_LEFT" prefHeight="134.0" prefWidth="316.0" spacing="15.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Material">
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo manga">
                                              <font>
                                                 <Font name="Inter SemiBold" size="24.0" />
                                              </font>
                                           </Text>
-                                          <ComboBox fx:id="cbMaterialAltaProducto" prefHeight="36.0" prefWidth="316.0" style="-fx-background-color: none; -fx-border-color: black; -fx-background-radius: none;" />
-                                       </children>
-                                    </VBox>
-                                    <VBox spacing="15.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Añadir imagen del producto">
-                                             <font>
-                                                <Font name="Inter SemiBold" size="24.0" />
-                                             </font>
-                                          </Text>
-                                          <HBox prefHeight="28.0" prefWidth="271.0">
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
                                              <children>
-                                                <TextField fx:id="txtfImagenAltaProducto" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="316.0" promptText="Subir imagen" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 1 1 1 1; -fx-prompt-text-fill: grey;">
+                                                <TextField fx:id="txtfTipoMangaAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Tipo manga producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
                                                    <opaqueInsets>
                                                       <Insets />
                                                    </opaqueInsets>
@@ -269,30 +431,7 @@
                                                       <Font name="Inter Regular" size="18.0" />
                                                    </font>
                                                 </TextField>
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </VBox>
-                              <Line startY="548.0" />
-                              <VBox prefHeight="548.0" prefWidth="316.0" spacing="50.0">
-                                 <children>
-                                    <VBox spacing="15.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
-                                             <font>
-                                                <Font name="Inter SemiBold" size="24.0" />
-                                             </font>
-                                          </Text>
-                                          <HBox alignment="CENTER" prefHeight="177.0" prefWidth="316.0" spacing="10.0">
-                                             <children>
-                                                <TextArea fx:id="txtaDescripcionAltaProducto" prefHeight="178.0" prefWidth="273.0" style="-fx-background-color: none; -fx-border-width: 1 1 1 1; -fx-border-color: black;">
-                                                   <font>
-                                                      <Font name="Inter Regular" size="18.0" />
-                                                   </font>
-                                                </TextArea>
-                                                <Button fx:id="btnClear4" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" onAction="#limpiarDescripcion" onMouseClicked="#limpiarPrecio" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                <Button fx:id="btnClearCamisa4" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
                                                    <graphic>
                                                       <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
                                                    </graphic>
@@ -304,14 +443,478 @@
                                           </HBox>
                                        </children>
                                     </VBox>
-                                    <VBox prefHeight="80.0" prefWidth="454.0" spacing="10.0">
+                                    <HBox>
                                        <children>
-                                          <CheckBox fx:id="checkBActivoAltaProducto" alignment="CENTER" contentDisplay="RIGHT" disable="true" mnemonicParsing="false" prefHeight="38.0" prefWidth="204.0" selected="true" text="Activo">
+                                          <CheckBox fx:id="chBoxEstampadaAltaProducto" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="204.0" text="Estampada">
                                              <font>
                                                 <Font name="Inter SemiBold" size="24.0" />
                                              </font>
                                           </CheckBox>
-                                          <VBox alignment="CENTER_RIGHT" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxAltaPantalon" alignment="CENTER" prefHeight="462.0" prefWidth="1440.0" spacing="150.0">
+                           <children>
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Talla">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTallaAltaProducto2" prefHeight="28.0" prefWidth="398.0" promptText="Talla producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearPantalon1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Color">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfColorAltaProducto2" prefHeight="28.0" prefWidth="398.0" promptText="Color producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearPantalon2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo cierre">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTipoCierreAltaProducto2" prefHeight="28.0" prefWidth="398.0" promptText="Tipo cierre producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearPantalon3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="1.6862154006958008E-4" endY="-47.387027740478516" startX="2.029657334787771E-4" startY="385.7058410644531" />
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="134.0" prefWidth="316.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo pantalón">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTipoPantalonAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Tipo pantalón producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearPantalon4" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox>
+                                       <children>
+                                          <CheckBox fx:id="chBoxBolsillosAltaProducto" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="204.0" text="Bolsillos">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxAltaChaqueta" alignment="CENTER" prefHeight="462.0" prefWidth="1440.0" spacing="150.0">
+                           <children>
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Talla">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTallaAltaProducto1" prefHeight="28.0" prefWidth="398.0" promptText="Talla producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearChaqueta1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Color">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfColorAltaProducto1" prefHeight="28.0" prefWidth="398.0" promptText="Color producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearChaqueta2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo cierre">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTipoCierreAltaProducto1" prefHeight="28.0" prefWidth="398.0" promptText="Tipo cierre producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearChaqueta3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="1.6862154006958008E-4" endY="-47.387027740478516" startX="2.029657334787771E-4" startY="385.7058410644531" />
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <CheckBox fx:id="chBoxImpermeableAltaProducto" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="231.0" text="Impermeable">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxAltaBolso" alignment="CENTER" prefHeight="459.0" prefWidth="1440.0" spacing="150.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="426.0" prefWidth="323.0" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="134.0" prefWidth="316.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estilo">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfMarcaAltaProducto1" prefHeight="28.0" prefWidth="398.0" promptText="Estilo producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearBolso1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox>
+                                       <children>
+                                          <CheckBox fx:id="chBoxPersonalizadoAltaProducto" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="239.0" text="Personalizado">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="1.6862154006958008E-4" endY="-47.387027740478516" startX="2.029657334787771E-4" startY="385.7058410644531" />
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo cierre">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTipoCierreAltaProducto3" prefHeight="28.0" prefWidth="398.0" promptText="Tipo cierre producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearBolso2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Capacidad">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfCapacidadAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Capacidad producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearBolso3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxAltaZapato" alignment="CENTER" prefHeight="462.0" prefWidth="1440.0" spacing="150.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="426.0" prefWidth="323.0" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="134.0" prefWidth="316.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estilo">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfMarcaAltaProducto2" prefHeight="28.0" prefWidth="398.0" promptText="Estilo producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearZapato1" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox>
+                                       <children>
+                                          <CheckBox fx:id="chBoxPersonalizadoAltaProducto1" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="38.0" prefWidth="239.0" text="Personalizado">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="1.6862154006958008E-4" endY="-47.387027740478516" startX="2.029657334787771E-4" startY="385.7058410644531" />
+                              <VBox alignment="CENTER" prefWidth="323.2" spacing="30.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo suela">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTipoSuelaAltaProducto" prefHeight="28.0" prefWidth="398.0" promptText="Tipo suela producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearZapato2" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="271.0" spacing="15.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Talla">
+                                             <font>
+                                                <Font name="Inter SemiBold" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="28.0" prefWidth="271.0">
+                                             <children>
+                                                <TextField fx:id="txtfTallaAltaProducto3" prefHeight="28.0" prefWidth="398.0" promptText="Talla producto" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-prompt-text-fill: grey;">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <font>
+                                                      <Font name="Inter Regular" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="btnClearZapato3" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="25.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                                                   <graphic>
+                                                      <SVGPath content="M24.4 7.61333C23.88 7.09333 23.04 7.09333 22.52 7.61333L16 14.12L9.47996 7.59999C8.95996 7.07999 8.11996 7.07999 7.59996 7.59999C7.07996 8.11999 7.07996 8.95999 7.59996 9.47999L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47999C24.9066 8.97333 24.9066 8.11999 24.4 7.61333Z" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </VBox>
                                  </children>
@@ -320,42 +923,42 @@
                         </HBox>
                      </children>
                   </VBox>
-               </content>
-            </ScrollPane>
-            <Button fx:id="btnGuardarCambiosAltaProducto" contentDisplay="CENTER" disable="true" layoutX="1157.5" layoutY="35.5" mnemonicParsing="false" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
-               <font>
-                  <Font name="Inter Bold" size="18.0" />
-               </font>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="btnGuardarCambiosAltaProducto" contentDisplay="CENTER" disable="true" layoutX="1157.5" layoutY="130.5" mnemonicParsing="false" prefHeight="64.0" prefWidth="164.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+         <font>
+            <Font name="Inter Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <graphic>
+            <HBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <SVGPath content="M27.7083 19.4583V26.75C27.7083 27.5521 27.0521 28.2083 26.25 28.2083H8.75C7.94792 28.2083 7.29167 27.5521 7.29167 26.75V19.4583C7.29167 18.6563 6.63542 18 5.83333 18C5.03125 18 4.375 18.6563 4.375 19.4583V28.2083C4.375 29.8125 5.6875 31.125 7.29167 31.125H27.7083C29.3125 31.125 30.625 29.8125 30.625 28.2083V19.4583C30.625 18.6563 29.9688 18 29.1667 18C28.3646 18 27.7083 18.6563 27.7083 19.4583ZM18.9583 18.9771L21.7 16.2354C22.2688 15.6667 23.1875 15.6667 23.7563 16.2354C24.325 16.8042 24.325 17.7229 23.7563 18.2917L18.5208 23.5271C17.9521 24.0958 17.0333 24.0958 16.4646 23.5271L11.2292 18.2917C10.6604 17.7229 10.6604 16.8042 11.2292 16.2354C11.7979 15.6667 12.7167 15.6667 13.2854 16.2354L16.0417 18.9771V6.33333C16.0417 5.53125 16.6979 4.875 17.5 4.875C18.3021 4.875 18.9583 5.53125 18.9583 6.33333V18.9771Z" fill="WHITE" />
+                  <VBox>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
+                           <font>
+                              <Font name="Inter Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="cambios">
+                           <font>
+                              <Font name="Inter Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
                <padding>
                   <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                </padding>
-               <graphic>
-                  <HBox alignment="CENTER" spacing="30.0">
-                     <children>
-                        <SVGPath content="M27.7083 19.4583V26.75C27.7083 27.5521 27.0521 28.2083 26.25 28.2083H8.75C7.94792 28.2083 7.29167 27.5521 7.29167 26.75V19.4583C7.29167 18.6563 6.63542 18 5.83333 18C5.03125 18 4.375 18.6563 4.375 19.4583V28.2083C4.375 29.8125 5.6875 31.125 7.29167 31.125H27.7083C29.3125 31.125 30.625 29.8125 30.625 28.2083V19.4583C30.625 18.6563 29.9688 18 29.1667 18C28.3646 18 27.7083 18.6563 27.7083 19.4583ZM18.9583 18.9771L21.7 16.2354C22.2688 15.6667 23.1875 15.6667 23.7563 16.2354C24.325 16.8042 24.325 17.7229 23.7563 18.2917L18.5208 23.5271C17.9521 24.0958 17.0333 24.0958 16.4646 23.5271L11.2292 18.2917C10.6604 17.7229 10.6604 16.8042 11.2292 16.2354C11.7979 15.6667 12.7167 15.6667 13.2854 16.2354L16.0417 18.9771V6.33333C16.0417 5.53125 16.6979 4.875 17.5 4.875C18.3021 4.875 18.9583 5.53125 18.9583 6.33333V18.9771Z" fill="WHITE" />
-                        <VBox>
-                           <children>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar">
-                                 <font>
-                                    <Font name="Inter Bold" size="20.0" />
-                                 </font>
-                              </Text>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="cambios">
-                                 <font>
-                                    <Font name="Inter Bold" size="20.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </VBox>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </padding>
-                  </HBox>
-               </graphic>
-            </Button>
-            <Line endX="1440.0" />
-         </children>
-      </Pane>
+            </HBox>
+         </graphic>
+      </Button>
+      <Line endX="1440.0" layoutY="95.0" />
    </children>
 </Pane>
