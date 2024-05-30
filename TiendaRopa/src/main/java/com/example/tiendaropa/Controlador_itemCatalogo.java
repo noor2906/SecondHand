@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,6 +25,9 @@ import java.time.LocalDate;
 public class Controlador_itemCatalogo{
 
     private InsercionesBBDD insercionesBBDD = new InsercionesBBDD();
+
+    @FXML
+    private Button btnCarritoImg;
 
     @FXML
     private ImageView imgItemCatalogo;
@@ -94,7 +98,6 @@ public class Controlador_itemCatalogo{
             System.out.println("No hay ningún usuario autenticado.");
             return; // Salir del método para evitar errores
         }
-        Pedido pedido = new Pedido();
 
         LocalDate fechaPedido = LocalDate.now();
         String dirEnvio = usuario.getDireccion();
@@ -114,7 +117,7 @@ public class Controlador_itemCatalogo{
     }
 
     //Hecho por carol:
-    private void insertarLineaPedidoCarrito(Integer numPedido) {
+    private void insertarLineaPedidoCarrito(int numPedido) {
 
         int codigoArticulo = articulo.getCodigo();
         int cantidad = 1;
@@ -133,27 +136,38 @@ public class Controlador_itemCatalogo{
     //Hecho por carol:
     public void addArticuloCarrito(MouseEvent event){
 
+        Alert noUsuario = new Alert(Alert.AlertType.NONE);
         Alert a = new Alert(Alert.AlertType.NONE);
         ConsultasBBDD consulta = new ConsultasBBDD();
 
-        int numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+        if (usuario != null) {
 
-        if (numPedido == 0){
-            insertarPedidoCarrito();
-            numPedido = consulta.getNumeroPedidoEnProceso(usuario);
-        }
+            int numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+
+            if (numPedido == 0) {
+                insertarPedidoCarrito();
+                numPedido = consulta.getNumeroPedidoEnProceso(usuario);
+            }
 
 
-        int codigoArticulo = articulo.getCodigo();
-        boolean existeLineaPedido = consulta.existeLineaPedido(numPedido, codigoArticulo);
+            int codigoArticulo = articulo.getCodigo();
+            boolean existeLineaPedido = consulta.existeLineaPedido(numPedido, codigoArticulo);
 
-        if (!existeLineaPedido){
-            insertarLineaPedidoCarrito(numPedido);
+            if (!existeLineaPedido) {
+                insertarLineaPedidoCarrito(numPedido);
+            } else {
+                a.setAlertType(Alert.AlertType.INFORMATION);
+                a.setHeaderText(null);
+                a.setContentText("Producto Agotado, por favor, seleccione otro");
+                a.show();
+            }
         } else {
-            a.setAlertType(Alert.AlertType.INFORMATION);
-            a.setHeaderText(null);
-            a.setContentText("Producto Agotado, por favor, seleccione otro");
-            a.show();
+            noUsuario.setAlertType(Alert.AlertType.INFORMATION);
+            noUsuario.setHeaderText(null);
+            noUsuario.setContentText("Debes iniciar sesión antes de añadir articulos al carrito");
+            noUsuario.show();
         }
+
     }
+
 }

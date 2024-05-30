@@ -5,49 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5137aad3-3be3-4ec2-9d73-a6898c9e817b" name="Changes" comment="He añadido la pantalla de edición usuario">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_listaEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_listaEmpleados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaBolso_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaBolso_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaCamisa_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaCamisa_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaChaqueta_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaChaqueta_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaPantalon_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaPantalon_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaZapato_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaZapato_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_catologo_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_catologo_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_home_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_home_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_itemCatalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_itemCatalogo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_login_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_login_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAltaProducto_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAltaProducto_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Aplicacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Aplicacion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/InsercionesBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/InsercionesBBDD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ModificacionesBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ModificacionesBBDD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemProducto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaEmpleados.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaEmpleados.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_panelAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_panelAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_catologo_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_catologo_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_home_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_home_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ConsultasBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ConsultasBBDD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_carrito.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_carrito.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemCatalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemCatalogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_carrito_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_carrito_Noor.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemProducto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemProducto.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_login_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_login_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Camisa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Camisa.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,5 +91,16 @@
     <MESSAGE value="He cambiado la pagina de inicio" />
     <MESSAGE value="He añadido la pantalla de edición usuario" />
     <option name="LAST_COMMIT_MESSAGE" value="He añadido la pantalla de edición usuario" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Conexiones/InsercionesBBDD.java</url>
+          <line>261</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
