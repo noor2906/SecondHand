@@ -1,5 +1,6 @@
 package com.example.tiendaropa;
 
+import com.example.tiendaropa.model.Empleado;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,11 +13,32 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Controlador_panelAdmin {
-
+    @FXML
+    private Button btnAltaProducto;
+    @FXML
+    private Button btnAltaEmpleado;
+    @FXML
+    private Button btnAdministrarProductos;
+    @FXML
+    private Button btnAdministrarEmpleados;
+    @FXML
+    private Button btnAdministrarUsuarios;
     @FXML
     Button btnLogin;
     public void initialize(){
         btnLogin.setDisable(true);
+        Empleado empleado = (Empleado) Controlador_login.getUsuario();
+        if (empleado.getDepartamento().getNombre().equals("Ventas")){
+            btnAltaEmpleado.setDisable(true);
+            btnAdministrarEmpleados.setDisable(true);
+            btnAdministrarUsuarios.setDisable(true);
+        } else if (empleado.getDepartamento().getNombre().equals("Almacén")) {
+            btnAltaEmpleado.setDisable(true);
+            btnAdministrarEmpleados.setDisable(true);
+            btnAdministrarUsuarios.setDisable(true);
+            btnAdministrarProductos.setDisable(true);
+            btnAltaProducto.setDisable(true);
+        }
     }
 
     //BOTONES ----------------------------------------------------------------------------------------------------------
