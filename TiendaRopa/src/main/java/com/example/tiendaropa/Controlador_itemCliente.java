@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
@@ -61,12 +60,17 @@ public class Controlador_itemCliente {
     }
     // Hecho por: Vero
     public void mostrarInfoCliente(MouseEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Parent root = FXMLLoader.load(getClass().getResource("FXML_edicionUsuario_Carol.fxml"));
-
-        stage.setScene(new Scene(root));
-        stage.show();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_edicionUsuario_Carol.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Usando el evento para obtener la ventana actual
+            Controlador_edicionCliente clienteController = loader.getController();// Crear objeto controlador de cliente
+            clienteController.cargarCliente(cliente);//Usando el método para cargar los clientes en la ventana de info
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

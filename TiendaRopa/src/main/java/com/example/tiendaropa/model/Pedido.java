@@ -1,26 +1,23 @@
 package com.example.tiendaropa.model;
 
-import java.util.List;
+import java.time.LocalDate;
 
 public class Pedido {
     //Atributos
-    private int numero;
-    private String fecha;
-    private String direccionEnvio;
-    private String estado;
-    private LineaPedido lineaPedido;
-    private int cantidadArticulo;
+    private  int numero;
+    private  String fecha;
+    private  String direccionEnvio;
+    private  String estado;
+
 
 
     //Constructor
 
-    public Pedido(int numero, String fecha, String direccionEnvio, String estado, LineaPedido lineaPedido, int cantidadArticulo) {
+    public Pedido() {
         this.numero = numero;
         this.fecha = fecha;
         this.direccionEnvio = direccionEnvio;
         this.estado = estado;
-        this.lineaPedido = lineaPedido;
-        this.cantidadArticulo = cantidadArticulo;
     }
 
 
@@ -34,15 +31,17 @@ public class Pedido {
         this.numero = numero;
     }
 
-    public String getFecha() {
-        return fecha;
+    public  LocalDate getFecha() {
+        LocalDate fechaActual = LocalDate.now();
+        fecha = String.valueOf(fechaActual);
+        return fechaActual;
     }
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public String getDireccionEnvio() {
+    public  String getDireccionEnvio() {
         return direccionEnvio;
     }
 
@@ -50,27 +49,12 @@ public class Pedido {
         this.direccionEnvio = direccionEnvio;
     }
 
-    public String getEstado() {
+    public  String getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public  void setEstado(String estado) {
         this.estado = estado;
     }
 
-    public LineaPedido getLineaPedido() {
-        return lineaPedido;
-    }
-
-    public void setLineaPedido(LineaPedido lineaPedido) {
-        this.lineaPedido = lineaPedido;
-    }
-
-    public int getCantidadArticulo() {
-        return cantidadArticulo;
-    }
-
-    public void setCantidadArticulo(int cantidadArticulo) {
-        this.cantidadArticulo = cantidadArticulo;
-    }
 }

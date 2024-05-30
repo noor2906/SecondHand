@@ -16,7 +16,6 @@ import java.util.List;
 
 public class Aplicacion extends Application {
 
-    public static List<Articulo> carrito = new ArrayList<>();
 
     @Override
     public void start(Stage stage) throws IOException {

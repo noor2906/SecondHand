@@ -29,10 +29,16 @@ public class Controlador_login {
 
     // Hecho por: Vero
     public void login(ActionEvent actionEvent) throws IOException {
+
         Alert a = new Alert(Alert.AlertType.NONE);
         String user = txtDatoLogin.getText();
         String pass = txtContraLogin.getText();
         usuario=consulta.login(user,pass);
+        if (usuario == null) {
+            System.out.println("Login fallido: usuario es null");
+        } else {
+            System.out.println("Login exitoso: " + usuario.getDni());
+        }
         if (usuario instanceof Cliente){
             mostrarHome(actionEvent);
         } else if (usuario instanceof Empleado) {
@@ -47,6 +53,10 @@ public class Controlador_login {
     //Hecho por: Vero
     public static Usuario getUsuario() {
         return usuario;
+    }
+
+    public static void setUsuario(Usuario usuario) {
+        Controlador_login.usuario = usuario;
     }
 
     // Hecho por: Vero

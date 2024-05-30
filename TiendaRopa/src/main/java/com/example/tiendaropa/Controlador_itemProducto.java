@@ -30,11 +30,14 @@ public class Controlador_itemProducto {
     @FXML
     private Text txtNombreProducto;
 
+    private int codigoArticulo;
+
     Articulo articulo;
     // Hecho por: Noor
     public void setData(Articulo articulo) throws FileNotFoundException {
 
         this.articulo = articulo;
+        this.codigoArticulo = articulo.getCodigo();
 
         //Nombre producto -----------------------------------------------------------------------------------------------
 
@@ -49,9 +52,7 @@ public class Controlador_itemProducto {
         imgProducto.setImage(imgArticulo);
 
     }
-
-    //if instance of Camisa -> altaCamisa
-   /* // Hecho por: Noor
+    // Hecho por: Noor
     public void mostrarInfoProducto(MouseEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -59,5 +60,9 @@ public class Controlador_itemProducto {
 
         stage.setScene(new Scene(root));
         stage.show();
-    }*/
+    }
+
+    public int getCodigoArticulo() {
+        return codigoArticulo;
+    }
 }
