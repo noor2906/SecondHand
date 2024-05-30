@@ -13,7 +13,7 @@
 
 <VBox alignment="TOP_CENTER" maxHeight="651.0" maxWidth="401.0" minHeight="651.0" minWidth="401.0" prefHeight="651.0" prefWidth="401.0" spacing="20.0" style="-fx-background-color: #F6F6F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendaropa.Controlador_itemCatalogo">
    <children>
-      <Button fx:id="btnImgItemCatalogo" onMouseClicked="#mostrarFichaProducto" ellipsisString="" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="530.0" prefWidth="822.0" style="-fx-background-color: NONE;" textAlignment="CENTER">
+      <Button fx:id="btnImgItemCatalogo" ellipsisString="" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#mostrarFichaProducto" prefHeight="530.0" prefWidth="822.0" style="-fx-background-color: NONE;" textAlignment="CENTER">
          <padding>
             <Insets left="-12.0" right="-12.0" />
          </padding>
@@ -48,7 +48,7 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <Button fx:id="btnCarritoImg1" mnemonicParsing="false" onMouseClicked="#addArticuloCarrito" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: none; -fx-background-radius: none;">
+                  <Button fx:id="btnCarritoImg" disable="true" mnemonicParsing="false" onMouseClicked="#addArticuloCarrito" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: none; -fx-background-radius: none;">
                      <graphic>
                         <HBox alignment="CENTER" prefHeight="34.0" prefWidth="98.0" spacing="15.0" style="-fx-background-color: black;">
                            <padding>

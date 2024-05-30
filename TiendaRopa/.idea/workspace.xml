@@ -6,10 +6,48 @@
   <component name="ChangeListManager">
     <list default="true" id="5137aad3-3be3-4ec2-9d73-a6898c9e817b" name="Changes" comment="He añadido la pantalla de edición usuario">
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Conexiones/ModificacionesBBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Conexiones/ModificacionesBBDD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_edicionCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_edicionCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_listaEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tiendaropa/Controlador_listaEmpleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaBolso_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaBolso_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaCamisa_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaCamisa_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaChaqueta_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaChaqueta_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaPantalon_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaPantalon_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaZapato_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_altaZapato_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_catologo_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_catologo_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_home_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_home_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_login_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_login_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAltaProducto_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_panelAltaProducto_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Aplicacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Aplicacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/InsercionesBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/InsercionesBBDD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ModificacionesBBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Conexiones/ModificacionesBBDD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_itemProducto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaEmpleados.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_listaEmpleados.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_panelAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/Controlador_panelAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_altaEdicionEmpleado_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_catologo_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_catologo_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_edicionUsuario_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_fichaProducto_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_home_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_home_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_infoEmpleadoEditable_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemArticuloCatalogo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemProducto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_itemProducto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaEmpleados_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaProductos_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_listaUsuarios_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_login_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_login_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_panelAdmin_Noor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/FXML_registroUsuario_Carol.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Camisa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tiendaropa/model/Camisa.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +77,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/alumnoM/Documents/SecondHand/SecondHand/TiendaRopa",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Proyecto-Final&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alumnoM/Documents/GitHub/SecondHand/TiendaRopa&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Noor\Documents\GitHub\SecondHand\TiendaRopa\src\main\resources\com\example\tiendaropa" />

@@ -97,7 +97,7 @@
                                     <Font name="Inter Bold" size="18.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnContraOlvidada" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: none;" text="¿Has olvidado la contraseña?">
+                              <Button fx:id="btnContraOlvidada" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="405.0" style="-fx-background-color: none;" text="¿Has olvidado la contraseña?" visible="false">
                                  <font>
                                     <Font name="Inter Regular" size="15.0" />
                                  </font>

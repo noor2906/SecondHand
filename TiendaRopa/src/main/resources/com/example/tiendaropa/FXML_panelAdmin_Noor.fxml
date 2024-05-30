@@ -97,7 +97,7 @@
                   </HBox>
                   <HBox prefHeight="163.0" prefWidth="474.0" spacing="60.0">
                      <children>
-                        <Button fx:id="btnAdministrarPedidos" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                        <Button fx:id="btnAdministrarPedidos" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                            <font>
                               <Font name="Inter Bold" size="18.0" />
                            </font>
@@ -110,7 +110,7 @@
                                     <SVGPath content="M13.1248 17.5C15.9394 17.5 18.229 15.2104 18.229 12.3959C18.229 9.58127 15.9394 7.29169 13.1248 7.29169C10.3103 7.29169 8.02067 9.58127 8.02067 12.3959C8.02067 15.2104 10.3103 17.5 13.1248 17.5ZM13.1248 10.2084C14.3353 10.2084 15.3123 11.1854 15.3123 12.3959C15.3123 13.6063 14.3353 14.5834 13.1248 14.5834C11.9144 14.5834 10.9373 13.6063 10.9373 12.3959C10.9373 11.1854 11.9144 10.2084 13.1248 10.2084ZM13.1248 20.0521C9.71234 20.0521 2.9165 21.7584 2.9165 25.1563V26.25C2.9165 27.0521 3.57275 27.7084 4.37484 27.7084H21.8748C22.6769 27.7084 23.3332 27.0521 23.3332 26.25V25.1563C23.3332 21.7584 16.5373 20.0521 13.1248 20.0521ZM6.329 24.7917C7.554 23.9459 10.5144 22.9688 13.1248 22.9688C15.7353 22.9688 18.6957 23.9459 19.9207 24.7917H6.329ZM23.3915 20.1396C25.0832 21.3646 26.2498 22.9979 26.2498 25.1563V27.7084H30.6248C31.4269 27.7084 32.0832 27.0521 32.0832 26.25V25.1563C32.0832 22.2104 26.979 20.5334 23.3915 20.1396ZM21.8748 17.5C24.6894 17.5 26.979 15.2104 26.979 12.3959C26.979 9.58127 24.6894 7.29169 21.8748 7.29169C21.0873 7.29169 20.3582 7.48127 19.6873 7.8021C20.6061 9.10002 21.1457 10.6896 21.1457 12.3959C21.1457 14.1021 20.6061 15.6917 19.6873 16.9896C20.3582 17.3104 21.0873 17.5 21.8748 17.5Z" fill="WHITE" />
                                     <VBox>
                                        <children>
-                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminsitrar">
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrar">
                                              <font>
                                                 <Font name="Inter Bold" size="20.0" />
                                              </font>
@@ -197,7 +197,7 @@
                               </HBox>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnAdministrarUsuarios" onMouseClicked="#mostrarListaUsuarios"  contentDisplay="CENTER" mnemonicParsing="false"  prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
+                        <Button fx:id="btnAdministrarUsuarios" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#mostrarListaUsuarios" prefHeight="64.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                            <font>
                               <Font name="Inter Bold" size="18.0" />
                            </font>
@@ -210,7 +210,7 @@
                                     <SVGPath content="M13.1248 17.5C15.9394 17.5 18.229 15.2104 18.229 12.3959C18.229 9.58127 15.9394 7.29169 13.1248 7.29169C10.3103 7.29169 8.02067 9.58127 8.02067 12.3959C8.02067 15.2104 10.3103 17.5 13.1248 17.5ZM13.1248 10.2084C14.3353 10.2084 15.3123 11.1854 15.3123 12.3959C15.3123 13.6063 14.3353 14.5834 13.1248 14.5834C11.9144 14.5834 10.9373 13.6063 10.9373 12.3959C10.9373 11.1854 11.9144 10.2084 13.1248 10.2084ZM13.1248 20.0521C9.71234 20.0521 2.9165 21.7584 2.9165 25.1563V26.25C2.9165 27.0521 3.57275 27.7084 4.37484 27.7084H21.8748C22.6769 27.7084 23.3332 27.0521 23.3332 26.25V25.1563C23.3332 21.7584 16.5373 20.0521 13.1248 20.0521ZM6.329 24.7917C7.554 23.9459 10.5144 22.9688 13.1248 22.9688C15.7353 22.9688 18.6957 23.9459 19.9207 24.7917H6.329ZM23.3915 20.1396C25.0832 21.3646 26.2498 22.9979 26.2498 25.1563V27.7084H30.6248C31.4269 27.7084 32.0832 27.0521 32.0832 26.25V25.1563C32.0832 22.2104 26.979 20.5334 23.3915 20.1396ZM21.8748 17.5C24.6894 17.5 26.979 15.2104 26.979 12.3959C26.979 9.58127 24.6894 7.29169 21.8748 7.29169C21.0873 7.29169 20.3582 7.48127 19.6873 7.8021C20.6061 9.10002 21.1457 10.6896 21.1457 12.3959C21.1457 14.1021 20.6061 15.6917 19.6873 16.9896C20.3582 17.3104 21.0873 17.5 21.8748 17.5Z" fill="WHITE" />
                                     <VBox>
                                        <children>
-                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Adminsitrar">
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrar">
                                              <font>
                                                 <Font name="Inter Bold" size="20.0" />
                                              </font>
@@ -231,7 +231,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="163.0" prefWidth="474.0" spacing="60.0">
+                  <HBox alignment="CENTER" prefHeight="163.0" prefWidth="474.0" spacing="60.0" visible="false">
                      <children>
                         <Button fx:id="btnEditarPerfil" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="254.0" style="-fx-background-color: black; -fx-background-radius: none;" textFill="WHITE">
                            <font>
@@ -298,7 +298,7 @@
                         <Group />
                      </graphic>
                   </Button>
-                  <Group layoutX="1085.0" layoutY="33.0">
+                  <Group layoutX="1085.0" layoutY="33.0" visible="false">
                      <children>
                         <TextField fx:id="txtfBusqueda" layoutX="2.0" prefHeight="33.0" prefWidth="168.0" promptText="Buscar" style="-fx-border-radius: 7px; -fx-border-width: 0 0 0 0;">
                            <opaqueInsets>
@@ -321,7 +321,7 @@
                         </Button>
                      </children>
                   </Group>
-                  <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                  <Button fx:id="btnMenu" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#mostrarMenu" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" visible="false">
                      <graphic>
                         <SVGPath content="M6.66667 30H33.3333C34.25 30 35 29.25 35 28.3333C35 27.4167 34.25 26.6667 33.3333 26.6667H6.66667C5.75 26.6667 5 27.4167 5 28.3333C5 29.25 5.75 30 6.66667 30ZM6.66667 21.6667H33.3333C34.25 21.6667 35 20.9167 35 20C35 19.0833 34.25 18.3333 33.3333 18.3333H6.66667C5.75 18.3333 5 19.0833 5 20C5 20.9167 5.75 21.6667 6.66667 21.6667ZM5 11.6667C5 12.5833 5.75 13.3333 6.66667 13.3333H33.3333C34.25 13.3333 35 12.5833 35 11.6667C35 10.75 34.25 10 33.3333 10H6.66667C5.75 10 5 10.75 5 11.6667Z" />
                      </graphic>
@@ -337,7 +337,7 @@
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCarrito" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="1340.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#mostrarCarrito" prefHeight="40.0" prefWidth="40.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;">
+                  <Button fx:id="btnCarrito" cacheShape="false" centerShape="false" disable="true" focusTraversable="false" layoutX="1340.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#mostrarCarrito" prefHeight="40.0" prefWidth="40.0" scaleShape="false" style="-fx-background-color: WHITE; -fx-effect: null;" visible="false">
                      <graphic>
                         <SVGPath content="M11.6667 30C9.83335 30 8.35002 31.5 8.35002 33.3333C8.35002 35.1667 9.83335 36.6667 11.6667 36.6667C13.5 36.6667 15 35.1667 15 33.3333C15 31.5 13.5 30 11.6667 30ZM1.66669 5.00001C1.66669 5.91668 2.41669 6.66668 3.33335 6.66668H5.00002L11 19.3167L8.75002 23.3833C7.53335 25.6167 9.13335 28.3333 11.6667 28.3333H30C30.9167 28.3333 31.6667 27.5833 31.6667 26.6667C31.6667 25.75 30.9167 25 30 25H11.6667L13.5 21.6667H25.9167C27.1667 21.6667 28.2667 20.9833 28.8334 19.95L34.8 9.13334C35.4167 8.03334 34.6167 6.66668 33.35 6.66668H8.68335L7.56669 4.28334C7.30002 3.70001 6.70002 3.33334 6.06669 3.33334H3.33335C2.41669 3.33334 1.66669 4.08334 1.66669 5.00001V5.00001ZM28.3334 30C26.5 30 25.0167 31.5 25.0167 33.3333C25.0167 35.1667 26.5 36.6667 28.3334 36.6667C30.1667 36.6667 31.6667 35.1667 31.6667 33.3333C31.6667 31.5 30.1667 30 28.3334 30Z" />
                      </graphic>
@@ -361,6 +361,11 @@
                   </Text>
                </children>
             </HBox>
+            <Button fx:id="btnCerrarSesion" alignment="CENTER" contentDisplay="CENTER" layoutX="1172.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#cerrarSesion" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: black;" text="Cerrar Sesión" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+                   </font>
+            </Button>
          </children>
       </Pane>
    </content>

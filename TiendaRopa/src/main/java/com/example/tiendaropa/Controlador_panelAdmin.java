@@ -113,5 +113,9 @@ public class Controlador_panelAdmin {
         stage.show();
     }
 
+    public void cerrarSesion(MouseEvent event) throws IOException {
+        Controlador_login.setUsuario(null);
+        mostrarHome(event);
+    }
 
 }
