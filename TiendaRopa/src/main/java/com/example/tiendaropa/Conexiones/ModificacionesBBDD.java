@@ -81,7 +81,7 @@ public class ModificacionesBBDD {
             String sql="UPDATE cliente SET nombre = '"+ nombre+"', apellidos = '"+apellidos+
                     "', telefono = '"+telefono+ "', f_nacimiento = '"+fecha+"', direccion = '"+direccion+
                     "',email='"+email+"',dir_envio='"+direccion+"', tarjeta_fidelizacion = "+fidelizacion+
-                    ", m_pago = "+metodoPago+" WHERE dni='"+dni+"';";
+                    ", m_pago = "+metodoPago+",pass = '"+contra+"' WHERE dni='"+dni+"';";
             conn.updateSQL(sql);
         }catch (Exception e){
             System.out.println(e);

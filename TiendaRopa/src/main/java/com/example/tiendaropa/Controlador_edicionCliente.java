@@ -99,8 +99,9 @@ public class Controlador_edicionCliente {
         txtEmail.setText(cliente.getE_mail());
         txtTelefono.setText(cliente.getTelefono());
         txtDireccion.setText(cliente.getDireccion());
-        combList.getSelectionModel().select(cliente.getMetodoPago().getCodigo());
+        combList.getSelectionModel().select(cliente.getMetodoPago().getDescripcion());
         chbxFidelizacion.setSelected(cliente.isTarjetaFidelizacion());
+
     }
 
 
@@ -181,7 +182,7 @@ public class Controlador_edicionCliente {
         if (direccion.equals("")){direccion = cliente.getDireccion();}
         if (pago.equals("")){pago = String.valueOf(cliente.getMetodoPago().getCodigo());}
         if (fecha.equals("")){fecha = cliente.getfNacimiento();}
-        int mPago = 0;
+        int mPago = 1;
 
         for (Integer k:mapaPagos.keySet()) {
             if (mapaPagos.get(k).getDescripcion().equals(pago)){
